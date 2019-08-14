@@ -1,0 +1,4291 @@
+{
+  "name": "SemanticModel",
+  "compatibilityLevel": 1200,
+  "model": {
+    "culture": "en-US",
+    "dataSources": [
+      {
+        "name": "CandelaKPI-Dev",
+        "connectionString": "Data Source=sc-az-datacontrol-srv1.database.windows.net;Initial Catalog=CandelaKPI-Dev;Persist Security Info=false;User ID=dev;Encrypt=true;TrustServerCertificate=false",
+        "impersonationMode": "impersonateServiceAccount",
+        "provider": "System.Data.SqlClient",
+        "annotations": [
+          {
+            "name": "ConnectionEditUISource",
+            "value": "SqlAzure"
+          }
+        ]
+      }
+    ],
+    "tables": [
+      {
+        "name": "dim_date",
+        "columns": [
+          {
+            "name": "Date_id",
+            "dataType": "int64",
+            "sourceColumn": "Date_id",
+            "sourceProviderType": "int"
+          },
+          {
+            "name": "Date_dt",
+            "dataType": "dateTime",
+            "sourceColumn": "Date_dt",
+            "formatString": "General Date",
+            "sourceProviderType": "date"
+          },
+          {
+            "name": "Day",
+            "dataType": "int64",
+            "sourceColumn": "Day",
+            "sourceProviderType": "tinyint"
+          },
+          {
+            "name": "DaySuffix",
+            "dataType": "string",
+            "sourceColumn": "DaySuffix",
+            "sourceProviderType": "char"
+          },
+          {
+            "name": "Weekday",
+            "dataType": "int64",
+            "sourceColumn": "Weekday",
+            "sourceProviderType": "tinyint"
+          },
+          {
+            "name": "WeekDayName",
+            "dataType": "string",
+            "sourceColumn": "WeekDayName",
+            "sourceProviderType": "varchar"
+          },
+          {
+            "name": "IsWeekend",
+            "dataType": "boolean",
+            "sourceColumn": "IsWeekend",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "sourceProviderType": "bit"
+          },
+          {
+            "name": "IsHoliday",
+            "dataType": "boolean",
+            "sourceColumn": "IsHoliday",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "sourceProviderType": "bit"
+          },
+          {
+            "name": "HolidayText",
+            "dataType": "string",
+            "sourceColumn": "HolidayText",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "HolidayCountry",
+            "dataType": "string",
+            "sourceColumn": "HolidayCountry",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "DOWInMonth",
+            "dataType": "int64",
+            "sourceColumn": "DOWInMonth",
+            "sourceProviderType": "tinyint"
+          },
+          {
+            "name": "DayOfYear",
+            "dataType": "int64",
+            "sourceColumn": "DayOfYear",
+            "sourceProviderType": "smallint"
+          },
+          {
+            "name": "WeekOfMonth",
+            "dataType": "int64",
+            "sourceColumn": "WeekOfMonth",
+            "sourceProviderType": "tinyint"
+          },
+          {
+            "name": "WeekOfYear",
+            "dataType": "int64",
+            "sourceColumn": "WeekOfYear",
+            "sourceProviderType": "tinyint"
+          },
+          {
+            "name": "ISOWeekOfYear",
+            "dataType": "int64",
+            "sourceColumn": "ISOWeekOfYear",
+            "sourceProviderType": "tinyint"
+          },
+          {
+            "name": "Month",
+            "dataType": "int64",
+            "sourceColumn": "Month",
+            "sourceProviderType": "tinyint"
+          },
+          {
+            "name": "MonthName",
+            "dataType": "string",
+            "sourceColumn": "MonthName",
+            "sortByColumn": "Month",
+            "sourceProviderType": "varchar"
+          },
+          {
+            "name": "Quarter",
+            "dataType": "int64",
+            "sourceColumn": "Quarter",
+            "sourceProviderType": "tinyint"
+          },
+          {
+            "name": "QuarterName",
+            "dataType": "string",
+            "sourceColumn": "QuarterName",
+            "sourceProviderType": "varchar"
+          },
+          {
+            "name": "QTD_days",
+            "dataType": "int64",
+            "sourceColumn": "QTD_days",
+            "sourceProviderType": "tinyint"
+          },
+          {
+            "name": "Year",
+            "dataType": "int64",
+            "sourceColumn": "Year",
+            "sourceProviderType": "int"
+          },
+          {
+            "name": "YTD_days",
+            "dataType": "int64",
+            "sourceColumn": "YTD_days",
+            "sourceProviderType": "smallint"
+          },
+          {
+            "name": "MMYYYY",
+            "dataType": "string",
+            "sourceColumn": "MMYYYY",
+            "sourceProviderType": "char"
+          },
+          {
+            "name": "MonthYear",
+            "dataType": "string",
+            "sourceColumn": "MonthYear",
+            "sourceProviderType": "char"
+          },
+          {
+            "name": "FirstDayOfMonth",
+            "dataType": "dateTime",
+            "sourceColumn": "FirstDayOfMonth",
+            "formatString": "General Date",
+            "sourceProviderType": "date"
+          },
+          {
+            "name": "LastDayOfMonth",
+            "dataType": "dateTime",
+            "sourceColumn": "LastDayOfMonth",
+            "formatString": "General Date",
+            "sourceProviderType": "date"
+          },
+          {
+            "name": "FirstDayOfQuarter",
+            "dataType": "dateTime",
+            "sourceColumn": "FirstDayOfQuarter",
+            "formatString": "General Date",
+            "sourceProviderType": "date"
+          },
+          {
+            "name": "LastDayOfQuarter",
+            "dataType": "dateTime",
+            "sourceColumn": "LastDayOfQuarter",
+            "formatString": "General Date",
+            "sourceProviderType": "date"
+          },
+          {
+            "name": "FirstDayOfYear",
+            "dataType": "dateTime",
+            "sourceColumn": "FirstDayOfYear",
+            "formatString": "General Date",
+            "sourceProviderType": "date"
+          },
+          {
+            "name": "LastDayOfYear",
+            "dataType": "dateTime",
+            "sourceColumn": "LastDayOfYear",
+            "formatString": "General Date",
+            "sourceProviderType": "date"
+          },
+          {
+            "name": "FirstDayOfNextMonth",
+            "dataType": "dateTime",
+            "sourceColumn": "FirstDayOfNextMonth",
+            "formatString": "General Date",
+            "sourceProviderType": "date"
+          },
+          {
+            "name": "FirstDayOfNextYear",
+            "dataType": "dateTime",
+            "sourceColumn": "FirstDayOfNextYear",
+            "formatString": "General Date",
+            "sourceProviderType": "date"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "dim_date",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [dbo].[dim_date].* FROM [dbo].[dim_date] ",
+              "dataSource": "CandelaKPI-Dev"
+            }
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Calendar",
+            "levels": [
+              {
+                "name": "Year",
+                "ordinal": 0,
+                "column": "Year"
+              },
+              {
+                "name": "MonthName",
+                "ordinal": 1,
+                "column": "MonthName"
+              },
+              {
+                "name": "Day",
+                "ordinal": 2,
+                "column": "Day"
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[dim_date].* FROM [dbo].[dim_date] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "dim_date"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "DIM_STATUS_LOOKUP",
+        "columns": [
+          {
+            "name": "STATUSID",
+            "dataType": "int64",
+            "sourceColumn": "STATUSID"
+          },
+          {
+            "name": "STATUS_SOURCE",
+            "dataType": "string",
+            "sourceColumn": "STATUS_SOURCE"
+          },
+          {
+            "name": "STATUS_DESC",
+            "dataType": "string",
+            "sourceColumn": "STATUS_DESC"
+          },
+          {
+            "name": "STATUS_TRANSLATION",
+            "dataType": "string",
+            "sourceColumn": "STATUS_TRANSLATION"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DIM_STATUS_LOOKUP",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [dbo].[DIM_STATUS_LOOKUP].* FROM [dbo].[DIM_STATUS_LOOKUP] ",
+              "dataSource": "CandelaKPI-Dev"
+            },
+            "annotations": [
+              {
+                "name": "TableWidgetSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"TableWidgetSerialization\"><AnnotationContent><![CDATA[<?xml version=\"1.0\"?>",
+                  "<TableWidgetGridSerialization xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">",
+                  "  <ColumnSuggestedType />",
+                  "  <ColumnFormat />",
+                  "  <ColumnAccuracy />",
+                  "  <ColumnCurrencySymbol />",
+                  "  <ColumnPositivePattern />",
+                  "  <ColumnNegativePattern />",
+                  "  <ColumnWidths>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>STATUSID</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>79</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>STATUS_SOURCE</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>115</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>STATUS_DESC</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>100</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>STATUS_TRANSLATION</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>144</int>",
+                  "      </value>",
+                  "    </item>",
+                  "  </ColumnWidths>",
+                  "  <ColumnDisplayIndex>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>STATUSID</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>0</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>STATUS_SOURCE</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>1</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>STATUS_DESC</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>2</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>STATUS_TRANSLATION</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>3</int>",
+                  "      </value>",
+                  "    </item>",
+                  "  </ColumnDisplayIndex>",
+                  "  <ColumnFrozen />",
+                  "  <ColumnChecked>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>STATUSID</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <boolean>true</boolean>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>STATUS_SOURCE</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <boolean>true</boolean>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>STATUS_DESC</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <boolean>true</boolean>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>STATUS_TRANSLATION</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <boolean>true</boolean>",
+                  "      </value>",
+                  "    </item>",
+                  "  </ColumnChecked>",
+                  "  <ColumnFilter />",
+                  "  <SelectionFilter />",
+                  "  <FilterParameters />",
+                  "  <IsSortDescending>false</IsSortDescending>",
+                  "</TableWidgetGridSerialization>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[DIM_STATUS_LOOKUP].* FROM [dbo].[DIM_STATUS_LOOKUP] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DIM_STATUS_LOOKUP"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          },
+          {
+            "name": "TableWidgetSerialization",
+            "value": [
+              "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"TableWidgetSerialization\"><AnnotationContent><![CDATA[<?xml version=\"1.0\"?>",
+              "<TableWidgetGridSerialization xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">",
+              "  <ColumnSuggestedType />",
+              "  <ColumnFormat />",
+              "  <ColumnAccuracy />",
+              "  <ColumnCurrencySymbol />",
+              "  <ColumnPositivePattern />",
+              "  <ColumnNegativePattern />",
+              "  <ColumnWidths>",
+              "    <item>",
+              "      <key>",
+              "        <string>STATUSID</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>79</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>STATUS_SOURCE</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>115</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>STATUS_DESC</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>100</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>STATUS_TRANSLATION</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>144</int>",
+              "      </value>",
+              "    </item>",
+              "  </ColumnWidths>",
+              "  <ColumnDisplayIndex>",
+              "    <item>",
+              "      <key>",
+              "        <string>STATUSID</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>0</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>STATUS_SOURCE</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>1</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>STATUS_DESC</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>2</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>STATUS_TRANSLATION</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>3</int>",
+              "      </value>",
+              "    </item>",
+              "  </ColumnDisplayIndex>",
+              "  <ColumnFrozen />",
+              "  <ColumnChecked>",
+              "    <item>",
+              "      <key>",
+              "        <string>STATUSID</string>",
+              "      </key>",
+              "      <value>",
+              "        <boolean>true</boolean>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>STATUS_SOURCE</string>",
+              "      </key>",
+              "      <value>",
+              "        <boolean>true</boolean>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>STATUS_DESC</string>",
+              "      </key>",
+              "      <value>",
+              "        <boolean>true</boolean>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>STATUS_TRANSLATION</string>",
+              "      </key>",
+              "      <value>",
+              "        <boolean>true</boolean>",
+              "      </value>",
+              "    </item>",
+              "  </ColumnChecked>",
+              "  <ColumnFilter />",
+              "  <SelectionFilter />",
+              "  <FilterParameters />",
+              "  <IsSortDescending>false</IsSortDescending>",
+              "</TableWidgetGridSerialization>]]></AnnotationContent></Gemini>"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "DIM_ACCOUNT",
+        "columns": [
+          {
+            "name": "ACCOUNTID",
+            "dataType": "int64",
+            "sourceColumn": "ACCOUNTID",
+            "sourceProviderType": "bigint"
+          },
+          {
+            "name": "Id",
+            "dataType": "string",
+            "sourceColumn": "Id",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "ParentId",
+            "dataType": "string",
+            "sourceColumn": "ParentId",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "OwnerId",
+            "dataType": "string",
+            "sourceColumn": "OwnerId",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "RecordTypeId",
+            "dataType": "string",
+            "sourceColumn": "RecordTypeId",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "AccountNumber",
+            "dataType": "string",
+            "sourceColumn": "AccountNumber",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "AccountRecord",
+            "dataType": "double",
+            "sourceColumn": "AccountRecord",
+            "sourceProviderType": "numeric"
+          },
+          {
+            "name": "AccountSource",
+            "dataType": "string",
+            "sourceColumn": "AccountSource",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Account_Activity_Status",
+            "dataType": "string",
+            "sourceColumn": "Account_Activity_Status",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Account_from_e_store",
+            "dataType": "string",
+            "sourceColumn": "Account_from_e_store",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Account_Lifecycle_Stage",
+            "dataType": "string",
+            "sourceColumn": "Account_Lifecycle_Stage",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Accout_Number_Candela",
+            "dataType": "string",
+            "sourceColumn": "Accout_Number_Candela",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Amount_To_Next_Tier",
+            "dataType": "double",
+            "sourceColumn": "Amount_To_Next_Tier",
+            "sourceProviderType": "numeric"
+          },
+          {
+            "name": "Application_Interest",
+            "dataType": "string",
+            "sourceColumn": "Application_Interest",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "AVA_SFCORE__Billing_Last_Validated",
+            "dataType": "string",
+            "sourceColumn": "AVA_SFCORE__Billing_Last_Validated",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "AVA_SFCORE__Shipping_Last_Validated",
+            "dataType": "string",
+            "sourceColumn": "AVA_SFCORE__Shipping_Last_Validated",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "BillingCity",
+            "dataType": "string",
+            "sourceColumn": "BillingCity",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "BillingCountry",
+            "dataType": "string",
+            "sourceColumn": "BillingCountry",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "BillingCountryCode",
+            "dataType": "string",
+            "sourceColumn": "BillingCountryCode",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "BillingPostalCode",
+            "dataType": "string",
+            "sourceColumn": "BillingPostalCode",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "BillingState",
+            "dataType": "string",
+            "sourceColumn": "BillingState",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "BillingStateCode",
+            "dataType": "string",
+            "sourceColumn": "BillingStateCode",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "BillingStreet",
+            "dataType": "string",
+            "sourceColumn": "BillingStreet",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Billing_additional_info",
+            "dataType": "string",
+            "sourceColumn": "Billing_additional_info",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Billing_Address_Map",
+            "dataType": "string",
+            "sourceColumn": "Billing_Address_Map",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Body_Shaping_Treatments_Last_Update",
+            "dataType": "dateTime",
+            "sourceColumn": "Body_Shaping_Treatments_Last_Update",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "Closed_Lost_Opportunties",
+            "dataType": "double",
+            "sourceColumn": "Closed_Lost_Opportunties",
+            "sourceProviderType": "numeric"
+          },
+          {
+            "name": "Closed_Won_Opportunties",
+            "dataType": "double",
+            "sourceColumn": "Closed_Won_Opportunties",
+            "sourceProviderType": "numeric"
+          },
+          {
+            "name": "Competitor_System_Owned",
+            "dataType": "string",
+            "sourceColumn": "Competitor_System_Owned",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "CoolTouch_Account",
+            "dataType": "string",
+            "sourceColumn": "CoolTouch_Account",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "CPP_Account",
+            "dataType": "string",
+            "sourceColumn": "CPP_Account",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "CreatedById",
+            "dataType": "string",
+            "sourceColumn": "CreatedById",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "CreatedDate",
+            "dataType": "dateTime",
+            "sourceColumn": "CreatedDate",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "Credit",
+            "dataType": "double",
+            "sourceColumn": "Credit",
+            "sourceProviderType": "numeric"
+          },
+          {
+            "name": "CurrencyIsoCode",
+            "dataType": "string",
+            "sourceColumn": "CurrencyIsoCode",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Date_of_Last_CPP_Activity",
+            "dataType": "dateTime",
+            "sourceColumn": "Date_of_Last_CPP_Activity",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "Days_Since_Activity",
+            "dataType": "double",
+            "sourceColumn": "Days_Since_Activity",
+            "sourceProviderType": "numeric"
+          },
+          {
+            "name": "Default_Price_Book",
+            "dataType": "string",
+            "sourceColumn": "Default_Price_Book",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Description",
+            "dataType": "string",
+            "sourceColumn": "Description",
+            "sourceProviderType": "ntext"
+          },
+          {
+            "name": "Discovery_Opportunities",
+            "dataType": "double",
+            "sourceColumn": "Discovery_Opportunities",
+            "sourceProviderType": "numeric"
+          },
+          {
+            "name": "Distributes",
+            "dataType": "string",
+            "sourceColumn": "Distributes",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Eligible_Points",
+            "dataType": "double",
+            "sourceColumn": "Eligible_Points",
+            "sourceProviderType": "numeric"
+          },
+          {
+            "name": "End_User_Number",
+            "dataType": "string",
+            "sourceColumn": "End_User_Number",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "enhancePaymentDate",
+            "dataType": "dateTime",
+            "sourceColumn": "enhancePaymentDate",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "Expired_Eligable_Point_This_Quarter",
+            "dataType": "double",
+            "sourceColumn": "Expired_Eligable_Point_This_Quarter",
+            "sourceProviderType": "numeric"
+          },
+          {
+            "name": "Fax",
+            "dataType": "string",
+            "sourceColumn": "Fax",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "ForumId",
+            "dataType": "double",
+            "sourceColumn": "ForumId",
+            "sourceProviderType": "numeric"
+          },
+          {
+            "name": "Google_Maps_Link",
+            "dataType": "string",
+            "sourceColumn": "Google_Maps_Link",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Hide_from_clinic_finder",
+            "dataType": "string",
+            "sourceColumn": "Hide_from_clinic_finder",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Inactive_Reason",
+            "dataType": "string",
+            "sourceColumn": "Inactive_Reason",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Industry",
+            "dataType": "string",
+            "sourceColumn": "Industry",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Installed_products_model",
+            "dataType": "string",
+            "sourceColumn": "Installed_products_model",
+            "sourceProviderType": "ntext"
+          },
+          {
+            "name": "Interface_Error_Desc",
+            "dataType": "string",
+            "sourceColumn": "Interface_Error_Desc",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Interface_Status",
+            "dataType": "string",
+            "sourceColumn": "Interface_Status",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Interface_Update",
+            "dataType": "dateTime",
+            "sourceColumn": "Interface_Update",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "Invested_this_quarter",
+            "dataType": "double",
+            "sourceColumn": "Invested_this_quarter",
+            "sourceProviderType": "numeric"
+          },
+          {
+            "name": "IsCustomerPortal",
+            "dataType": "string",
+            "sourceColumn": "IsCustomerPortal",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "IsPartner",
+            "dataType": "string",
+            "sourceColumn": "IsPartner",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "ISR_Site_Number",
+            "dataType": "string",
+            "sourceColumn": "ISR_Site_Number",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Is_EMEA",
+            "dataType": "string",
+            "sourceColumn": "Is_EMEA",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Is_NA",
+            "dataType": "string",
+            "sourceColumn": "Is_NA",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Is_Velashape_Account",
+            "dataType": "string",
+            "sourceColumn": "Is_Velashape_Account",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "JP_Old_Account",
+            "dataType": "string",
+            "sourceColumn": "JP_Old_Account",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "LastActivityDate",
+            "dataType": "dateTime",
+            "sourceColumn": "LastActivityDate",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "LastModifiedById",
+            "dataType": "string",
+            "sourceColumn": "LastModifiedById",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "LastModifiedDate",
+            "dataType": "dateTime",
+            "sourceColumn": "LastModifiedDate",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "Last_time_purchased_date",
+            "dataType": "dateTime",
+            "sourceColumn": "Last_time_purchased_date",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "Last_Visit_Date",
+            "dataType": "dateTime",
+            "sourceColumn": "Last_Visit_Date",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "Last_Visit_Status",
+            "dataType": "string",
+            "sourceColumn": "Last_Visit_Status",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Lead_Converted",
+            "dataType": "string",
+            "sourceColumn": "Lead_Converted",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Legal_Billing_Country",
+            "dataType": "string",
+            "sourceColumn": "Legal_Billing_Country",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Legal_Operating_Account_Name",
+            "dataType": "string",
+            "sourceColumn": "Legal_Operating_Account_Name",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Legal_Shipping_Country",
+            "dataType": "string",
+            "sourceColumn": "Legal_Shipping_Country",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "MAB",
+            "dataType": "string",
+            "sourceColumn": "MAB",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Model_Distributes",
+            "dataType": "string",
+            "sourceColumn": "Model_Distributes",
+            "sourceProviderType": "ntext"
+          },
+          {
+            "name": "Name",
+            "dataType": "string",
+            "sourceColumn": "Name",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "National_Account",
+            "dataType": "string",
+            "sourceColumn": "National_Account",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Nationa_Account_Established_Date",
+            "dataType": "dateTime",
+            "sourceColumn": "Nationa_Account_Established_Date",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "Net_30",
+            "dataType": "string",
+            "sourceColumn": "Net_30",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Net_Term",
+            "dataType": "string",
+            "sourceColumn": "Net_Term",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "newBeautyOptInDate",
+            "dataType": "dateTime",
+            "sourceColumn": "newBeautyOptInDate",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "No_Territory_Assigned",
+            "dataType": "string",
+            "sourceColumn": "No_Territory_Assigned",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Office_Email",
+            "dataType": "string",
+            "sourceColumn": "Office_Email",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Open_Opportunties",
+            "dataType": "double",
+            "sourceColumn": "Open_Opportunties",
+            "sourceProviderType": "numeric"
+          },
+          {
+            "name": "Opportunities_Count",
+            "dataType": "double",
+            "sourceColumn": "Opportunities_Count",
+            "sourceProviderType": "numeric"
+          },
+          {
+            "name": "Oracle_Bill_To_Site_Number",
+            "dataType": "string",
+            "sourceColumn": "Oracle_Bill_To_Site_Number",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Oracle_Ship_To_Site_Number",
+            "dataType": "string",
+            "sourceColumn": "Oracle_Ship_To_Site_Number",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Outcome_Health_POC",
+            "dataType": "string",
+            "sourceColumn": "Outcome_Health_POC",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Ownership",
+            "dataType": "string",
+            "sourceColumn": "Ownership",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Parent_Account_FullID",
+            "dataType": "string",
+            "sourceColumn": "Parent_Account_FullID",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "PDP_Account_Email",
+            "dataType": "string",
+            "sourceColumn": "PDP_Account_Email",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "PDP_Account_User",
+            "dataType": "string",
+            "sourceColumn": "PDP_Account_User",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "PDP_First_Name",
+            "dataType": "string",
+            "sourceColumn": "PDP_First_Name",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Pending_For_Redemption",
+            "dataType": "double",
+            "sourceColumn": "Pending_For_Redemption",
+            "sourceProviderType": "numeric"
+          },
+          {
+            "name": "Pending_Points",
+            "dataType": "double",
+            "sourceColumn": "Pending_Points",
+            "sourceProviderType": "numeric"
+          },
+          {
+            "name": "Phone",
+            "dataType": "string",
+            "sourceColumn": "Phone",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "PhotoUrl",
+            "dataType": "string",
+            "sourceColumn": "PhotoUrl",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Points_Balance",
+            "dataType": "double",
+            "sourceColumn": "Points_Balance",
+            "sourceProviderType": "numeric"
+          },
+          {
+            "name": "Preferred_Distributor_User_For_Community",
+            "dataType": "string",
+            "sourceColumn": "Preferred_Distributor_User_For_Community",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Preferred_Language",
+            "dataType": "string",
+            "sourceColumn": "Preferred_Language",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Principal_Contact",
+            "dataType": "string",
+            "sourceColumn": "Principal_Contact",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Product_Referrence",
+            "dataType": "string",
+            "sourceColumn": "Product_Referrence",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Rating",
+            "dataType": "string",
+            "sourceColumn": "Rating",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Reedemed_Points",
+            "dataType": "double",
+            "sourceColumn": "Reedemed_Points",
+            "sourceProviderType": "numeric"
+          },
+          {
+            "name": "Region_Segment",
+            "dataType": "string",
+            "sourceColumn": "Region_Segment",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Sales_Dept_Number",
+            "dataType": "double",
+            "sourceColumn": "Sales_Dept_Number",
+            "sourceProviderType": "numeric"
+          },
+          {
+            "name": "Satisfaction_Rating",
+            "dataType": "string",
+            "sourceColumn": "Satisfaction_Rating",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Satisfaction",
+            "dataType": "string",
+            "sourceColumn": "Satisfaction",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Segment_ID",
+            "dataType": "string",
+            "sourceColumn": "Segment_ID",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "ShippingCity",
+            "dataType": "string",
+            "sourceColumn": "ShippingCity",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "ShippingCountry",
+            "dataType": "string",
+            "sourceColumn": "ShippingCountry",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "ShippingCountryCode",
+            "dataType": "string",
+            "sourceColumn": "ShippingCountryCode",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "ShippingPostalCode",
+            "dataType": "string",
+            "sourceColumn": "ShippingPostalCode",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "ShippingState",
+            "dataType": "string",
+            "sourceColumn": "ShippingState",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "ShippingStateCode",
+            "dataType": "string",
+            "sourceColumn": "ShippingStateCode",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "ShippingStreet",
+            "dataType": "string",
+            "sourceColumn": "ShippingStreet",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Shipping_additional_info",
+            "dataType": "string",
+            "sourceColumn": "Shipping_additional_info",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Shipping_Address_Map",
+            "dataType": "string",
+            "sourceColumn": "Shipping_Address_Map",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Shop_Price_Book",
+            "dataType": "string",
+            "sourceColumn": "Shop_Price_Book",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Single_Treatment_Price",
+            "dataType": "double",
+            "sourceColumn": "Single_Treatment_Price",
+            "sourceProviderType": "numeric"
+          },
+          {
+            "name": "Site",
+            "dataType": "string",
+            "sourceColumn": "Site",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "SpaMedware",
+            "dataType": "string",
+            "sourceColumn": "SpaMedware",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Speciality",
+            "dataType": "string",
+            "sourceColumn": "Speciality",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Status",
+            "dataType": "string",
+            "sourceColumn": "Status",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Subscription_Date",
+            "dataType": "dateTime",
+            "sourceColumn": "Subscription_Date",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "Sub_Category",
+            "dataType": "string",
+            "sourceColumn": "Sub_Category",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "SVMX_3rd_Party_Models_Id",
+            "dataType": "string",
+            "sourceColumn": "SVMX_3rd_Party_Models_Id",
+            "sourceProviderType": "ntext"
+          },
+          {
+            "name": "SVMX_3rd_Party_Models_name",
+            "dataType": "string",
+            "sourceColumn": "SVMX_3rd_Party_Models_name",
+            "sourceProviderType": "ntext"
+          },
+          {
+            "name": "SVMX_AccountWithSecondary_Operating_Unit",
+            "dataType": "string",
+            "sourceColumn": "SVMX_AccountWithSecondary_Operating_Unit",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "SVMX_Account_Owner_Name",
+            "dataType": "string",
+            "sourceColumn": "SVMX_Account_Owner_Name",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "SVMX_Community_AUS_Sharing_Rule",
+            "dataType": "string",
+            "sourceColumn": "SVMX_Community_AUS_Sharing_Rule",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "SVMX_Credit_Hold_in_Operating_Unit",
+            "dataType": "string",
+            "sourceColumn": "SVMX_Credit_Hold_in_Operating_Unit",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "SVMX_Credit_Hold",
+            "dataType": "string",
+            "sourceColumn": "SVMX_Credit_Hold",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "SVMX_Currency_For_Service",
+            "dataType": "string",
+            "sourceColumn": "SVMX_Currency_For_Service",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "SVMX_Direct_Models_Ids",
+            "dataType": "string",
+            "sourceColumn": "SVMX_Direct_Models_Ids",
+            "sourceProviderType": "ntext"
+          },
+          {
+            "name": "SVMX_Direct_Models_name",
+            "dataType": "string",
+            "sourceColumn": "SVMX_Direct_Models_name",
+            "sourceProviderType": "ntext"
+          },
+          {
+            "name": "SVMX_Do_Not_Calculate_Models",
+            "dataType": "string",
+            "sourceColumn": "SVMX_Do_Not_Calculate_Models",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "SVMX_Hold_Shipment_Lines",
+            "dataType": "string",
+            "sourceColumn": "SVMX_Hold_Shipment_Lines",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "SVMX_Importation_approval_is_required",
+            "dataType": "string",
+            "sourceColumn": "SVMX_Importation_approval_is_required",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "SVMX_Last_Update_For_Marketing",
+            "dataType": "dateTime",
+            "sourceColumn": "SVMX_Last_Update_For_Marketing",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "SVMX_Logistics_Profile",
+            "dataType": "string",
+            "sourceColumn": "SVMX_Logistics_Profile",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "SVMX_Maureen_s_User",
+            "dataType": "string",
+            "sourceColumn": "SVMX_Maureen_s_User",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "SVMX_National_Account_Flag",
+            "dataType": "string",
+            "sourceColumn": "SVMX_National_Account_Flag",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "SVMX_National_Account_Formula",
+            "dataType": "string",
+            "sourceColumn": "SVMX_National_Account_Formula",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "SVMX_Need_Schedular",
+            "dataType": "string",
+            "sourceColumn": "SVMX_Need_Schedular",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "SVMX_Operating_Unit",
+            "dataType": "string",
+            "sourceColumn": "SVMX_Operating_Unit",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "SVMX_Pay_In_Advance",
+            "dataType": "string",
+            "sourceColumn": "SVMX_Pay_In_Advance",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "SVMX_Preferred_user_for_PO",
+            "dataType": "string",
+            "sourceColumn": "SVMX_Preferred_user_for_PO",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "SVMX_Recommended_Consolidation_Ship_Date",
+            "dataType": "string",
+            "sourceColumn": "SVMX_Recommended_Consolidation_Ship_Date",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "SVMX_Secondary_Operating_Unit",
+            "dataType": "string",
+            "sourceColumn": "SVMX_Secondary_Operating_Unit",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "SVMX_Send_price_book_status",
+            "dataType": "string",
+            "sourceColumn": "SVMX_Send_price_book_status",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "SVMX_Send_price_book_userID",
+            "dataType": "string",
+            "sourceColumn": "SVMX_Send_price_book_userID",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "SVMX_Sharing_With_Community_AUS",
+            "dataType": "string",
+            "sourceColumn": "SVMX_Sharing_With_Community_AUS",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "SVMX_Tertiary_Operating_Unit",
+            "dataType": "string",
+            "sourceColumn": "SVMX_Tertiary_Operating_Unit",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "SVMX_Top_Region",
+            "dataType": "string",
+            "sourceColumn": "SVMX_Top_Region",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "SVMX_Total_ISB_Under_Contract",
+            "dataType": "double",
+            "sourceColumn": "SVMX_Total_ISB_Under_Contract",
+            "sourceProviderType": "numeric"
+          },
+          {
+            "name": "SVMX_Total_Number_Of_Active_Install_Base",
+            "dataType": "double",
+            "sourceColumn": "SVMX_Total_Number_Of_Active_Install_Base",
+            "sourceProviderType": "numeric"
+          },
+          {
+            "name": "SVMX_Total_Number_Of_Install_Base",
+            "dataType": "double",
+            "sourceColumn": "SVMX_Total_Number_Of_Install_Base",
+            "sourceProviderType": "numeric"
+          },
+          {
+            "name": "SVMX_User_Allow_To_See_Pricebook",
+            "dataType": "string",
+            "sourceColumn": "SVMX_User_Allow_To_See_Pricebook",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "SystemModstamp",
+            "dataType": "dateTime",
+            "sourceColumn": "SystemModstamp",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "Tax_ID",
+            "dataType": "string",
+            "sourceColumn": "Tax_ID",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Tax_Registered",
+            "dataType": "string",
+            "sourceColumn": "Tax_Registered",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Tax_Resolve",
+            "dataType": "string",
+            "sourceColumn": "Tax_Resolve",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Territory_Allcloud",
+            "dataType": "string",
+            "sourceColumn": "Territory_Allcloud",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Territory",
+            "dataType": "string",
+            "sourceColumn": "Territory",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Tier_Type",
+            "dataType": "string",
+            "sourceColumn": "Tier_Type",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Time_since_last_CPP_Activity",
+            "dataType": "double",
+            "sourceColumn": "Time_since_last_CPP_Activity",
+            "sourceProviderType": "numeric"
+          },
+          {
+            "name": "TM_Territory_Number",
+            "dataType": "double",
+            "sourceColumn": "TM_Territory_Number",
+            "sourceProviderType": "numeric"
+          },
+          {
+            "name": "TotalCoupons",
+            "dataType": "double",
+            "sourceColumn": "TotalCoupons",
+            "sourceProviderType": "numeric"
+          },
+          {
+            "name": "Total_FTZ_to_Date_Qty",
+            "dataType": "double",
+            "sourceColumn": "Total_FTZ_to_Date_Qty",
+            "sourceProviderType": "numeric"
+          },
+          {
+            "name": "Transactions_Points",
+            "dataType": "double",
+            "sourceColumn": "Transactions_Points",
+            "sourceProviderType": "numeric"
+          },
+          {
+            "name": "Type",
+            "dataType": "string",
+            "sourceColumn": "Type",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Ultrashape_Account",
+            "dataType": "string",
+            "sourceColumn": "Ultrashape_Account",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Ultrashape_is_Not_in_Use",
+            "dataType": "string",
+            "sourceColumn": "Ultrashape_is_Not_in_Use",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "UltraShape_KOL_Discount_Expiration_Date",
+            "dataType": "dateTime",
+            "sourceColumn": "UltraShape_KOL_Discount_Expiration_Date",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "UltraShape_KOL",
+            "dataType": "string",
+            "sourceColumn": "UltraShape_KOL",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "UltraShape_Partner_Package",
+            "dataType": "string",
+            "sourceColumn": "UltraShape_Partner_Package",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "UltraShape_User_Level",
+            "dataType": "string",
+            "sourceColumn": "UltraShape_User_Level",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "URL",
+            "dataType": "string",
+            "sourceColumn": "URL",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Validated_By",
+            "dataType": "string",
+            "sourceColumn": "Validated_By",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Validated_Date",
+            "dataType": "dateTime",
+            "sourceColumn": "Validated_Date",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "VAT_Number",
+            "dataType": "string",
+            "sourceColumn": "VAT_Number",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Website",
+            "dataType": "string",
+            "sourceColumn": "Website",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "W_9",
+            "dataType": "string",
+            "sourceColumn": "W_9",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Years_In_Business",
+            "dataType": "string",
+            "sourceColumn": "Years_In_Business",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "isActiveRecord",
+            "dataType": "boolean",
+            "sourceColumn": "isActiveRecord",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "sourceProviderType": "bit"
+          },
+          {
+            "name": "RecordValidStartDate",
+            "dataType": "dateTime",
+            "sourceColumn": "RecordValidStartDate",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "RecordValidEndDate",
+            "dataType": "dateTime",
+            "sourceColumn": "RecordValidEndDate",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DIM_ACCOUNT",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [salesforce].[DIM_ACCOUNT].* FROM [salesforce].[DIM_ACCOUNT] ",
+              "dataSource": "CandelaKPI-Dev"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [salesforce].[DIM_ACCOUNT].* FROM [salesforce].[DIM_ACCOUNT] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DIM_ACCOUNT"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "salesforce"
+          }
+        ]
+      },
+      {
+        "name": "DIM_ACQUISITION",
+        "columns": [
+          {
+            "name": "acquisition_id",
+            "dataType": "int64",
+            "sourceColumn": "acquisition_id",
+            "sourceProviderType": "bigint"
+          },
+          {
+            "name": "Acquisition_Program_Id",
+            "dataType": "double",
+            "sourceColumn": "Acquisition_Program_Id",
+            "sourceProviderType": "numeric"
+          },
+          {
+            "name": "Acquisition_Program",
+            "dataType": "string",
+            "sourceColumn": "Acquisition_Program",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "isActiveRecord",
+            "dataType": "boolean",
+            "sourceColumn": "isActiveRecord",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "sourceProviderType": "bit"
+          },
+          {
+            "name": "RecordValidStartDate",
+            "dataType": "dateTime",
+            "sourceColumn": "RecordValidStartDate",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "RecordValidEndDate",
+            "dataType": "dateTime",
+            "sourceColumn": "RecordValidEndDate",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DIM_ACQUISITION",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [salesforce].[DIM_ACQUISITION].* FROM [salesforce].[DIM_ACQUISITION] ",
+              "dataSource": "CandelaKPI-Dev"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [salesforce].[DIM_ACQUISITION].* FROM [salesforce].[DIM_ACQUISITION] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DIM_ACQUISITION"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "salesforce"
+          }
+        ]
+      },
+      {
+        "name": "Dim_Campaign",
+        "columns": [
+          {
+            "name": "Campaignid",
+            "dataType": "int64",
+            "sourceColumn": "Campaignid",
+            "sourceProviderType": "bigint"
+          },
+          {
+            "name": "Id",
+            "dataType": "string",
+            "sourceColumn": "Id",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Owner_user_Id",
+            "dataType": "string",
+            "sourceColumn": "Owner_user_Id",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "ActualCost",
+            "dataType": "double",
+            "sourceColumn": "ActualCost",
+            "sourceProviderType": "numeric"
+          },
+          {
+            "name": "AmountAllOpportunities",
+            "dataType": "double",
+            "sourceColumn": "AmountAllOpportunities",
+            "sourceProviderType": "numeric"
+          },
+          {
+            "name": "AmountWonOpportunities",
+            "dataType": "double",
+            "sourceColumn": "AmountWonOpportunities",
+            "sourceProviderType": "numeric"
+          },
+          {
+            "name": "BudgetedCost",
+            "dataType": "double",
+            "sourceColumn": "BudgetedCost",
+            "sourceProviderType": "numeric"
+          },
+          {
+            "name": "ContactEmail",
+            "dataType": "string",
+            "sourceColumn": "ContactEmail",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Cost_Per_Lead",
+            "dataType": "double",
+            "sourceColumn": "Cost_Per_Lead",
+            "sourceProviderType": "numeric"
+          },
+          {
+            "name": "Cost_Per_Opportunity",
+            "dataType": "double",
+            "sourceColumn": "Cost_Per_Opportunity",
+            "sourceProviderType": "numeric"
+          },
+          {
+            "name": "CreatedBy_user_id",
+            "dataType": "string",
+            "sourceColumn": "CreatedBy_user_id",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "CreatedDate",
+            "dataType": "dateTime",
+            "sourceColumn": "CreatedDate",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "CurrencyIsoCode",
+            "dataType": "string",
+            "sourceColumn": "CurrencyIsoCode",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Description",
+            "dataType": "string",
+            "sourceColumn": "Description",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "EndDate",
+            "dataType": "dateTime",
+            "sourceColumn": "EndDate",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "IsActive",
+            "dataType": "string",
+            "sourceColumn": "IsActive",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "IsDeleted",
+            "dataType": "string",
+            "sourceColumn": "IsDeleted",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "LastModifiedBy_user_id",
+            "dataType": "string",
+            "sourceColumn": "LastModifiedBy_user_id",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "LastModifiedDate",
+            "dataType": "dateTime",
+            "sourceColumn": "LastModifiedDate",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "LocationCity",
+            "dataType": "string",
+            "sourceColumn": "LocationCity",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "LocationName",
+            "dataType": "string",
+            "sourceColumn": "LocationName",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "LocationPostalCode",
+            "dataType": "string",
+            "sourceColumn": "LocationPostalCode",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "LocationState",
+            "dataType": "string",
+            "sourceColumn": "LocationState",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "LocationStreet",
+            "dataType": "string",
+            "sourceColumn": "LocationStreet",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "NumberOfContacts",
+            "dataType": "int64",
+            "sourceColumn": "NumberOfContacts",
+            "sourceProviderType": "int"
+          },
+          {
+            "name": "NumberOfConvertedLeads",
+            "dataType": "int64",
+            "sourceColumn": "NumberOfConvertedLeads",
+            "sourceProviderType": "int"
+          },
+          {
+            "name": "NumberOfLeads",
+            "dataType": "int64",
+            "sourceColumn": "NumberOfLeads",
+            "sourceProviderType": "int"
+          },
+          {
+            "name": "NumberOfOpportunities",
+            "dataType": "int64",
+            "sourceColumn": "NumberOfOpportunities",
+            "sourceProviderType": "int"
+          },
+          {
+            "name": "NumberOfResponses",
+            "dataType": "int64",
+            "sourceColumn": "NumberOfResponses",
+            "sourceProviderType": "int"
+          },
+          {
+            "name": "NumberOfWonOpportunities",
+            "dataType": "double",
+            "sourceColumn": "NumberOfWonOpportunities",
+            "sourceProviderType": "numeric"
+          },
+          {
+            "name": "NumberSent",
+            "dataType": "double",
+            "sourceColumn": "NumberSent",
+            "sourceProviderType": "numeric"
+          },
+          {
+            "name": "Phone",
+            "dataType": "string",
+            "sourceColumn": "Phone",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "StartDate",
+            "dataType": "dateTime",
+            "sourceColumn": "StartDate",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "StartTime",
+            "dataType": "string",
+            "sourceColumn": "StartTime",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Status",
+            "dataType": "string",
+            "sourceColumn": "Status",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Type",
+            "dataType": "string",
+            "sourceColumn": "Type",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "URL",
+            "dataType": "string",
+            "sourceColumn": "URL",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "bizible2__Bizible_Attribution_SyncType",
+            "dataType": "string",
+            "sourceColumn": "bizible2__Bizible_Attribution_SyncType",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "bizible2__Touchpoint_End_Date",
+            "dataType": "dateTime",
+            "sourceColumn": "bizible2__Touchpoint_End_Date",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "bizible2__Touchpoint_Start_Date",
+            "dataType": "dateTime",
+            "sourceColumn": "bizible2__Touchpoint_Start_Date",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "bizible2__UniqueId",
+            "dataType": "string",
+            "sourceColumn": "bizible2__UniqueId",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "isActiveRecord",
+            "dataType": "boolean",
+            "sourceColumn": "isActiveRecord",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "sourceProviderType": "bit"
+          },
+          {
+            "name": "RecordValidStartDate",
+            "dataType": "dateTime",
+            "sourceColumn": "RecordValidStartDate",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "RecordValidEndDate",
+            "dataType": "dateTime",
+            "sourceColumn": "RecordValidEndDate",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "campaign_nm",
+            "dataType": "string",
+            "sourceColumn": "campaign_nm",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Campaign_nm_english",
+            "dataType": "string",
+            "sourceColumn": "Campaign_nm_english",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "SpeakersOrBooth",
+            "dataType": "string",
+            "sourceColumn": "SpeakersOrBooth",
+            "sourceProviderType": "nvarchar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Dim_Campaign",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [salesforce].[Dim_Campaign].* FROM [salesforce].[Dim_Campaign] ",
+              "dataSource": "CandelaKPI-Dev"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [salesforce].[Dim_Campaign].* FROM [salesforce].[Dim_Campaign] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Dim_Campaign"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "salesforce"
+          }
+        ]
+      },
+      {
+        "name": "DIM_CHANNEL",
+        "columns": [
+          {
+            "name": "channel_id",
+            "dataType": "int64",
+            "sourceColumn": "channel_id",
+            "sourceProviderType": "bigint"
+          },
+          {
+            "name": "channel_nm",
+            "dataType": "string",
+            "sourceColumn": "channel_nm",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "isActiveRecord",
+            "dataType": "boolean",
+            "sourceColumn": "isActiveRecord",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "sourceProviderType": "bit"
+          },
+          {
+            "name": "RecordValidStartDate",
+            "dataType": "dateTime",
+            "sourceColumn": "RecordValidStartDate",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "RecordValidEndDate",
+            "dataType": "dateTime",
+            "sourceColumn": "RecordValidEndDate",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DIM_CHANNEL",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [salesforce].[DIM_CHANNEL].* FROM [salesforce].[DIM_CHANNEL] ",
+              "dataSource": "CandelaKPI-Dev"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [salesforce].[DIM_CHANNEL].* FROM [salesforce].[DIM_CHANNEL] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DIM_CHANNEL"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "salesforce"
+          }
+        ]
+      },
+      {
+        "name": "DIM_ENGAGEMENT_TYPE",
+        "columns": [
+          {
+            "name": "ID",
+            "dataType": "int64",
+            "sourceColumn": "ID",
+            "sourceProviderType": "int"
+          },
+          {
+            "name": "Engagement_Type",
+            "dataType": "string",
+            "sourceColumn": "Engagement_Type",
+            "sourceProviderType": "nvarchar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DIM_ENGAGEMENT_TYPE",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [salesforce].[DIM_ENGAGEMENT_TYPE].* FROM [salesforce].[DIM_ENGAGEMENT_TYPE] ",
+              "dataSource": "CandelaKPI-Dev"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [salesforce].[DIM_ENGAGEMENT_TYPE].* FROM [salesforce].[DIM_ENGAGEMENT_TYPE] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DIM_ENGAGEMENT_TYPE"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "salesforce"
+          }
+        ]
+      },
+      {
+        "name": "DIM_LEAD",
+        "columns": [
+          {
+            "name": "lead_id",
+            "dataType": "int64",
+            "sourceColumn": "lead_id",
+            "sourceProviderType": "bigint"
+          },
+          {
+            "name": "City",
+            "dataType": "string",
+            "sourceColumn": "City",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Company",
+            "dataType": "string",
+            "sourceColumn": "Company",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Competitor_System_Owned",
+            "dataType": "string",
+            "sourceColumn": "Competitor_System_Owned",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Competitor",
+            "dataType": "string",
+            "sourceColumn": "Competitor",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Contact_Request_Notes",
+            "dataType": "string",
+            "sourceColumn": "Contact_Request_Notes",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "ConvertedAccountId",
+            "dataType": "string",
+            "sourceColumn": "ConvertedAccountId",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "ConvertedContactId",
+            "dataType": "string",
+            "sourceColumn": "ConvertedContactId",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "ConvertedDate",
+            "dataType": "dateTime",
+            "sourceColumn": "ConvertedDate",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "ConvertedOpportunityId",
+            "dataType": "string",
+            "sourceColumn": "ConvertedOpportunityId",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Converted_Opportunity",
+            "dataType": "string",
+            "sourceColumn": "Converted_Opportunity",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Converted",
+            "dataType": "string",
+            "sourceColumn": "Converted",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Country",
+            "dataType": "string",
+            "sourceColumn": "Country",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "CountryCode",
+            "dataType": "string",
+            "sourceColumn": "CountryCode",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "CreatedById",
+            "dataType": "string",
+            "sourceColumn": "CreatedById",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "CreatedDate",
+            "dataType": "dateTime",
+            "sourceColumn": "CreatedDate",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "CurrencyIsoCode",
+            "dataType": "string",
+            "sourceColumn": "CurrencyIsoCode",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Current_Treatment",
+            "dataType": "string",
+            "sourceColumn": "Current_Treatment",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "DB_Created_Date_without_Time",
+            "dataType": "dateTime",
+            "sourceColumn": "DB_Created_Date_without_Time",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "DB_Lead_Age",
+            "dataType": "double",
+            "sourceColumn": "DB_Lead_Age",
+            "sourceProviderType": "numeric"
+          },
+          {
+            "name": "Description",
+            "dataType": "string",
+            "sourceColumn": "Description",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "DoNotCall",
+            "dataType": "string",
+            "sourceColumn": "DoNotCall",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Email",
+            "dataType": "string",
+            "sourceColumn": "Email",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "EmailBouncedDate",
+            "dataType": "dateTime",
+            "sourceColumn": "EmailBouncedDate",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "EmailBouncedReason",
+            "dataType": "string",
+            "sourceColumn": "EmailBouncedReason",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Financial_Qualified",
+            "dataType": "string",
+            "sourceColumn": "Financial_Qualified",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "FirstName",
+            "dataType": "string",
+            "sourceColumn": "FirstName",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Goal_Date",
+            "dataType": "dateTime",
+            "sourceColumn": "Goal_Date",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "HasOptedOutOfEmail",
+            "dataType": "string",
+            "sourceColumn": "HasOptedOutOfEmail",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "HasOptedOutOfFax",
+            "dataType": "string",
+            "sourceColumn": "HasOptedOutOfFax",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "How_was_this_lead_qualified",
+            "dataType": "string",
+            "sourceColumn": "How_was_this_lead_qualified",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Id",
+            "dataType": "string",
+            "sourceColumn": "Id",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Industry",
+            "dataType": "string",
+            "sourceColumn": "Industry",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Inside_sales_qualified_lead",
+            "dataType": "string",
+            "sourceColumn": "Inside_sales_qualified_lead",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "In_Business_Since",
+            "dataType": "string",
+            "sourceColumn": "In_Business_Since",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "IsConverted",
+            "dataType": "string",
+            "sourceColumn": "IsConverted",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "IsDeleted",
+            "dataType": "string",
+            "sourceColumn": "IsDeleted",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "IsUnreadByOwner",
+            "dataType": "string",
+            "sourceColumn": "IsUnreadByOwner",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Is_Syneron_customer",
+            "dataType": "string",
+            "sourceColumn": "Is_Syneron_customer",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Is_Updated_By_Sales",
+            "dataType": "string",
+            "sourceColumn": "Is_Updated_By_Sales",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Job_Function",
+            "dataType": "string",
+            "sourceColumn": "Job_Function",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "LastActivityDate",
+            "dataType": "dateTime",
+            "sourceColumn": "LastActivityDate",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "LastModifiedById",
+            "dataType": "string",
+            "sourceColumn": "LastModifiedById",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "LastModifiedDate",
+            "dataType": "dateTime",
+            "sourceColumn": "LastModifiedDate",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "LastName",
+            "dataType": "string",
+            "sourceColumn": "LastName",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "LastReferencedDate",
+            "dataType": "dateTime",
+            "sourceColumn": "LastReferencedDate",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "LastViewedDate",
+            "dataType": "dateTime",
+            "sourceColumn": "LastViewedDate",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "Last_Activity",
+            "dataType": "dateTime",
+            "sourceColumn": "Last_Activity",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "Last_Expressed_Product_Interest",
+            "dataType": "string",
+            "sourceColumn": "Last_Expressed_Product_Interest",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Last_Inferred_Product_Interest",
+            "dataType": "string",
+            "sourceColumn": "Last_Inferred_Product_Interest",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "LeadSource",
+            "dataType": "string",
+            "sourceColumn": "LeadSource",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Leads_Power_of_1",
+            "dataType": "double",
+            "sourceColumn": "Leads_Power_of_1",
+            "sourceProviderType": "numeric"
+          },
+          {
+            "name": "Marketing_qualified_lead",
+            "dataType": "string",
+            "sourceColumn": "Marketing_qualified_lead",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Medical_Designation",
+            "dataType": "string",
+            "sourceColumn": "Medical_Designation",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Min_Act_On_a_Lead",
+            "dataType": "double",
+            "sourceColumn": "Min_Act_On_a_Lead",
+            "sourceProviderType": "numeric"
+          },
+          {
+            "name": "mkto2__Inferred_City",
+            "dataType": "string",
+            "sourceColumn": "mkto2__Inferred_City",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "mkto2__Inferred_Company",
+            "dataType": "string",
+            "sourceColumn": "mkto2__Inferred_Company",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "mkto2__Inferred_Country",
+            "dataType": "string",
+            "sourceColumn": "mkto2__Inferred_Country",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "mkto2__Inferred_Metropolitan_Area",
+            "dataType": "string",
+            "sourceColumn": "mkto2__Inferred_Metropolitan_Area",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "mkto2__Inferred_Phone_Area_Code",
+            "dataType": "string",
+            "sourceColumn": "mkto2__Inferred_Phone_Area_Code",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "mkto2__Inferred_Postal_Code",
+            "dataType": "string",
+            "sourceColumn": "mkto2__Inferred_Postal_Code",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "mkto2__Inferred_State_Region",
+            "dataType": "string",
+            "sourceColumn": "mkto2__Inferred_State_Region",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "mkto2__Lead_Score",
+            "dataType": "double",
+            "sourceColumn": "mkto2__Lead_Score",
+            "sourceProviderType": "numeric"
+          },
+          {
+            "name": "mkto2__Original_Referrer",
+            "dataType": "string",
+            "sourceColumn": "mkto2__Original_Referrer",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "mkto2__Original_Search_Engine",
+            "dataType": "string",
+            "sourceColumn": "mkto2__Original_Search_Engine",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "mkto2__Original_Search_Phrase",
+            "dataType": "string",
+            "sourceColumn": "mkto2__Original_Search_Phrase",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "mkto2__Original_Source_Info",
+            "dataType": "string",
+            "sourceColumn": "mkto2__Original_Source_Info",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "mkto2__Original_Source_Type",
+            "dataType": "string",
+            "sourceColumn": "mkto2__Original_Source_Type",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "mkto_si__HideDate",
+            "dataType": "dateTime",
+            "sourceColumn": "mkto_si__HideDate",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "mkto_si__Last_Interesting_Moment_Date",
+            "dataType": "dateTime",
+            "sourceColumn": "mkto_si__Last_Interesting_Moment_Date",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "mkto_si__Last_Interesting_Moment_Desc",
+            "dataType": "string",
+            "sourceColumn": "mkto_si__Last_Interesting_Moment_Desc",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "mkto_si__Last_Interesting_Moment_Source",
+            "dataType": "string",
+            "sourceColumn": "mkto_si__Last_Interesting_Moment_Source",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "mkto_si__Last_Interesting_Moment_Type",
+            "dataType": "string",
+            "sourceColumn": "mkto_si__Last_Interesting_Moment_Type",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "mkto_si__Last_Interesting_Moment",
+            "dataType": "string",
+            "sourceColumn": "mkto_si__Last_Interesting_Moment",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "mkto_si__Priority",
+            "dataType": "double",
+            "sourceColumn": "mkto_si__Priority",
+            "sourceProviderType": "numeric"
+          },
+          {
+            "name": "mkto_si__Relative_Score_Value",
+            "dataType": "double",
+            "sourceColumn": "mkto_si__Relative_Score_Value",
+            "sourceProviderType": "numeric"
+          },
+          {
+            "name": "Name",
+            "dataType": "string",
+            "sourceColumn": "Name",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Next_Step_Client",
+            "dataType": "string",
+            "sourceColumn": "Next_Step_Client",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Open_status_counter",
+            "dataType": "double",
+            "sourceColumn": "Open_status_counter",
+            "sourceProviderType": "numeric"
+          },
+          {
+            "name": "Owner_Id",
+            "dataType": "string",
+            "sourceColumn": "Owner_Id",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Patient_Skin_Type_Class_III_or_higher",
+            "dataType": "double",
+            "sourceColumn": "Patient_Skin_Type_Class_III_or_higher",
+            "sourceProviderType": "numeric"
+          },
+          {
+            "name": "PostalCode",
+            "dataType": "string",
+            "sourceColumn": "PostalCode",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Purchase_Time_Frame",
+            "dataType": "double",
+            "sourceColumn": "Purchase_Time_Frame",
+            "sourceProviderType": "numeric"
+          },
+          {
+            "name": "Rating",
+            "dataType": "string",
+            "sourceColumn": "Rating",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Reasons_for_1st_Recommendation",
+            "dataType": "string",
+            "sourceColumn": "Reasons_for_1st_Recommendation",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Reasons_for_2nd_Recommendation",
+            "dataType": "string",
+            "sourceColumn": "Reasons_for_2nd_Recommendation",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Reasons_for_3rd_Recommendation",
+            "dataType": "string",
+            "sourceColumn": "Reasons_for_3rd_Recommendation",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "RecordTypeId",
+            "dataType": "string",
+            "sourceColumn": "RecordTypeId",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Referred_By",
+            "dataType": "string",
+            "sourceColumn": "Referred_By",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Sales_qualified_lead",
+            "dataType": "string",
+            "sourceColumn": "Sales_qualified_lead",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Salutation",
+            "dataType": "string",
+            "sourceColumn": "Salutation",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Selected_System",
+            "dataType": "string",
+            "sourceColumn": "Selected_System",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Source_Web_Page",
+            "dataType": "string",
+            "sourceColumn": "Source_Web_Page",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Speciality",
+            "dataType": "string",
+            "sourceColumn": "Speciality",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "State",
+            "dataType": "string",
+            "sourceColumn": "State",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "StateCode",
+            "dataType": "string",
+            "sourceColumn": "StateCode",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Status",
+            "dataType": "string",
+            "sourceColumn": "Status",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Street",
+            "dataType": "string",
+            "sourceColumn": "Street",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Sub_Category",
+            "dataType": "string",
+            "sourceColumn": "Sub_Category",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Syneron_Systems_Interested_In",
+            "dataType": "string",
+            "sourceColumn": "Syneron_Systems_Interested_In",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "SystemModstamp",
+            "dataType": "dateTime",
+            "sourceColumn": "SystemModstamp",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "Territory",
+            "dataType": "string",
+            "sourceColumn": "Territory",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Title",
+            "dataType": "string",
+            "sourceColumn": "Title",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Treatments_Currently_Offered",
+            "dataType": "string",
+            "sourceColumn": "Treatments_Currently_Offered",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Treatment_Interest",
+            "dataType": "string",
+            "sourceColumn": "Treatment_Interest",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Treatment_Speed",
+            "dataType": "string",
+            "sourceColumn": "Treatment_Speed",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Unqualified_Reason",
+            "dataType": "string",
+            "sourceColumn": "Unqualified_Reason",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Website",
+            "dataType": "string",
+            "sourceColumn": "Website",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "X1st_Recommendation",
+            "dataType": "string",
+            "sourceColumn": "X1st_Recommendation",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "X2nd_Recommendation",
+            "dataType": "string",
+            "sourceColumn": "X2nd_Recommendation",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "X3rd_Recommendation",
+            "dataType": "string",
+            "sourceColumn": "X3rd_Recommendation",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Years_In_Business",
+            "dataType": "string",
+            "sourceColumn": "Years_In_Business",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "isActiveRecord",
+            "dataType": "boolean",
+            "sourceColumn": "isActiveRecord",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "sourceProviderType": "bit"
+          },
+          {
+            "name": "RecordValidStartDate",
+            "dataType": "dateTime",
+            "sourceColumn": "RecordValidStartDate",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "RecordValidEndDate",
+            "dataType": "dateTime",
+            "sourceColumn": "RecordValidEndDate",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "ValidFrom",
+            "dataType": "dateTime",
+            "sourceColumn": "ValidFrom",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "ValidTo",
+            "dataType": "dateTime",
+            "sourceColumn": "ValidTo",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "mkto2__Acquisition_Program_Id",
+            "dataType": "double",
+            "sourceColumn": "mkto2__Acquisition_Program_Id",
+            "sourceProviderType": "numeric"
+          },
+          {
+            "name": "mkto2__Acquisition_Program",
+            "dataType": "string",
+            "sourceColumn": "mkto2__Acquisition_Program",
+            "sourceProviderType": "nvarchar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DIM_LEAD",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [salesforce].[DIM_LEAD].* FROM [salesforce].[DIM_LEAD] ",
+              "dataSource": "CandelaKPI-Dev"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [salesforce].[DIM_LEAD].* FROM [salesforce].[DIM_LEAD] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DIM_LEAD"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "salesforce"
+          }
+        ]
+      },
+      {
+        "name": "DIM_LEAD_SOURCE",
+        "columns": [
+          {
+            "name": "lead_source_id",
+            "dataType": "int64",
+            "sourceColumn": "lead_source_id",
+            "sourceProviderType": "bigint"
+          },
+          {
+            "name": "LeadSource",
+            "dataType": "string",
+            "sourceColumn": "LeadSource",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "leadsource_type",
+            "dataType": "string",
+            "sourceColumn": "leadsource_type",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "leadsource_info",
+            "dataType": "string",
+            "sourceColumn": "leadsource_info",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "isActiveRecord",
+            "dataType": "boolean",
+            "sourceColumn": "isActiveRecord",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "sourceProviderType": "bit"
+          },
+          {
+            "name": "RecordValidStartDate",
+            "dataType": "dateTime",
+            "sourceColumn": "RecordValidStartDate",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "RecordValidEndDate",
+            "dataType": "dateTime",
+            "sourceColumn": "RecordValidEndDate",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DIM_LEAD_SOURCE",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [salesforce].[DIM_LEAD_SOURCE].* FROM [salesforce].[DIM_LEAD_SOURCE] ",
+              "dataSource": "CandelaKPI-Dev"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [salesforce].[DIM_LEAD_SOURCE].* FROM [salesforce].[DIM_LEAD_SOURCE] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DIM_LEAD_SOURCE"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "salesforce"
+          }
+        ]
+      },
+      {
+        "name": "DIM_USERS",
+        "columns": [
+          {
+            "name": "USERSID",
+            "dataType": "int64",
+            "sourceColumn": "USERSID",
+            "sourceProviderType": "bigint"
+          },
+          {
+            "name": "Id",
+            "dataType": "string",
+            "sourceColumn": "Id",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "CreatedDate",
+            "dataType": "dateTime",
+            "sourceColumn": "CreatedDate",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "LastModifiedDate",
+            "dataType": "dateTime",
+            "sourceColumn": "LastModifiedDate",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "UserRoleId",
+            "dataType": "string",
+            "sourceColumn": "UserRoleId",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "AboutMe",
+            "dataType": "string",
+            "sourceColumn": "AboutMe",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "AccountId",
+            "dataType": "string",
+            "sourceColumn": "AccountId",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Address_Map",
+            "dataType": "string",
+            "sourceColumn": "Address_Map",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Alias",
+            "dataType": "string",
+            "sourceColumn": "Alias",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "BadgeText",
+            "dataType": "string",
+            "sourceColumn": "BadgeText",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Can_Close_Won",
+            "dataType": "string",
+            "sourceColumn": "Can_Close_Won",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Can_Move_to_Purchasing",
+            "dataType": "string",
+            "sourceColumn": "Can_Move_to_Purchasing",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "City",
+            "dataType": "string",
+            "sourceColumn": "City",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "CommunityNickname",
+            "dataType": "string",
+            "sourceColumn": "CommunityNickname",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "CompanyName",
+            "dataType": "string",
+            "sourceColumn": "CompanyName",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "ContactId",
+            "dataType": "string",
+            "sourceColumn": "ContactId",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Country",
+            "dataType": "string",
+            "sourceColumn": "Country",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "CountryCode",
+            "dataType": "string",
+            "sourceColumn": "CountryCode",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "CreatedById",
+            "dataType": "string",
+            "sourceColumn": "CreatedById",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "CurrencyIsoCode",
+            "dataType": "string",
+            "sourceColumn": "CurrencyIsoCode",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "DB_Region",
+            "dataType": "string",
+            "sourceColumn": "DB_Region",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "DefaultCurrencyIsoCode",
+            "dataType": "string",
+            "sourceColumn": "DefaultCurrencyIsoCode",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "DelegatedApproverId",
+            "dataType": "string",
+            "sourceColumn": "DelegatedApproverId",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Department",
+            "dataType": "string",
+            "sourceColumn": "Department",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Division",
+            "dataType": "string",
+            "sourceColumn": "Division",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Email",
+            "dataType": "string",
+            "sourceColumn": "Email",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "EmailEncodingKey",
+            "dataType": "string",
+            "sourceColumn": "EmailEncodingKey",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "EmailPreferencesStayInTouchReminder",
+            "dataType": "string",
+            "sourceColumn": "EmailPreferencesStayInTouchReminder",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "EmployeeNumber",
+            "dataType": "string",
+            "sourceColumn": "EmployeeNumber",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "ExpirationDate",
+            "dataType": "dateTime",
+            "sourceColumn": "ExpirationDate",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "Extension",
+            "dataType": "string",
+            "sourceColumn": "Extension",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Fax",
+            "dataType": "string",
+            "sourceColumn": "Fax",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "FirstName",
+            "dataType": "string",
+            "sourceColumn": "FirstName",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "ForecastEnabled",
+            "dataType": "string",
+            "sourceColumn": "ForecastEnabled",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Full_Name",
+            "dataType": "string",
+            "sourceColumn": "Full_Name",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Hash_Link",
+            "dataType": "string",
+            "sourceColumn": "Hash_Link",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "HCM_Person_Number",
+            "dataType": "string",
+            "sourceColumn": "HCM_Person_Number",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Hire_Date",
+            "dataType": "dateTime",
+            "sourceColumn": "Hire_Date",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "IsActive",
+            "dataType": "string",
+            "sourceColumn": "IsActive",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "LanguageLocaleKey",
+            "dataType": "string",
+            "sourceColumn": "LanguageLocaleKey",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "LastLoginDate",
+            "dataType": "dateTime",
+            "sourceColumn": "LastLoginDate",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "LastModifiedById",
+            "dataType": "string",
+            "sourceColumn": "LastModifiedById",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "LastName",
+            "dataType": "string",
+            "sourceColumn": "LastName",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "LastReferencedDate",
+            "dataType": "dateTime",
+            "sourceColumn": "LastReferencedDate",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "LastViewedDate",
+            "dataType": "dateTime",
+            "sourceColumn": "LastViewedDate",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "Last_Opportunity_Update",
+            "dataType": "dateTime",
+            "sourceColumn": "Last_Opportunity_Update",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "LocaleSidKey",
+            "dataType": "string",
+            "sourceColumn": "LocaleSidKey",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "ManagerId",
+            "dataType": "string",
+            "sourceColumn": "ManagerId",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "mercury__Mobile_Phone_Short",
+            "dataType": "string",
+            "sourceColumn": "mercury__Mobile_Phone_Short",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "mercury__OwnerId",
+            "dataType": "string",
+            "sourceColumn": "mercury__OwnerId",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "mercury__Owner_Mobile_Phone",
+            "dataType": "string",
+            "sourceColumn": "mercury__Owner_Mobile_Phone",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "mkto_si__Sales_Insight_Counter",
+            "dataType": "double",
+            "sourceColumn": "mkto_si__Sales_Insight_Counter",
+            "sourceProviderType": "numeric"
+          },
+          {
+            "name": "MobilePhone",
+            "dataType": "string",
+            "sourceColumn": "MobilePhone",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Name",
+            "dataType": "string",
+            "sourceColumn": "Name",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Personal_Email_Address",
+            "dataType": "string",
+            "sourceColumn": "Personal_Email_Address",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Phone",
+            "dataType": "string",
+            "sourceColumn": "Phone",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "PostalCode",
+            "dataType": "string",
+            "sourceColumn": "PostalCode",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "ProfileId",
+            "dataType": "string",
+            "sourceColumn": "ProfileId",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Profile_Text",
+            "dataType": "string",
+            "sourceColumn": "Profile_Text",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "P_C_Candela_Name_Format",
+            "dataType": "string",
+            "sourceColumn": "P_C_Candela_Name_Format",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "ReceivesAdminInfoEmails",
+            "dataType": "string",
+            "sourceColumn": "ReceivesAdminInfoEmails",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "ReceivesInfoEmails",
+            "dataType": "string",
+            "sourceColumn": "ReceivesInfoEmails",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Region",
+            "dataType": "string",
+            "sourceColumn": "Region",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Role_Text",
+            "dataType": "string",
+            "sourceColumn": "Role_Text",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Sales_Rep_ID_CND",
+            "dataType": "string",
+            "sourceColumn": "Sales_Rep_ID_CND",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Sales_Rep_ID_ELP",
+            "dataType": "string",
+            "sourceColumn": "Sales_Rep_ID_ELP",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Sales_Rep_ID_GES",
+            "dataType": "string",
+            "sourceColumn": "Sales_Rep_ID_GES",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "SecondaryEmployee_Number",
+            "dataType": "string",
+            "sourceColumn": "SecondaryEmployee_Number",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Secondary_Employee_Number",
+            "dataType": "string",
+            "sourceColumn": "Secondary_Employee_Number",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "SenderEmail",
+            "dataType": "string",
+            "sourceColumn": "SenderEmail",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "SenderName",
+            "dataType": "string",
+            "sourceColumn": "SenderName",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Skype_Me",
+            "dataType": "string",
+            "sourceColumn": "Skype_Me",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "State",
+            "dataType": "string",
+            "sourceColumn": "State",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "StateCode",
+            "dataType": "string",
+            "sourceColumn": "StateCode",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Street",
+            "dataType": "string",
+            "sourceColumn": "Street",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "SVMX_AllowStockConsumptionEntireRegion",
+            "dataType": "string",
+            "sourceColumn": "SVMX_AllowStockConsumptionEntireRegion",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "SVMX_Allow_To_See_Pricebook",
+            "dataType": "string",
+            "sourceColumn": "SVMX_Allow_To_See_Pricebook",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "SVMX_Currency_Text",
+            "dataType": "string",
+            "sourceColumn": "SVMX_Currency_Text",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "SVMX_Full_ID",
+            "dataType": "string",
+            "sourceColumn": "SVMX_Full_ID",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "SVMX_Inventory_Location",
+            "dataType": "string",
+            "sourceColumn": "SVMX_Inventory_Location",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "SVMX_Labor_Travel_Items",
+            "dataType": "string",
+            "sourceColumn": "SVMX_Labor_Travel_Items",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "SVMX_License",
+            "dataType": "string",
+            "sourceColumn": "SVMX_License",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "SVMX_Office",
+            "dataType": "string",
+            "sourceColumn": "SVMX_Office",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "SVMX_Oracle_Sales_Person_Number",
+            "dataType": "string",
+            "sourceColumn": "SVMX_Oracle_Sales_Person_Number",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "SVMX_Service_Outputs_Language",
+            "dataType": "string",
+            "sourceColumn": "SVMX_Service_Outputs_Language",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "SVMX_Service_Team",
+            "dataType": "string",
+            "sourceColumn": "SVMX_Service_Team",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "SVMX_Technician",
+            "dataType": "string",
+            "sourceColumn": "SVMX_Technician",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "SVMX_Warehouse",
+            "dataType": "string",
+            "sourceColumn": "SVMX_Warehouse",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "SystemModstamp",
+            "dataType": "dateTime",
+            "sourceColumn": "SystemModstamp",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "Template_Group_for_Conga",
+            "dataType": "string",
+            "sourceColumn": "Template_Group_for_Conga",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "TimeZoneSidKey",
+            "dataType": "string",
+            "sourceColumn": "TimeZoneSidKey",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Title",
+            "dataType": "string",
+            "sourceColumn": "Title",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Username",
+            "dataType": "string",
+            "sourceColumn": "Username",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "UserType",
+            "dataType": "string",
+            "sourceColumn": "UserType",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "zp_count",
+            "dataType": "double",
+            "sourceColumn": "zp_count",
+            "sourceProviderType": "numeric"
+          },
+          {
+            "name": "zp_lastenter",
+            "dataType": "dateTime",
+            "sourceColumn": "zp_lastenter",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "Longitude",
+            "dataType": "double",
+            "sourceColumn": "Longitude",
+            "sourceProviderType": "numeric"
+          },
+          {
+            "name": "Latitude",
+            "dataType": "double",
+            "sourceColumn": "Latitude",
+            "sourceProviderType": "numeric"
+          },
+          {
+            "name": "isActiveRecord",
+            "dataType": "boolean",
+            "sourceColumn": "isActiveRecord",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "sourceProviderType": "bit"
+          },
+          {
+            "name": "RecordValidStartDate",
+            "dataType": "dateTime",
+            "sourceColumn": "RecordValidStartDate",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "RecordValidEndDate",
+            "dataType": "dateTime",
+            "sourceColumn": "RecordValidEndDate",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DIM_USERS",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [salesforce].[DIM_USERS].* FROM [salesforce].[DIM_USERS] ",
+              "dataSource": "CandelaKPI-Dev"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [salesforce].[DIM_USERS].* FROM [salesforce].[DIM_USERS] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DIM_USERS"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "salesforce"
+          }
+        ]
+      },
+      {
+        "name": "FACT_ENGAGEMENT",
+        "columns": [
+          {
+            "name": "Lead_Id",
+            "dataType": "int64",
+            "sourceColumn": "Lead_Id",
+            "sourceProviderType": "bigint"
+          },
+          {
+            "name": "engagement_type_id",
+            "dataType": "int64",
+            "sourceColumn": "engagement_type_id",
+            "sourceProviderType": "int"
+          },
+          {
+            "name": "campaign_id",
+            "dataType": "int64",
+            "sourceColumn": "campaign_id",
+            "sourceProviderType": "int"
+          },
+          {
+            "name": "acquisition_id",
+            "dataType": "int64",
+            "sourceColumn": "acquisition_id",
+            "sourceProviderType": "int"
+          },
+          {
+            "name": "Status_id",
+            "dataType": "int64",
+            "sourceColumn": "Status_id",
+            "sourceProviderType": "int"
+          },
+          {
+            "name": "Date_id",
+            "dataType": "int64",
+            "sourceColumn": "Date_id",
+            "sourceProviderType": "int"
+          },
+          {
+            "name": "opportunity_id",
+            "dataType": "string",
+            "sourceColumn": "opportunity_id",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "product_id",
+            "dataType": "int64",
+            "sourceColumn": "product_id",
+            "sourceProviderType": "int"
+          },
+          {
+            "name": "channel_id",
+            "dataType": "int64",
+            "sourceColumn": "channel_id",
+            "sourceProviderType": "int"
+          },
+          {
+            "name": "contact_id",
+            "dataType": "string",
+            "sourceColumn": "contact_id",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "account_id",
+            "dataType": "string",
+            "sourceColumn": "account_id",
+            "sourceProviderType": "nvarchar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "FACT_ENGAGEMENT",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [salesforce].[FACT_ENGAGEMENT].* FROM [salesforce].[FACT_ENGAGEMENT] ",
+              "dataSource": "CandelaKPI-Dev"
+            },
+            "annotations": [
+              {
+                "name": "TableWidgetSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"TableWidgetSerialization\"><AnnotationContent><![CDATA[<?xml version=\"1.0\"?>",
+                  "<TableWidgetGridSerialization xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">",
+                  "  <ColumnSuggestedType />",
+                  "  <ColumnFormat />",
+                  "  <ColumnAccuracy />",
+                  "  <ColumnCurrencySymbol />",
+                  "  <ColumnPositivePattern />",
+                  "  <ColumnNegativePattern />",
+                  "  <ColumnWidths>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>Lead_Id</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>69</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>engagement_type_id</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>132</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>campaign_id</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>89</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>acquisition_id</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>94</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>Status_id</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>75</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>Date_id</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>67</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>opportunity_id</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>100</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>product_id</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>81</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>channel_id</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>81</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>contact_id</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>80</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>account_id</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>82</int>",
+                  "      </value>",
+                  "    </item>",
+                  "  </ColumnWidths>",
+                  "  <ColumnDisplayIndex>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>Lead_Id</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>0</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>engagement_type_id</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>1</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>campaign_id</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>2</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>acquisition_id</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>3</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>Status_id</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>4</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>Date_id</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>5</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>opportunity_id</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>6</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>product_id</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>7</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>channel_id</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>8</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>contact_id</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>9</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>account_id</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>10</int>",
+                  "      </value>",
+                  "    </item>",
+                  "  </ColumnDisplayIndex>",
+                  "  <ColumnFrozen />",
+                  "  <ColumnChecked />",
+                  "  <ColumnFilter />",
+                  "  <SelectionFilter />",
+                  "  <FilterParameters />",
+                  "  <IsSortDescending>false</IsSortDescending>",
+                  "</TableWidgetGridSerialization>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [salesforce].[FACT_ENGAGEMENT].* FROM [salesforce].[FACT_ENGAGEMENT] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "FACT_ENGAGEMENT"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "salesforce"
+          },
+          {
+            "name": "TableWidgetSerialization",
+            "value": [
+              "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"TableWidgetSerialization\"><AnnotationContent><![CDATA[<?xml version=\"1.0\"?>",
+              "<TableWidgetGridSerialization xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">",
+              "  <ColumnSuggestedType />",
+              "  <ColumnFormat />",
+              "  <ColumnAccuracy />",
+              "  <ColumnCurrencySymbol />",
+              "  <ColumnPositivePattern />",
+              "  <ColumnNegativePattern />",
+              "  <ColumnWidths>",
+              "    <item>",
+              "      <key>",
+              "        <string>Lead_Id</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>69</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>engagement_type_id</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>132</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>campaign_id</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>89</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>acquisition_id</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>94</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>Status_id</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>75</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>Date_id</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>67</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>opportunity_id</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>100</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>product_id</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>81</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>channel_id</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>81</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>contact_id</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>80</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>account_id</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>82</int>",
+              "      </value>",
+              "    </item>",
+              "  </ColumnWidths>",
+              "  <ColumnDisplayIndex>",
+              "    <item>",
+              "      <key>",
+              "        <string>Lead_Id</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>0</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>engagement_type_id</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>1</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>campaign_id</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>2</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>acquisition_id</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>3</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>Status_id</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>4</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>Date_id</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>5</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>opportunity_id</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>6</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>product_id</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>7</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>channel_id</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>8</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>contact_id</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>9</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>account_id</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>10</int>",
+              "      </value>",
+              "    </item>",
+              "  </ColumnDisplayIndex>",
+              "  <ColumnFrozen />",
+              "  <ColumnChecked />",
+              "  <ColumnFilter />",
+              "  <SelectionFilter />",
+              "  <FilterParameters />",
+              "  <IsSortDescending>false</IsSortDescending>",
+              "</TableWidgetGridSerialization>]]></AnnotationContent></Gemini>"
+            ]
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "7ccc99b4-6be0-4c34-b217-b180330055e2",
+        "fromTable": "FACT_ENGAGEMENT",
+        "fromColumn": "Lead_Id",
+        "toTable": "DIM_LEAD",
+        "toColumn": "lead_id",
+        "crossFilteringBehavior": "bothDirections"
+      },
+      {
+        "name": "24dc0a5a-8df5-46f2-bb26-83b377b06126",
+        "fromTable": "FACT_ENGAGEMENT",
+        "fromColumn": "engagement_type_id",
+        "toTable": "DIM_ENGAGEMENT_TYPE",
+        "toColumn": "ID",
+        "crossFilteringBehavior": "bothDirections"
+      },
+      {
+        "name": "1cb7626a-d952-4e63-b4e4-d895a3a10c3a",
+        "fromTable": "FACT_ENGAGEMENT",
+        "fromColumn": "campaign_id",
+        "toTable": "Dim_Campaign",
+        "toColumn": "Campaignid",
+        "crossFilteringBehavior": "bothDirections"
+      },
+      {
+        "name": "fe1220aa-0447-4240-bcbe-992d4587850b",
+        "fromTable": "FACT_ENGAGEMENT",
+        "fromColumn": "acquisition_id",
+        "toTable": "DIM_ACQUISITION",
+        "toColumn": "acquisition_id",
+        "crossFilteringBehavior": "bothDirections"
+      },
+      {
+        "name": "47e657e7-8af0-4cdc-b893-1d875e0c6a10",
+        "fromTable": "FACT_ENGAGEMENT",
+        "fromColumn": "Date_id",
+        "toTable": "dim_date",
+        "toColumn": "Date_id",
+        "crossFilteringBehavior": "bothDirections"
+      },
+      {
+        "name": "2fc78824-1370-4f4c-8416-2a757adbf550",
+        "fromTable": "FACT_ENGAGEMENT",
+        "fromColumn": "account_id",
+        "toTable": "DIM_ACCOUNT",
+        "toColumn": "ACCOUNTID",
+        "crossFilteringBehavior": "bothDirections"
+      },
+      {
+        "name": "e75d6ae2-dc41-485a-916e-3e70c730e800",
+        "fromTable": "FACT_ENGAGEMENT",
+        "fromColumn": "channel_id",
+        "toTable": "DIM_CHANNEL",
+        "toColumn": "channel_id",
+        "crossFilteringBehavior": "bothDirections"
+      },
+      {
+        "name": "685bcb28-99b5-4dfe-8564-ec9f4f9fe446",
+        "fromTable": "FACT_ENGAGEMENT",
+        "fromColumn": "contact_id",
+        "toTable": "DIM_USERS",
+        "toColumn": "USERSID",
+        "crossFilteringBehavior": "bothDirections"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "ClientCompatibilityLevel",
+        "value": "400"
+      }
+    ]
+  },
+  "id": "SemanticModel"
+}

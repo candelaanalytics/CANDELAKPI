@@ -1,0 +1,7 @@
+C:\Users\Vamshi\source\repos\CANDELAKPI\CANDELAKPI\bin\Model.asdatabase
+C:\Users\Vamshi\source\repos\CANDELAKPI\CANDELAKPI\bin\Model.deploymenttargets
+C:\Users\Vamshi\source\repos\CANDELAKPI\CANDELAKPI\bin\Model.deploymentoptions
+C:\Users\Vamshi\source\repos\CANDELAKPI\CANDELAKPI\obj\Development\CANDELAKPI.smproj.CoreCompileInputs.cache
+C:\Users\Vamshi\source\repos\CANDELAKPI\CANDELAKPI\obj\Development\Model.asdatabase
+C:\Users\Vamshi\source\repos\CANDELAKPI\CANDELAKPI\obj\Development\Model.deploymentoptions
+C:\Users\Vamshi\source\repos\CANDELAKPI\CANDELAKPI\obj\Development\Model.deploymenttargets
