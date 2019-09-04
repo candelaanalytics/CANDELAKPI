@@ -5,3 +5,10 @@ C:\Users\Vamshi\source\repos\CANDELAKPI\CANDELAKPI\obj\Development\CANDELAKPI.sm
 C:\Users\Vamshi\source\repos\CANDELAKPI\CANDELAKPI\obj\Development\Model.asdatabase
 C:\Users\Vamshi\source\repos\CANDELAKPI\CANDELAKPI\obj\Development\Model.deploymentoptions
 C:\Users\Vamshi\source\repos\CANDELAKPI\CANDELAKPI\obj\Development\Model.deploymenttargets
+D:\Projects\Candela\SourceCode\CANDELAKPI\CANDELAKPI\bin\Model.asdatabase
+D:\Projects\Candela\SourceCode\CANDELAKPI\CANDELAKPI\bin\Model.deploymenttargets
+D:\Projects\Candela\SourceCode\CANDELAKPI\CANDELAKPI\bin\Model.deploymentoptions
+D:\Projects\Candela\SourceCode\CANDELAKPI\CANDELAKPI\obj\Development\CANDELAKPI.smproj.CoreCompileInputs.cache
+D:\Projects\Candela\SourceCode\CANDELAKPI\CANDELAKPI\obj\Development\Model.asdatabase
+D:\Projects\Candela\SourceCode\CANDELAKPI\CANDELAKPI\obj\Development\Model.deploymentoptions
+D:\Projects\Candela\SourceCode\CANDELAKPI\CANDELAKPI\obj\Development\Model.deploymenttargets
