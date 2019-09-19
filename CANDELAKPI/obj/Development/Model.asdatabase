@@ -298,11 +298,6 @@
             "name": "STATUS_DESC",
             "dataType": "string",
             "sourceColumn": "STATUS_DESC"
-          },
-          {
-            "name": "STATUS_TRANSLATION",
-            "dataType": "string",
-            "sourceColumn": "STATUS_TRANSLATION"
           }
         ],
         "partitions": [
@@ -331,7 +326,7 @@
                   "        <string>STATUSID</string>",
                   "      </key>",
                   "      <value>",
-                  "        <int>79</int>",
+                  "        <int>117</int>",
                   "      </value>",
                   "    </item>",
                   "    <item>",
@@ -339,7 +334,7 @@
                   "        <string>STATUS_SOURCE</string>",
                   "      </key>",
                   "      <value>",
-                  "        <int>115</int>",
+                  "        <int>176</int>",
                   "      </value>",
                   "    </item>",
                   "    <item>",
@@ -347,15 +342,7 @@
                   "        <string>STATUS_DESC</string>",
                   "      </key>",
                   "      <value>",
-                  "        <int>100</int>",
-                  "      </value>",
-                  "    </item>",
-                  "    <item>",
-                  "      <key>",
-                  "        <string>STATUS_TRANSLATION</string>",
-                  "      </key>",
-                  "      <value>",
-                  "        <int>144</int>",
+                  "        <int>147</int>",
                   "      </value>",
                   "    </item>",
                   "  </ColumnWidths>",
@@ -384,14 +371,6 @@
                   "        <int>2</int>",
                   "      </value>",
                   "    </item>",
-                  "    <item>",
-                  "      <key>",
-                  "        <string>STATUS_TRANSLATION</string>",
-                  "      </key>",
-                  "      <value>",
-                  "        <int>3</int>",
-                  "      </value>",
-                  "    </item>",
                   "  </ColumnDisplayIndex>",
                   "  <ColumnFrozen />",
                   "  <ColumnChecked>",
@@ -414,14 +393,6 @@
                   "    <item>",
                   "      <key>",
                   "        <string>STATUS_DESC</string>",
-                  "      </key>",
-                  "      <value>",
-                  "        <boolean>true</boolean>",
-                  "      </value>",
-                  "    </item>",
-                  "    <item>",
-                  "      <key>",
-                  "        <string>STATUS_TRANSLATION</string>",
                   "      </key>",
                   "      <value>",
                   "        <boolean>true</boolean>",
@@ -468,7 +439,7 @@
               "        <string>STATUSID</string>",
               "      </key>",
               "      <value>",
-              "        <int>79</int>",
+              "        <int>117</int>",
               "      </value>",
               "    </item>",
               "    <item>",
@@ -476,7 +447,7 @@
               "        <string>STATUS_SOURCE</string>",
               "      </key>",
               "      <value>",
-              "        <int>115</int>",
+              "        <int>176</int>",
               "      </value>",
               "    </item>",
               "    <item>",
@@ -484,15 +455,7 @@
               "        <string>STATUS_DESC</string>",
               "      </key>",
               "      <value>",
-              "        <int>100</int>",
-              "      </value>",
-              "    </item>",
-              "    <item>",
-              "      <key>",
-              "        <string>STATUS_TRANSLATION</string>",
-              "      </key>",
-              "      <value>",
-              "        <int>144</int>",
+              "        <int>147</int>",
               "      </value>",
               "    </item>",
               "  </ColumnWidths>",
@@ -521,14 +484,6 @@
               "        <int>2</int>",
               "      </value>",
               "    </item>",
-              "    <item>",
-              "      <key>",
-              "        <string>STATUS_TRANSLATION</string>",
-              "      </key>",
-              "      <value>",
-              "        <int>3</int>",
-              "      </value>",
-              "    </item>",
               "  </ColumnDisplayIndex>",
               "  <ColumnFrozen />",
               "  <ColumnChecked>",
@@ -551,14 +506,6 @@
               "    <item>",
               "      <key>",
               "        <string>STATUS_DESC</string>",
-              "      </key>",
-              "      <value>",
-              "        <boolean>true</boolean>",
-              "      </value>",
-              "    </item>",
-              "    <item>",
-              "      <key>",
-              "        <string>STATUS_TRANSLATION</string>",
               "      </key>",
               "      <value>",
               "        <boolean>true</boolean>",
@@ -4679,7 +4626,7 @@
         ]
       },
       {
-        "name": "DIM_ISO_COUNTRY_REGION_CODES",
+        "name": "DIM_Region",
         "columns": [
           {
             "name": "ID",
@@ -20389,39 +20336,11 @@
         "crossFilteringBehavior": "bothDirections"
       },
       {
-        "name": "4e139291-b744-49ed-8981-6604c1197653",
-        "fromTable": "FACT_ENGAGEMENT",
-        "fromColumn": "Status_id",
-        "toTable": "DIM_STATUS_LOOKUP",
-        "toColumn": "STATUSID"
-      },
-      {
         "name": "a46d4ac2-f6f1-439f-9077-cd8fdb35d1fe",
         "fromTable": "FACT_ENGAGEMENT",
         "fromColumn": "LeadSource_Id",
         "toTable": "DIM_LEAD_SOURCE",
         "toColumn": "lead_source_id"
-      },
-      {
-        "name": "5d3969c1-16cc-4f2e-8c4e-a02e244db32f",
-        "fromTable": "FACT_ENGAGEMENT",
-        "fromColumn": "Country_Id",
-        "toTable": "DIM_ISO_COUNTRY_REGION_CODES",
-        "toColumn": "ID"
-      },
-      {
-        "name": "ac6a5cfd-6a2a-47bc-b6b9-eccda41d4f1a",
-        "fromTable": "FACT_ENGAGEMENT",
-        "fromColumn": "contact_id",
-        "toTable": "DIM_CONTACT",
-        "toColumn": "contact_id"
-      },
-      {
-        "name": "a62982c3-dbd3-4067-8479-e48a350c69d6",
-        "fromTable": "FACT_ENGAGEMENT",
-        "fromColumn": "op_sales_type_id",
-        "toTable": "DIM_SALES_TYPE",
-        "toColumn": "SALES_TYPE_ID"
       },
       {
         "name": "dfdfda46-8c58-408a-9275-737d8d495a4d",
@@ -20438,100 +20357,144 @@
         "toColumn": "DIM_OPP_ID"
       },
       {
-        "name": "0ba05c0b-815d-4099-a67d-a57ab646fcca",
-        "fromTable": "DIM_PAYMENT_TERMS",
-        "fromColumn": "PAYMENT_TERM_ID",
-        "toTable": "FACT_SALES_ORDER",
-        "toColumn": "dim_PAYMENT_TERM_ID"
+        "name": "6326f2b0-499d-4b2e-a4fc-91c637f0183e",
+        "fromTable": "FACT_SALES_ORDER",
+        "fromColumn": "Line_Invoice_Location_id",
+        "toTable": "DIM_LOCATION",
+        "toColumn": "DIM_LOCATION_ID",
+        "isActive": false,
+        "crossFilteringBehavior": "bothDirections"
       },
       {
-        "name": "a5665106-15ca-4dd5-a9c5-0fc009e59e8a",
-        "fromTable": "DIM_ORDER_TRX_TYPES",
-        "fromColumn": "DIM_TRX_ID",
-        "toTable": "FACT_SALES_ORDER",
-        "toColumn": "dim_ORDER_TRX_TYPE_ID"
+        "name": "d8c2ca4c-3523-465e-90ba-329effc74d60",
+        "fromTable": "FACT_SALES_ORDER",
+        "fromColumn": "SHIP_TO_LOCATION_ID",
+        "toTable": "DIM_LOCATION",
+        "toColumn": "DIM_LOCATION_ID",
+        "crossFilteringBehavior": "bothDirections"
       },
       {
-        "name": "35e7ff6e-0c6b-4bdd-87bc-7655b2bb3135",
-        "fromTable": "DIM_ORDER_TRX_TYPES",
-        "fromColumn": "DIM_TRX_ID",
-        "toTable": "FACT_SALES_ORDER",
-        "toColumn": "LINE_TYPE_ID",
-        "isActive": false
+        "name": "0c8d2319-999a-4478-9d7c-58685366b23d",
+        "fromTable": "FACT_SALES_ORDER",
+        "fromColumn": "Order_SOURCE_DOCUMENT_Key_Header",
+        "toTable": "DIM_ORDER_SOURCES",
+        "toColumn": "DIM_OS_ID",
+        "crossFilteringBehavior": "bothDirections"
       },
       {
-        "name": "c2a266a7-746c-4e71-b2da-7be029c152d4",
-        "fromTable": "DIM_ORGANIZATION_UNITS",
-        "fromColumn": "DIM_Organization_units_ID",
-        "toTable": "FACT_SALES_ORDER",
-        "toColumn": "Company_id"
+        "name": "adf9e344-0a0f-4cf9-afb9-8c6098d75b03",
+        "fromTable": "FACT_SALES_ORDER",
+        "fromColumn": "dim_ORDER_TRX_TYPE_ID",
+        "toTable": "DIM_ORDER_TRX_TYPES",
+        "toColumn": "DIM_TRX_ID",
+        "crossFilteringBehavior": "bothDirections"
       },
       {
-        "name": "c1f6f6c6-0348-45f5-b0b3-361174642865",
-        "fromTable": "DIM_ORGANIZATION_UNITS",
-        "fromColumn": "DIM_Organization_units_ID",
-        "toTable": "FACT_SALES_ORDER",
-        "toColumn": "Line_SHIP_FROM_COMPANY_ID",
-        "isActive": false
+        "name": "553956e5-b608-4f1d-a102-5cbb95bd81b2",
+        "fromTable": "FACT_SALES_ORDER",
+        "fromColumn": "LINE_TYPE_ID",
+        "toTable": "DIM_ORDER_TRX_TYPES",
+        "toColumn": "DIM_TRX_ID",
+        "isActive": false,
+        "crossFilteringBehavior": "bothDirections"
       },
       {
-        "name": "816a28f0-16b1-44df-8ec4-af4bf09a8bf1",
-        "fromTable": "DIM_ORGANIZATION_UNITS",
-        "fromColumn": "DIM_Organization_units_ID",
-        "toTable": "FACT_SALES_ORDER",
-        "toColumn": "Line_SOLD_FROM_COMPANY_ID",
-        "isActive": false
+        "name": "0faad76e-1661-4edb-a874-2d398b74cb34",
+        "fromTable": "FACT_SALES_ORDER",
+        "fromColumn": "Company_id",
+        "toTable": "DIM_ORGANIZATION_UNITS",
+        "toColumn": "DIM_Organization_units_ID"
       },
       {
-        "name": "673ef233-7f8e-466b-87d8-46db70e0d748",
-        "fromTable": "DIM_ORDER_SOURCES",
-        "fromColumn": "DIM_OS_ID",
-        "toTable": "FACT_SALES_ORDER",
-        "toColumn": "Order_SOURCE_DOCUMENT_Key_Header"
+        "name": "5e5896b4-0a31-4884-9dec-63b856732fcb",
+        "fromTable": "FACT_SALES_ORDER",
+        "fromColumn": "Line_SHIP_FROM_COMPANY_ID",
+        "toTable": "DIM_ORGANIZATION_UNITS",
+        "toColumn": "DIM_Organization_units_ID",
+        "isActive": false,
+        "crossFilteringBehavior": "bothDirections"
       },
       {
-        "name": "ce002752-07e9-439e-839e-4ce67d53e952",
-        "fromTable": "DIM_ITEM_MASTER",
-        "fromColumn": "DIM_ITEM_ID",
-        "toTable": "FACT_SALES_ORDER",
-        "toColumn": "Dim_Item_id"
+        "name": "5033e23e-4ea6-46bb-8c97-4519a37077a1",
+        "fromTable": "FACT_SALES_ORDER",
+        "fromColumn": "Line_SOLD_FROM_COMPANY_ID",
+        "toTable": "DIM_ORGANIZATION_UNITS",
+        "toColumn": "DIM_Organization_units_ID",
+        "isActive": false,
+        "crossFilteringBehavior": "bothDirections"
       },
       {
-        "name": "ff98f627-a51b-4a99-b269-3bb458ba2769",
-        "fromTable": "DIM_CUSTOMER",
-        "fromColumn": "CUSTOMER_ID",
-        "toTable": "FACT_SALES_ORDER",
-        "toColumn": "Customer_ID"
+        "name": "25cd7ab5-9d0c-4a8b-828f-c2cd52d67060",
+        "fromTable": "FACT_SALES_ORDER",
+        "fromColumn": "dim_PAYMENT_TERM_ID",
+        "toTable": "DIM_PAYMENT_TERMS",
+        "toColumn": "PAYMENT_TERM_ID",
+        "crossFilteringBehavior": "bothDirections"
       },
       {
-        "name": "3ac487ce-9a9b-4cc0-b2b4-9403fdde50f8",
-        "fromTable": "DIM_USERS",
-        "fromColumn": "USERSID",
-        "toTable": "FACT_SALES_ORDER",
-        "toColumn": "SALESREP_ID_Header"
+        "name": "aad2d96d-649d-4877-b166-f4b621424669",
+        "fromTable": "FACT_SALES_ORDER",
+        "fromColumn": "SALESREP_ID_Header",
+        "toTable": "DIM_USERS",
+        "toColumn": "USERSID",
+        "crossFilteringBehavior": "bothDirections"
       },
       {
-        "name": "268b178e-1d39-4c5c-995b-b066cd7d3c73",
-        "fromTable": "DIM_USERS",
-        "fromColumn": "USERSID",
-        "toTable": "FACT_SALES_ORDER",
-        "toColumn": "SALESREP_ID_Line",
-        "isActive": false
+        "name": "6288ea44-f387-4bed-a90c-185b10dc953b",
+        "fromTable": "FACT_SALES_ORDER",
+        "fromColumn": "SALESREP_ID_Line",
+        "toTable": "DIM_USERS",
+        "toColumn": "USERSID",
+        "isActive": false,
+        "crossFilteringBehavior": "bothDirections"
       },
       {
-        "name": "b693d9d0-5454-44d7-92ef-b6392780d771",
-        "fromTable": "DIM_LOCATION",
-        "fromColumn": "DIM_LOCATION_ID",
-        "toTable": "FACT_SALES_ORDER",
-        "toColumn": "SHIP_TO_LOCATION_ID"
+        "name": "0f970978-1db5-4f43-a5c2-f10ee9176a96",
+        "fromTable": "FACT_ENGAGEMENT",
+        "fromColumn": "op_sales_type_id",
+        "toTable": "DIM_SALES_TYPE",
+        "toColumn": "SALES_TYPE_ID",
+        "crossFilteringBehavior": "bothDirections"
       },
       {
-        "name": "d2ad6486-1b83-46ac-adab-c513da241a43",
-        "fromTable": "DIM_LOCATION",
-        "fromColumn": "DIM_LOCATION_ID",
-        "toTable": "FACT_SALES_ORDER",
-        "toColumn": "Line_Invoice_Location_id",
-        "isActive": false
+        "name": "98725515-30ec-4e9d-9330-1201ae13248e",
+        "fromTable": "FACT_ENGAGEMENT",
+        "fromColumn": "contact_id",
+        "toTable": "DIM_CONTACT",
+        "toColumn": "contact_id",
+        "crossFilteringBehavior": "bothDirections"
+      },
+      {
+        "name": "481d90e5-705f-4e29-a27b-fcaa363548e6",
+        "fromTable": "FACT_ENGAGEMENT",
+        "fromColumn": "Country_Id",
+        "toTable": "DIM_Region",
+        "toColumn": "ID",
+        "crossFilteringBehavior": "bothDirections"
+      },
+      {
+        "name": "587b1c0f-2ba0-4d98-a5ef-f49e1838e243",
+        "fromTable": "FACT_SALES_ORDER",
+        "fromColumn": "Dim_Item_id",
+        "toTable": "DIM_ITEM_MASTER",
+        "toColumn": "DIM_ITEM_ID",
+        "crossFilteringBehavior": "bothDirections"
+      },
+      {
+        "name": "6fb5c3e2-4c31-4029-b0d6-17dbc4bfb11f",
+        "fromTable": "FACT_SALES_ORDER",
+        "fromColumn": "Customer_ID",
+        "toTable": "DIM_CUSTOMER",
+        "toColumn": "CUSTOMER_ID",
+        "crossFilteringBehavior": "bothDirections"
+      },
+      {
+        "name": "9da8edc1-bcfc-4401-90c3-bfad5e45f94c",
+        "fromTable": "FACT_ENGAGEMENT",
+        "fromColumn": "Status_id",
+        "toTable": "DIM_STATUS_LOOKUP",
+        "toColumn": "STATUSID",
+        "crossFilteringBehavior": "bothDirections"
       }
     ],
     "annotations": [
