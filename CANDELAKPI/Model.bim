@@ -4280,15 +4280,17 @@
         ],
         "measures": [
           {
-            "name": "Count",
-            "expression": "COUNTA(FACT_ENGAGEMENT[Lead_Id])"
+            "name": "Count1",
+            "expression": "COUNTA(FACT_ENGAGEMENT[Lead_Id])",
+            "isHidden": true
           },
           {
             "name": "Count2",
-            "expression": " COUNT(FACT_ENGAGEMENT[Lead_Id])"
+            "expression": " COUNT(FACT_ENGAGEMENT[Lead_Id])",
+            "isHidden": true
           },
           {
-            "name": "RowCount",
+            "name": "Count",
             "expression": "COUNTROWS(FACT_ENGAGEMENT)"
           }
         ],
@@ -19295,77 +19297,6 @@
         ]
       },
       {
-        "name": "DIM_LKUP_customer_site_use_location",
-        "columns": [
-          {
-            "name": "DIM_LKUP_ID",
-            "dataType": "int64",
-            "sourceColumn": "DIM_LKUP_ID",
-            "sourceProviderType": "bigint"
-          },
-          {
-            "name": "SITE_USE_ID",
-            "dataType": "int64",
-            "sourceColumn": "SITE_USE_ID",
-            "sourceProviderType": "bigint"
-          },
-          {
-            "name": "CUST_ACCT_SITE_ID",
-            "dataType": "int64",
-            "sourceColumn": "CUST_ACCT_SITE_ID",
-            "sourceProviderType": "bigint"
-          },
-          {
-            "name": "PARTY_SITE_ID",
-            "dataType": "int64",
-            "sourceColumn": "PARTY_SITE_ID",
-            "sourceProviderType": "bigint"
-          },
-          {
-            "name": "LOCATION_ID",
-            "dataType": "int64",
-            "sourceColumn": "LOCATION_ID",
-            "sourceProviderType": "bigint"
-          },
-          {
-            "name": "CUST_ACCOUNT_ID",
-            "dataType": "int64",
-            "sourceColumn": "CUST_ACCOUNT_ID",
-            "sourceProviderType": "bigint"
-          },
-          {
-            "name": "PARTY_ID",
-            "dataType": "int64",
-            "sourceColumn": "PARTY_ID",
-            "sourceProviderType": "bigint"
-          }
-        ],
-        "partitions": [
-          {
-            "name": "DIM_LKUP_customer_site_use_location",
-            "dataView": "full",
-            "source": {
-              "query": " SELECT [ORACLE].[DIM_LKUP_customer_site_use_location].* FROM [ORACLE].[DIM_LKUP_customer_site_use_location] ",
-              "dataSource": "CandelaKPI-Dev"
-            }
-          }
-        ],
-        "annotations": [
-          {
-            "name": "_TM_ExtProp_QueryDefinition",
-            "value": " SELECT [ORACLE].[DIM_LKUP_customer_site_use_location].* FROM [ORACLE].[DIM_LKUP_customer_site_use_location] "
-          },
-          {
-            "name": "_TM_ExtProp_DbTableName",
-            "value": "DIM_LKUP_customer_site_use_location"
-          },
-          {
-            "name": "_TM_ExtProp_DbSchemaName",
-            "value": "ORACLE"
-          }
-        ]
-      },
-      {
         "name": "DIM_LOCATION",
         "columns": [
           {
@@ -20552,21 +20483,6 @@
         "isActive": false
       },
       {
-        "name": "a63de993-ae75-454c-a008-d47b3676d450",
-        "fromTable": "DIM_LKUP_customer_site_use_location",
-        "fromColumn": "LOCATION_ID",
-        "toTable": "FACT_SALES_ORDER",
-        "toColumn": "Line_Invoice_Location_id"
-      },
-      {
-        "name": "8d75956f-77d5-4d9e-a8e0-57e99fb4b563",
-        "fromTable": "DIM_LKUP_customer_site_use_location",
-        "fromColumn": "LOCATION_ID",
-        "toTable": "FACT_SALES_ORDER",
-        "toColumn": "SHIP_TO_LOCATION_ID",
-        "isActive": false
-      },
-      {
         "name": "673ef233-7f8e-466b-87d8-46db70e0d748",
         "fromTable": "DIM_ORDER_SOURCES",
         "fromColumn": "DIM_OS_ID",
@@ -20600,6 +20516,21 @@
         "fromColumn": "USERSID",
         "toTable": "FACT_SALES_ORDER",
         "toColumn": "SALESREP_ID_Line",
+        "isActive": false
+      },
+      {
+        "name": "b693d9d0-5454-44d7-92ef-b6392780d771",
+        "fromTable": "DIM_LOCATION",
+        "fromColumn": "DIM_LOCATION_ID",
+        "toTable": "FACT_SALES_ORDER",
+        "toColumn": "SHIP_TO_LOCATION_ID"
+      },
+      {
+        "name": "d2ad6486-1b83-46ac-adab-c513da241a43",
+        "fromTable": "DIM_LOCATION",
+        "fromColumn": "DIM_LOCATION_ID",
+        "toTable": "FACT_SALES_ORDER",
+        "toColumn": "Line_Invoice_Location_id",
         "isActive": false
       }
     ],
