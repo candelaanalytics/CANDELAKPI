@@ -19019,6 +19019,1377 @@
             "value": "salesforce"
           }
         ]
+      },
+      {
+        "name": "DIM_ITEM_COST",
+        "columns": [
+          {
+            "name": "DIM_CST_ID",
+            "dataType": "int64",
+            "sourceColumn": "DIM_CST_ID",
+            "sourceProviderType": "bigint"
+          },
+          {
+            "name": "INVENTORY_ITEM_ID",
+            "dataType": "string",
+            "sourceColumn": "INVENTORY_ITEM_ID",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "ORGANIZATION_ID",
+            "dataType": "string",
+            "sourceColumn": "ORGANIZATION_ID",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "ITEM_COST",
+            "dataType": "string",
+            "sourceColumn": "ITEM_COST",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "MATERIAL_COST",
+            "dataType": "string",
+            "sourceColumn": "MATERIAL_COST",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "MATERIAL_OVERHEAD_COST",
+            "dataType": "string",
+            "sourceColumn": "MATERIAL_OVERHEAD_COST",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "RESOURCE_COST",
+            "dataType": "string",
+            "sourceColumn": "RESOURCE_COST",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "OUTSIDE_PROCESSING_COST",
+            "dataType": "string",
+            "sourceColumn": "OUTSIDE_PROCESSING_COST",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "OVERHEAD_COST",
+            "dataType": "string",
+            "sourceColumn": "OVERHEAD_COST",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "PL_ITEM_COST",
+            "dataType": "string",
+            "sourceColumn": "PL_ITEM_COST",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "TL_ITEM_COST",
+            "dataType": "string",
+            "sourceColumn": "TL_ITEM_COST",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "UNBURDENED_COST",
+            "dataType": "string",
+            "sourceColumn": "UNBURDENED_COST",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "BURDEN_COST",
+            "dataType": "string",
+            "sourceColumn": "BURDEN_COST",
+            "sourceProviderType": "nvarchar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DIM_ITEM_COST",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [ORACLE].[DIM_ITEM_COST].* FROM [ORACLE].[DIM_ITEM_COST] ",
+              "dataSource": "CandelaKPI-Dev"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [ORACLE].[DIM_ITEM_COST].* FROM [ORACLE].[DIM_ITEM_COST] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DIM_ITEM_COST"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "ORACLE"
+          }
+        ]
+      },
+      {
+        "name": "DIM_ITEM_MASTER",
+        "columns": [
+          {
+            "name": "DIM_ITEM_ID",
+            "dataType": "int64",
+            "sourceColumn": "DIM_ITEM_ID",
+            "sourceProviderType": "bigint"
+          },
+          {
+            "name": "INVENTORY_ITEM_ID",
+            "dataType": "string",
+            "sourceColumn": "INVENTORY_ITEM_ID",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "ORGANIZATION_ID",
+            "dataType": "string",
+            "sourceColumn": "ORGANIZATION_ID",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "ITEM_CODE",
+            "dataType": "string",
+            "sourceColumn": "ITEM_CODE",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "LAST_UPDATE_DATE",
+            "dataType": "string",
+            "sourceColumn": "LAST_UPDATE_DATE",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "CREATION_DATE",
+            "dataType": "string",
+            "sourceColumn": "CREATION_DATE",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "LAST_UPDATE_LOGIN",
+            "dataType": "string",
+            "sourceColumn": "LAST_UPDATE_LOGIN",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "ITEM_DESC",
+            "dataType": "string",
+            "sourceColumn": "ITEM_DESC",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "MARKET_PRICE",
+            "dataType": "string",
+            "sourceColumn": "MARKET_PRICE",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "LIST_PRICE_PER_UNIT",
+            "dataType": "string",
+            "sourceColumn": "LIST_PRICE_PER_UNIT",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "EXPENSE_ACCOUNT",
+            "dataType": "string",
+            "sourceColumn": "EXPENSE_ACCOUNT",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "BASE_ITEM_ID",
+            "dataType": "string",
+            "sourceColumn": "BASE_ITEM_ID",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "PRIMARY_UOM_CODE",
+            "dataType": "string",
+            "sourceColumn": "PRIMARY_UOM_CODE",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "PRIMARY_UNIT_OF_MEASURE",
+            "dataType": "string",
+            "sourceColumn": "PRIMARY_UNIT_OF_MEASURE",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "COST_OF_SALES_ACCOUNT",
+            "dataType": "string",
+            "sourceColumn": "COST_OF_SALES_ACCOUNT",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "SALES_ACCOUNT",
+            "dataType": "string",
+            "sourceColumn": "SALES_ACCOUNT",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "INVENTORY_ITEM_STATUS_CODE",
+            "dataType": "string",
+            "sourceColumn": "INVENTORY_ITEM_STATUS_CODE",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "INVENTORY_PLANNING_CODE",
+            "dataType": "string",
+            "sourceColumn": "INVENTORY_PLANNING_CODE",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "PLANNER_CODE",
+            "dataType": "string",
+            "sourceColumn": "PLANNER_CODE",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "PLANNING_MAKE_BUY_CODE",
+            "dataType": "string",
+            "sourceColumn": "PLANNING_MAKE_BUY_CODE",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "ORDER_COST",
+            "dataType": "string",
+            "sourceColumn": "ORDER_COST",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "TAX_CODE",
+            "dataType": "string",
+            "sourceColumn": "TAX_CODE",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "EQUIPMENT_TYPE",
+            "dataType": "string",
+            "sourceColumn": "EQUIPMENT_TYPE",
+            "sourceProviderType": "nvarchar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DIM_ITEM_MASTER",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [ORACLE].[DIM_ITEM_MASTER].* FROM [ORACLE].[DIM_ITEM_MASTER] ",
+              "dataSource": "CandelaKPI-Dev"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [ORACLE].[DIM_ITEM_MASTER].* FROM [ORACLE].[DIM_ITEM_MASTER] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DIM_ITEM_MASTER"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "ORACLE"
+          }
+        ]
+      },
+      {
+        "name": "DIM_LKUP_customer_site_use_location",
+        "columns": [
+          {
+            "name": "DIM_LKUP_ID",
+            "dataType": "int64",
+            "sourceColumn": "DIM_LKUP_ID",
+            "sourceProviderType": "bigint"
+          },
+          {
+            "name": "SITE_USE_ID",
+            "dataType": "int64",
+            "sourceColumn": "SITE_USE_ID",
+            "sourceProviderType": "bigint"
+          },
+          {
+            "name": "CUST_ACCT_SITE_ID",
+            "dataType": "int64",
+            "sourceColumn": "CUST_ACCT_SITE_ID",
+            "sourceProviderType": "bigint"
+          },
+          {
+            "name": "PARTY_SITE_ID",
+            "dataType": "int64",
+            "sourceColumn": "PARTY_SITE_ID",
+            "sourceProviderType": "bigint"
+          },
+          {
+            "name": "LOCATION_ID",
+            "dataType": "int64",
+            "sourceColumn": "LOCATION_ID",
+            "sourceProviderType": "bigint"
+          },
+          {
+            "name": "CUST_ACCOUNT_ID",
+            "dataType": "int64",
+            "sourceColumn": "CUST_ACCOUNT_ID",
+            "sourceProviderType": "bigint"
+          },
+          {
+            "name": "PARTY_ID",
+            "dataType": "int64",
+            "sourceColumn": "PARTY_ID",
+            "sourceProviderType": "bigint"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DIM_LKUP_customer_site_use_location",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [ORACLE].[DIM_LKUP_customer_site_use_location].* FROM [ORACLE].[DIM_LKUP_customer_site_use_location] ",
+              "dataSource": "CandelaKPI-Dev"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [ORACLE].[DIM_LKUP_customer_site_use_location].* FROM [ORACLE].[DIM_LKUP_customer_site_use_location] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DIM_LKUP_customer_site_use_location"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "ORACLE"
+          }
+        ]
+      },
+      {
+        "name": "DIM_LOCATION",
+        "columns": [
+          {
+            "name": "DIM_LOCATION_ID",
+            "dataType": "int64",
+            "sourceColumn": "DIM_LOCATION_ID",
+            "sourceProviderType": "bigint"
+          },
+          {
+            "name": "LOCATION_ID",
+            "dataType": "string",
+            "sourceColumn": "LOCATION_ID",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "ORIG_SYSTEM_REFERENCE",
+            "dataType": "string",
+            "sourceColumn": "ORIG_SYSTEM_REFERENCE",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "COUNTRY",
+            "dataType": "string",
+            "sourceColumn": "COUNTRY",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "ADDRESS1",
+            "dataType": "string",
+            "sourceColumn": "ADDRESS1",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "ADDRESS2",
+            "dataType": "string",
+            "sourceColumn": "ADDRESS2",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "ADDRESS3",
+            "dataType": "string",
+            "sourceColumn": "ADDRESS3",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "ADDRESS4",
+            "dataType": "string",
+            "sourceColumn": "ADDRESS4",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "CITY",
+            "dataType": "string",
+            "sourceColumn": "CITY",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "POSTAL_CODE",
+            "dataType": "string",
+            "sourceColumn": "POSTAL_CODE",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "POSTAL_PLUS4_CODE",
+            "dataType": "string",
+            "sourceColumn": "POSTAL_PLUS4_CODE",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "STATE",
+            "dataType": "string",
+            "sourceColumn": "STATE",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "PROVINCE",
+            "dataType": "string",
+            "sourceColumn": "PROVINCE",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "COUNTY",
+            "dataType": "string",
+            "sourceColumn": "COUNTY",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "ADDRESS_KEY",
+            "dataType": "string",
+            "sourceColumn": "ADDRESS_KEY",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "LAST_UPDATE_DATE",
+            "dataType": "string",
+            "sourceColumn": "LAST_UPDATE_DATE",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "CREATION_DATE",
+            "dataType": "string",
+            "sourceColumn": "CREATION_DATE",
+            "sourceProviderType": "nvarchar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DIM_LOCATION",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [ORACLE].[DIM_LOCATION].* FROM [ORACLE].[DIM_LOCATION] ",
+              "dataSource": "CandelaKPI-Dev"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [ORACLE].[DIM_LOCATION].* FROM [ORACLE].[DIM_LOCATION] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DIM_LOCATION"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "ORACLE"
+          }
+        ]
+      },
+      {
+        "name": "DIM_ORDER_SOURCES",
+        "columns": [
+          {
+            "name": "DIM_OS_ID",
+            "dataType": "int64",
+            "sourceColumn": "DIM_OS_ID",
+            "sourceProviderType": "bigint"
+          },
+          {
+            "name": "ORDER_SOURCE_ID",
+            "dataType": "string",
+            "sourceColumn": "ORDER_SOURCE_ID",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "CREATION_DATE",
+            "dataType": "string",
+            "sourceColumn": "CREATION_DATE",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "LAST_UPDATE_DATE",
+            "dataType": "string",
+            "sourceColumn": "LAST_UPDATE_DATE",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "ORDER_NAME",
+            "dataType": "string",
+            "sourceColumn": "ORDER_NAME",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "ORDER_DESCRIPTION",
+            "dataType": "string",
+            "sourceColumn": "ORDER_DESCRIPTION",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "ENABLED_FLAG",
+            "dataType": "string",
+            "sourceColumn": "ENABLED_FLAG",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "CREATE_CUSTOMERS_FLAG",
+            "dataType": "string",
+            "sourceColumn": "CREATE_CUSTOMERS_FLAG",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "USE_IDS_FLAG",
+            "dataType": "string",
+            "sourceColumn": "USE_IDS_FLAG",
+            "sourceProviderType": "nvarchar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DIM_ORDER_SOURCES",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [ORACLE].[DIM_ORDER_SOURCES].* FROM [ORACLE].[DIM_ORDER_SOURCES] ",
+              "dataSource": "CandelaKPI-Dev"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [ORACLE].[DIM_ORDER_SOURCES].* FROM [ORACLE].[DIM_ORDER_SOURCES] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DIM_ORDER_SOURCES"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "ORACLE"
+          }
+        ]
+      },
+      {
+        "name": "DIM_ORDER_TRX_TYPES",
+        "columns": [
+          {
+            "name": "DIM_TRX_ID",
+            "dataType": "int64",
+            "sourceColumn": "DIM_TRX_ID",
+            "sourceProviderType": "bigint"
+          },
+          {
+            "name": "TRANSACTION_TYPE_ID",
+            "dataType": "string",
+            "sourceColumn": "TRANSACTION_TYPE_ID",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "TRANSACTION_TYPE_CODE",
+            "dataType": "string",
+            "sourceColumn": "TRANSACTION_TYPE_CODE",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "ORDER_CATEGORY_CODE",
+            "dataType": "string",
+            "sourceColumn": "ORDER_CATEGORY_CODE",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "START_DATE_ACTIVE",
+            "dataType": "string",
+            "sourceColumn": "START_DATE_ACTIVE",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "END_DATE_ACTIVE",
+            "dataType": "string",
+            "sourceColumn": "END_DATE_ACTIVE",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "CREATION_DATE",
+            "dataType": "string",
+            "sourceColumn": "CREATION_DATE",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "LAST_UPDATE_DATE",
+            "dataType": "string",
+            "sourceColumn": "LAST_UPDATE_DATE",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "CURRENCY_CODE",
+            "dataType": "string",
+            "sourceColumn": "CURRENCY_CODE",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "CONVERSION_TYPE_CODE",
+            "dataType": "string",
+            "sourceColumn": "CONVERSION_TYPE_CODE",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "CUST_TRX_TYPE_ID",
+            "dataType": "string",
+            "sourceColumn": "CUST_TRX_TYPE_ID",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "COST_OF_GOODS_SOLD_ACCOUNT",
+            "dataType": "string",
+            "sourceColumn": "COST_OF_GOODS_SOLD_ACCOUNT",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "PRICE_LIST_ID",
+            "dataType": "string",
+            "sourceColumn": "PRICE_LIST_ID",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "ENFORCE_LINE_PRICES_FLAG",
+            "dataType": "string",
+            "sourceColumn": "ENFORCE_LINE_PRICES_FLAG",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "WAREHOUSE_ID",
+            "dataType": "string",
+            "sourceColumn": "WAREHOUSE_ID",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "FOB_POINT_CODE",
+            "dataType": "string",
+            "sourceColumn": "FOB_POINT_CODE",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "SHIP_SOURCE_TYPE_CODE",
+            "dataType": "string",
+            "sourceColumn": "SHIP_SOURCE_TYPE_CODE",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "INVOICE_SOURCE_ID",
+            "dataType": "string",
+            "sourceColumn": "INVOICE_SOURCE_ID",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "NON_DELIVERY_INVOICE_SOURCE_ID",
+            "dataType": "string",
+            "sourceColumn": "NON_DELIVERY_INVOICE_SOURCE_ID",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "ORG_ID",
+            "dataType": "string",
+            "sourceColumn": "ORG_ID",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "CONTEXT",
+            "dataType": "string",
+            "sourceColumn": "CONTEXT",
+            "sourceProviderType": "nvarchar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DIM_ORDER_TRX_TYPES",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [ORACLE].[DIM_ORDER_TRX_TYPES].* FROM [ORACLE].[DIM_ORDER_TRX_TYPES] ",
+              "dataSource": "CandelaKPI-Dev"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [ORACLE].[DIM_ORDER_TRX_TYPES].* FROM [ORACLE].[DIM_ORDER_TRX_TYPES] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DIM_ORDER_TRX_TYPES"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "ORACLE"
+          }
+        ]
+      },
+      {
+        "name": "DIM_ORGANIZATION_UNITS",
+        "columns": [
+          {
+            "name": "DIM_Organization_units_ID",
+            "dataType": "int64",
+            "sourceColumn": "DIM_Organization_units_ID",
+            "sourceProviderType": "bigint"
+          },
+          {
+            "name": "ORG_ID",
+            "dataType": "string",
+            "sourceColumn": "ORG_ID",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "BUSINESS_GROUP_ID",
+            "dataType": "string",
+            "sourceColumn": "BUSINESS_GROUP_ID",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "LOCATION_ID",
+            "dataType": "string",
+            "sourceColumn": "LOCATION_ID",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "DATE_FROM",
+            "dataType": "string",
+            "sourceColumn": "DATE_FROM",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "NAME",
+            "dataType": "string",
+            "sourceColumn": "NAME",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "DATE_TO",
+            "dataType": "string",
+            "sourceColumn": "DATE_TO",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "INTERNAL_EXTERNAL_FLAG",
+            "dataType": "string",
+            "sourceColumn": "INTERNAL_EXTERNAL_FLAG",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "ACTIVE",
+            "dataType": "string",
+            "sourceColumn": "ACTIVE",
+            "sourceProviderType": "char"
+          },
+          {
+            "name": "TYPE",
+            "dataType": "string",
+            "sourceColumn": "TYPE",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "ATTRIBUTE_CATEGORY",
+            "dataType": "string",
+            "sourceColumn": "ATTRIBUTE_CATEGORY",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "ATTRIBUTE1",
+            "dataType": "string",
+            "sourceColumn": "ATTRIBUTE1",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "LAST_UPDATE_DATE",
+            "dataType": "string",
+            "sourceColumn": "LAST_UPDATE_DATE",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "HR_LOCATION_ID",
+            "dataType": "string",
+            "sourceColumn": "HR_LOCATION_ID",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "LOCATION_CODE",
+            "dataType": "string",
+            "sourceColumn": "LOCATION_CODE",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "DESCRIPTION",
+            "dataType": "string",
+            "sourceColumn": "DESCRIPTION",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "SHIP_TO_LOCATION_ID",
+            "dataType": "string",
+            "sourceColumn": "SHIP_TO_LOCATION_ID",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "SHIP_TO_SITE_FLAG",
+            "dataType": "string",
+            "sourceColumn": "SHIP_TO_SITE_FLAG",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "RECEIVING_SITE_FLAG",
+            "dataType": "string",
+            "sourceColumn": "RECEIVING_SITE_FLAG",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "BILL_TO_SITE_FLAG",
+            "dataType": "string",
+            "sourceColumn": "BILL_TO_SITE_FLAG",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "IN_ORGANIZATION_FLAG",
+            "dataType": "string",
+            "sourceColumn": "IN_ORGANIZATION_FLAG",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "OFFICE_SITE_FLAG",
+            "dataType": "string",
+            "sourceColumn": "OFFICE_SITE_FLAG",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "INVENTORY_ORGANIZATION_ID",
+            "dataType": "string",
+            "sourceColumn": "INVENTORY_ORGANIZATION_ID",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "INACTIVE_DATE",
+            "dataType": "string",
+            "sourceColumn": "INACTIVE_DATE",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "ADDRESS_LINE_1",
+            "dataType": "string",
+            "sourceColumn": "ADDRESS_LINE_1",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "ADDRESS_LINE_2",
+            "dataType": "string",
+            "sourceColumn": "ADDRESS_LINE_2",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "ADDRESS_LINE_3",
+            "dataType": "string",
+            "sourceColumn": "ADDRESS_LINE_3",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "TOWN_OR_CITY",
+            "dataType": "string",
+            "sourceColumn": "TOWN_OR_CITY",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "COUNTRY",
+            "dataType": "string",
+            "sourceColumn": "COUNTRY",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "POSTAL_CODE",
+            "dataType": "string",
+            "sourceColumn": "POSTAL_CODE",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "REGION_1",
+            "dataType": "string",
+            "sourceColumn": "REGION_1",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "REGION_2",
+            "dataType": "string",
+            "sourceColumn": "REGION_2",
+            "sourceProviderType": "nvarchar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DIM_ORGANIZATION_UNITS",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [ORACLE].[DIM_ORGANIZATION_UNITS].* FROM [ORACLE].[DIM_ORGANIZATION_UNITS] ",
+              "dataSource": "CandelaKPI-Dev"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [ORACLE].[DIM_ORGANIZATION_UNITS].* FROM [ORACLE].[DIM_ORGANIZATION_UNITS] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DIM_ORGANIZATION_UNITS"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "ORACLE"
+          }
+        ]
+      },
+      {
+        "name": "DIM_PAYMENT_TERMS",
+        "columns": [
+          {
+            "name": "PAYMENT_TERM_ID",
+            "dataType": "int64",
+            "sourceColumn": "PAYMENT_TERM_ID",
+            "sourceProviderType": "bigint"
+          },
+          {
+            "name": "TERM_ID",
+            "dataType": "string",
+            "sourceColumn": "TERM_ID",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "LAST_UPDATE_DATE",
+            "dataType": "string",
+            "sourceColumn": "LAST_UPDATE_DATE",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "CREDIT_CHECK_FLAG",
+            "dataType": "string",
+            "sourceColumn": "CREDIT_CHECK_FLAG",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "DUE_CUTOFF_DAY",
+            "dataType": "string",
+            "sourceColumn": "DUE_CUTOFF_DAY",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "PRINTING_LEAD_DAYS",
+            "dataType": "string",
+            "sourceColumn": "PRINTING_LEAD_DAYS",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "START_DATE_ACTIVE",
+            "dataType": "string",
+            "sourceColumn": "START_DATE_ACTIVE",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "END_DATE_ACTIVE",
+            "dataType": "string",
+            "sourceColumn": "END_DATE_ACTIVE",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "BASE_AMOUNT",
+            "dataType": "string",
+            "sourceColumn": "BASE_AMOUNT",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "CALC_DISCOUNT_ON_LINES_FLAG",
+            "dataType": "string",
+            "sourceColumn": "CALC_DISCOUNT_ON_LINES_FLAG",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "FIRST_INSTALLMENT_CODE",
+            "dataType": "string",
+            "sourceColumn": "FIRST_INSTALLMENT_CODE",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "IN_USE",
+            "dataType": "string",
+            "sourceColumn": "IN_USE",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "PARTIAL_DISCOUNT_FLAG",
+            "dataType": "string",
+            "sourceColumn": "PARTIAL_DISCOUNT_FLAG",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "PREPAYMENT_FLAG",
+            "dataType": "string",
+            "sourceColumn": "PREPAYMENT_FLAG",
+            "sourceProviderType": "nvarchar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DIM_PAYMENT_TERMS",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [ORACLE].[DIM_PAYMENT_TERMS].* FROM [ORACLE].[DIM_PAYMENT_TERMS] ",
+              "dataSource": "CandelaKPI-Dev"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [ORACLE].[DIM_PAYMENT_TERMS].* FROM [ORACLE].[DIM_PAYMENT_TERMS] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DIM_PAYMENT_TERMS"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "ORACLE"
+          }
+        ]
+      },
+      {
+        "name": "FACT_SALES_ORDER",
+        "columns": [
+          {
+            "name": "Order_type",
+            "dataType": "int64",
+            "sourceColumn": "Order_type",
+            "sourceProviderType": "bigint"
+          },
+          {
+            "name": "BOOKED_FLAG",
+            "dataType": "string",
+            "sourceColumn": "BOOKED_FLAG",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "CANCELLED_FLAG",
+            "dataType": "string",
+            "sourceColumn": "CANCELLED_FLAG",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "LINE_CANCELLED_QUANTITY",
+            "dataType": "string",
+            "sourceColumn": "LINE_CANCELLED_QUANTITY",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "CREATION_DATE",
+            "dataType": "string",
+            "sourceColumn": "CREATION_DATE",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "PO_Number",
+            "dataType": "string",
+            "sourceColumn": "PO_Number",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "HEADER_FLOW_STATUS_CODE",
+            "dataType": "int64",
+            "sourceColumn": "HEADER_FLOW_STATUS_CODE",
+            "sourceProviderType": "int"
+          },
+          {
+            "name": "LINE_FLOW_STATUS_CODE",
+            "dataType": "int64",
+            "sourceColumn": "LINE_FLOW_STATUS_CODE",
+            "sourceProviderType": "int"
+          },
+          {
+            "name": "LINE_FULFILLED_QUANTITY",
+            "dataType": "string",
+            "sourceColumn": "LINE_FULFILLED_QUANTITY",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Dim_Item_id",
+            "dataType": "int64",
+            "sourceColumn": "Dim_Item_id",
+            "sourceProviderType": "bigint"
+          },
+          {
+            "name": "Line_Invoice_Location_id",
+            "dataType": "int64",
+            "sourceColumn": "Line_Invoice_Location_id",
+            "sourceProviderType": "bigint"
+          },
+          {
+            "name": "LAST_UPDATE_DATE",
+            "dataType": "string",
+            "sourceColumn": "LAST_UPDATE_DATE",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "LINE_NUMBER",
+            "dataType": "string",
+            "sourceColumn": "LINE_NUMBER",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "LINE_TYPE_ID",
+            "dataType": "int64",
+            "sourceColumn": "LINE_TYPE_ID",
+            "sourceProviderType": "bigint"
+          },
+          {
+            "name": "OPEN_FLAG",
+            "dataType": "string",
+            "sourceColumn": "OPEN_FLAG",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "LINE_OPEN_FLAG",
+            "dataType": "string",
+            "sourceColumn": "LINE_OPEN_FLAG",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "dim_order_type_id",
+            "dataType": "int64",
+            "sourceColumn": "dim_order_type_id",
+            "sourceProviderType": "int"
+          },
+          {
+            "name": "ORDER_NUMBER",
+            "dataType": "string",
+            "sourceColumn": "ORDER_NUMBER",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "LINE_ORDER_UOM_id",
+            "dataType": "int64",
+            "sourceColumn": "LINE_ORDER_UOM_id",
+            "sourceProviderType": "int"
+          },
+          {
+            "name": "dim_ORDER_TRX_TYPE_ID",
+            "dataType": "int64",
+            "sourceColumn": "dim_ORDER_TRX_TYPE_ID",
+            "sourceProviderType": "bigint"
+          },
+          {
+            "name": "LINE_ORDERED_QUANTITY",
+            "dataType": "string",
+            "sourceColumn": "LINE_ORDERED_QUANTITY",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "ORIG_SYS_DOCUMENT_REF",
+            "dataType": "string",
+            "sourceColumn": "ORIG_SYS_DOCUMENT_REF",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "dim_PAYMENT_TERM_ID",
+            "dataType": "int64",
+            "sourceColumn": "dim_PAYMENT_TERM_ID",
+            "sourceProviderType": "bigint"
+          },
+          {
+            "name": "dim_LINE_PRICE_LIST_ID",
+            "dataType": "string",
+            "sourceColumn": "dim_LINE_PRICE_LIST_ID",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "LINE_PRICING_QUANTITY",
+            "dataType": "string",
+            "sourceColumn": "LINE_PRICING_QUANTITY",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "LINE_PRICING_UOM",
+            "dataType": "int64",
+            "sourceColumn": "LINE_PRICING_UOM",
+            "sourceProviderType": "int"
+          },
+          {
+            "name": "SALES_CHANNEL_id",
+            "dataType": "int64",
+            "sourceColumn": "SALES_CHANNEL_id",
+            "sourceProviderType": "bigint"
+          },
+          {
+            "name": "SALESREP_ID_Line",
+            "dataType": "int64",
+            "sourceColumn": "SALESREP_ID_Line",
+            "sourceProviderType": "bigint"
+          },
+          {
+            "name": "SALESREP_ID_Header",
+            "dataType": "int64",
+            "sourceColumn": "SALESREP_ID_Header",
+            "sourceProviderType": "bigint"
+          },
+          {
+            "name": "Line_SHIP_FROM_COMPANY_ID",
+            "dataType": "int64",
+            "sourceColumn": "Line_SHIP_FROM_COMPANY_ID",
+            "sourceProviderType": "bigint"
+          },
+          {
+            "name": "Line_SOLD_FROM_COMPANY_ID",
+            "dataType": "int64",
+            "sourceColumn": "Line_SOLD_FROM_COMPANY_ID",
+            "sourceProviderType": "bigint"
+          },
+          {
+            "name": "SHIP_TO_LOCATION_ID",
+            "dataType": "int64",
+            "sourceColumn": "SHIP_TO_LOCATION_ID",
+            "sourceProviderType": "int"
+          },
+          {
+            "name": "LINE_SHIPMENT_NUMBER",
+            "dataType": "string",
+            "sourceColumn": "LINE_SHIPMENT_NUMBER",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "LINE_SHIPPED_QUANTITY",
+            "dataType": "string",
+            "sourceColumn": "LINE_SHIPPED_QUANTITY",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "LINE_SHIPPING_QUANTITY",
+            "dataType": "string",
+            "sourceColumn": "LINE_SHIPPING_QUANTITY",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "LINE_SHIPPING_QUANTITY_UOM",
+            "dataType": "int64",
+            "sourceColumn": "LINE_SHIPPING_QUANTITY_UOM",
+            "sourceProviderType": "int"
+          },
+          {
+            "name": "Company_id",
+            "dataType": "int64",
+            "sourceColumn": "Company_id",
+            "sourceProviderType": "bigint"
+          },
+          {
+            "name": "Customer_ID",
+            "dataType": "int64",
+            "sourceColumn": "Customer_ID",
+            "sourceProviderType": "bigint"
+          },
+          {
+            "name": "Order_SOURCE_DOCUMENT_Key_Header",
+            "dataType": "int64",
+            "sourceColumn": "Order_SOURCE_DOCUMENT_Key_Header",
+            "sourceProviderType": "bigint"
+          },
+          {
+            "name": "TRANSACTIONAL_CURR_CODE",
+            "dataType": "string",
+            "sourceColumn": "TRANSACTIONAL_CURR_CODE",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "LINE_UNIT_COST",
+            "dataType": "string",
+            "sourceColumn": "LINE_UNIT_COST",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "LINE_UNIT_LIST_PRICE",
+            "dataType": "string",
+            "sourceColumn": "LINE_UNIT_LIST_PRICE",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "LINE_UNIT_LIST_PRICE_PER_PQTY",
+            "dataType": "string",
+            "sourceColumn": "LINE_UNIT_LIST_PRICE_PER_PQTY",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "LINE_UNIT_SELLING_PRICE",
+            "dataType": "string",
+            "sourceColumn": "LINE_UNIT_SELLING_PRICE",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "LINE_UNIT_SELLING_PRICE_PER_PQTY",
+            "dataType": "string",
+            "sourceColumn": "LINE_UNIT_SELLING_PRICE_PER_PQTY",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "ORDER_DATE_ID",
+            "dataType": "int64",
+            "sourceColumn": "ORDER_DATE_ID",
+            "sourceProviderType": "bigint"
+          },
+          {
+            "name": "PRICING_DATE_ID",
+            "dataType": "int64",
+            "sourceColumn": "PRICING_DATE_ID",
+            "sourceProviderType": "bigint"
+          },
+          {
+            "name": "REQUEST_DATE_ID",
+            "dataType": "int64",
+            "sourceColumn": "REQUEST_DATE_ID",
+            "sourceProviderType": "bigint"
+          },
+          {
+            "name": "BOOKED_DATE_ID",
+            "dataType": "int64",
+            "sourceColumn": "BOOKED_DATE_ID",
+            "sourceProviderType": "bigint"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "FACT_SALES_ORDER",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [ORACLE].[FACT_SALES_ORDER].* FROM [ORACLE].[FACT_SALES_ORDER] ",
+              "dataSource": "CandelaKPI-Dev"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [ORACLE].[FACT_SALES_ORDER].* FROM [ORACLE].[FACT_SALES_ORDER] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "FACT_SALES_ORDER"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "ORACLE"
+          }
+        ]
       }
     ],
     "relationships": [
@@ -19134,6 +20505,102 @@
         "fromColumn": "opportunity_id",
         "toTable": "DIM_OPPORTUNITY",
         "toColumn": "DIM_OPP_ID"
+      },
+      {
+        "name": "0ba05c0b-815d-4099-a67d-a57ab646fcca",
+        "fromTable": "DIM_PAYMENT_TERMS",
+        "fromColumn": "PAYMENT_TERM_ID",
+        "toTable": "FACT_SALES_ORDER",
+        "toColumn": "dim_PAYMENT_TERM_ID"
+      },
+      {
+        "name": "a5665106-15ca-4dd5-a9c5-0fc009e59e8a",
+        "fromTable": "DIM_ORDER_TRX_TYPES",
+        "fromColumn": "DIM_TRX_ID",
+        "toTable": "FACT_SALES_ORDER",
+        "toColumn": "dim_ORDER_TRX_TYPE_ID"
+      },
+      {
+        "name": "35e7ff6e-0c6b-4bdd-87bc-7655b2bb3135",
+        "fromTable": "DIM_ORDER_TRX_TYPES",
+        "fromColumn": "DIM_TRX_ID",
+        "toTable": "FACT_SALES_ORDER",
+        "toColumn": "LINE_TYPE_ID",
+        "isActive": false
+      },
+      {
+        "name": "c2a266a7-746c-4e71-b2da-7be029c152d4",
+        "fromTable": "DIM_ORGANIZATION_UNITS",
+        "fromColumn": "DIM_Organization_units_ID",
+        "toTable": "FACT_SALES_ORDER",
+        "toColumn": "Company_id"
+      },
+      {
+        "name": "c1f6f6c6-0348-45f5-b0b3-361174642865",
+        "fromTable": "DIM_ORGANIZATION_UNITS",
+        "fromColumn": "DIM_Organization_units_ID",
+        "toTable": "FACT_SALES_ORDER",
+        "toColumn": "Line_SHIP_FROM_COMPANY_ID",
+        "isActive": false
+      },
+      {
+        "name": "816a28f0-16b1-44df-8ec4-af4bf09a8bf1",
+        "fromTable": "DIM_ORGANIZATION_UNITS",
+        "fromColumn": "DIM_Organization_units_ID",
+        "toTable": "FACT_SALES_ORDER",
+        "toColumn": "Line_SOLD_FROM_COMPANY_ID",
+        "isActive": false
+      },
+      {
+        "name": "a63de993-ae75-454c-a008-d47b3676d450",
+        "fromTable": "DIM_LKUP_customer_site_use_location",
+        "fromColumn": "LOCATION_ID",
+        "toTable": "FACT_SALES_ORDER",
+        "toColumn": "Line_Invoice_Location_id"
+      },
+      {
+        "name": "8d75956f-77d5-4d9e-a8e0-57e99fb4b563",
+        "fromTable": "DIM_LKUP_customer_site_use_location",
+        "fromColumn": "LOCATION_ID",
+        "toTable": "FACT_SALES_ORDER",
+        "toColumn": "SHIP_TO_LOCATION_ID",
+        "isActive": false
+      },
+      {
+        "name": "673ef233-7f8e-466b-87d8-46db70e0d748",
+        "fromTable": "DIM_ORDER_SOURCES",
+        "fromColumn": "DIM_OS_ID",
+        "toTable": "FACT_SALES_ORDER",
+        "toColumn": "Order_SOURCE_DOCUMENT_Key_Header"
+      },
+      {
+        "name": "ce002752-07e9-439e-839e-4ce67d53e952",
+        "fromTable": "DIM_ITEM_MASTER",
+        "fromColumn": "DIM_ITEM_ID",
+        "toTable": "FACT_SALES_ORDER",
+        "toColumn": "Dim_Item_id"
+      },
+      {
+        "name": "ff98f627-a51b-4a99-b269-3bb458ba2769",
+        "fromTable": "DIM_CUSTOMER",
+        "fromColumn": "CUSTOMER_ID",
+        "toTable": "FACT_SALES_ORDER",
+        "toColumn": "Customer_ID"
+      },
+      {
+        "name": "3ac487ce-9a9b-4cc0-b2b4-9403fdde50f8",
+        "fromTable": "DIM_USERS",
+        "fromColumn": "USERSID",
+        "toTable": "FACT_SALES_ORDER",
+        "toColumn": "SALESREP_ID_Header"
+      },
+      {
+        "name": "268b178e-1d39-4c5c-995b-b066cd7d3c73",
+        "fromTable": "DIM_USERS",
+        "fromColumn": "USERSID",
+        "toTable": "FACT_SALES_ORDER",
+        "toColumn": "SALESREP_ID_Line",
+        "isActive": false
       }
     ],
     "annotations": [
