@@ -3842,6 +3842,11 @@
             "isDataTypeInferred": true,
             "expression": "FACT_ENGAGEMENT[CalculatedAgeBucket]",
             "sortByColumn": "AgeBucketSortOrder"
+          },
+          {
+            "name": "Speciality_id",
+            "dataType": "int64",
+            "sourceColumn": "Speciality_id"
           }
         ],
         "partitions": [
@@ -4009,6 +4014,14 @@
                   "        <int>67</int>",
                   "      </value>",
                   "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>Speciality_id</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>89</int>",
+                  "      </value>",
+                  "    </item>",
                   "  </ColumnWidths>",
                   "  <ColumnDisplayIndex>",
                   "    <item>",
@@ -4155,6 +4168,14 @@
                   "        <int>17</int>",
                   "      </value>",
                   "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>Speciality_id</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>18</int>",
+                  "      </value>",
+                  "    </item>",
                   "  </ColumnDisplayIndex>",
                   "  <ColumnFrozen />",
                   "  <ColumnChecked>",
@@ -4209,6 +4230,14 @@
                   "    <item>",
                   "      <key>",
                   "        <string>Amount</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <boolean>true</boolean>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>Speciality_id</string>",
                   "      </key>",
                   "      <value>",
                   "        <boolean>true</boolean>",
@@ -4410,6 +4439,14 @@
               "        <int>67</int>",
               "      </value>",
               "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>Speciality_id</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>89</int>",
+              "      </value>",
+              "    </item>",
               "  </ColumnWidths>",
               "  <ColumnDisplayIndex>",
               "    <item>",
@@ -4556,6 +4593,14 @@
               "        <int>17</int>",
               "      </value>",
               "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>Speciality_id</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>18</int>",
+              "      </value>",
+              "    </item>",
               "  </ColumnDisplayIndex>",
               "  <ColumnFrozen />",
               "  <ColumnChecked>",
@@ -4610,6 +4655,14 @@
               "    <item>",
               "      <key>",
               "        <string>Amount</string>",
+              "      </key>",
+              "      <value>",
+              "        <boolean>true</boolean>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>Speciality_id</string>",
               "      </key>",
               "      <value>",
               "        <boolean>true</boolean>",
@@ -20268,6 +20321,54 @@
             "value": "ORACLE"
           }
         ]
+      },
+      {
+        "name": "DIM_SPECIALITY",
+        "columns": [
+          {
+            "name": "SPECIALITY_ID",
+            "dataType": "int64",
+            "sourceColumn": "SPECIALITY_ID",
+            "sourceProviderType": "int"
+          },
+          {
+            "name": "SPECIALITY_SOURCE",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "SPECIALITY_SOURCE",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "SPECIALITY",
+            "dataType": "string",
+            "sourceColumn": "SPECIALITY",
+            "sourceProviderType": "nvarchar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DIM_SPECIALITY",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [dbo].[DIM_SPECIALITY].* FROM [dbo].[DIM_SPECIALITY] ",
+              "dataSource": "CandelaKPI-Dev"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[DIM_SPECIALITY].* FROM [dbo].[DIM_SPECIALITY] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DIM_SPECIALITY"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
       }
     ],
     "relationships": [
@@ -20325,14 +20426,6 @@
         "fromColumn": "channel_id",
         "toTable": "DIM_CHANNEL",
         "toColumn": "channel_id",
-        "crossFilteringBehavior": "bothDirections"
-      },
-      {
-        "name": "685bcb28-99b5-4dfe-8564-ec9f4f9fe446",
-        "fromTable": "FACT_ENGAGEMENT",
-        "fromColumn": "contact_id",
-        "toTable": "DIM_USERS",
-        "toColumn": "USERSID",
         "crossFilteringBehavior": "bothDirections"
       },
       {
@@ -20432,23 +20525,6 @@
         "crossFilteringBehavior": "bothDirections"
       },
       {
-        "name": "aad2d96d-649d-4877-b166-f4b621424669",
-        "fromTable": "FACT_SALES_ORDER",
-        "fromColumn": "SALESREP_ID_Header",
-        "toTable": "DIM_USERS",
-        "toColumn": "USERSID",
-        "crossFilteringBehavior": "bothDirections"
-      },
-      {
-        "name": "6288ea44-f387-4bed-a90c-185b10dc953b",
-        "fromTable": "FACT_SALES_ORDER",
-        "fromColumn": "SALESREP_ID_Line",
-        "toTable": "DIM_USERS",
-        "toColumn": "USERSID",
-        "isActive": false,
-        "crossFilteringBehavior": "bothDirections"
-      },
-      {
         "name": "0f970978-1db5-4f43-a5c2-f10ee9176a96",
         "fromTable": "FACT_ENGAGEMENT",
         "fromColumn": "op_sales_type_id",
@@ -20495,6 +20571,66 @@
         "toTable": "DIM_STATUS_LOOKUP",
         "toColumn": "STATUSID",
         "crossFilteringBehavior": "bothDirections"
+      },
+      {
+        "name": "a6a5f2b1-a5f6-4d9d-bd45-c786b1a7526c",
+        "fromTable": "FACT_ENGAGEMENT",
+        "fromColumn": "Speciality_id",
+        "toTable": "DIM_SPECIALITY",
+        "toColumn": "SPECIALITY_ID"
+      },
+      {
+        "name": "f7647857-5b8b-43fb-975a-3b95c07b3e96",
+        "fromTable": "FACT_SALES_ORDER",
+        "fromColumn": "SALESREP_ID_Line",
+        "toTable": "DIM_USERS",
+        "toColumn": "USERSID",
+        "isActive": false
+      },
+      {
+        "name": "116fde37-12ff-4c67-b736-d9a400aae5cc",
+        "fromTable": "FACT_SALES_ORDER",
+        "fromColumn": "SALESREP_ID_Header",
+        "toTable": "DIM_USERS",
+        "toColumn": "USERSID"
+      },
+      {
+        "name": "1f02532b-68b1-4134-b864-1d3cf4a49242",
+        "fromTable": "FACT_ENGAGEMENT",
+        "fromColumn": "contact_id",
+        "toTable": "DIM_USERS",
+        "toColumn": "USERSID"
+      },
+      {
+        "name": "0f632000-80fe-4af7-97a0-b699d7a42065",
+        "fromTable": "FACT_SALES_ORDER",
+        "fromColumn": "ORDER_DATE_ID",
+        "toTable": "dim_date",
+        "toColumn": "Date_id"
+      },
+      {
+        "name": "0abe4014-4a6a-40c3-8a2d-4293ffb74df8",
+        "fromTable": "FACT_SALES_ORDER",
+        "fromColumn": "PRICING_DATE_ID",
+        "toTable": "dim_date",
+        "toColumn": "Date_id",
+        "isActive": false
+      },
+      {
+        "name": "929e4174-c792-4420-bb04-5e6aaf8e5ab1",
+        "fromTable": "FACT_SALES_ORDER",
+        "fromColumn": "REQUEST_DATE_ID",
+        "toTable": "dim_date",
+        "toColumn": "Date_id",
+        "isActive": false
+      },
+      {
+        "name": "3191e2f3-f2a3-4832-af90-a8c13d52f430",
+        "fromTable": "FACT_SALES_ORDER",
+        "fromColumn": "BOOKED_DATE_ID",
+        "toTable": "dim_date",
+        "toColumn": "Date_id",
+        "isActive": false
       }
     ],
     "annotations": [

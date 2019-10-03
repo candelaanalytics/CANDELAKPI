@@ -1,0 +1,7 @@
+D:\Projects\Candela\SourceCode\CANDELAKPI\OrdersKPI\bin\Model.asdatabase
+D:\Projects\Candela\SourceCode\CANDELAKPI\OrdersKPI\bin\Model.deploymenttargets
+D:\Projects\Candela\SourceCode\CANDELAKPI\OrdersKPI\bin\Model.deploymentoptions
+D:\Projects\Candela\SourceCode\CANDELAKPI\OrdersKPI\obj\Development\OrdersKPI.smproj.CoreCompileInputs.cache
+D:\Projects\Candela\SourceCode\CANDELAKPI\OrdersKPI\obj\Development\Model.asdatabase
+D:\Projects\Candela\SourceCode\CANDELAKPI\OrdersKPI\obj\Development\Model.deploymentoptions
+D:\Projects\Candela\SourceCode\CANDELAKPI\OrdersKPI\obj\Development\Model.deploymenttargets

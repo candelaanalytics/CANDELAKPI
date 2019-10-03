@@ -1,0 +1,7 @@
+D:\Projects\Candela\SourceCode\CANDELAKPI\EngagementKPI\bin\Model.asdatabase
+D:\Projects\Candela\SourceCode\CANDELAKPI\EngagementKPI\bin\Model.deploymenttargets
+D:\Projects\Candela\SourceCode\CANDELAKPI\EngagementKPI\bin\Model.deploymentoptions
+D:\Projects\Candela\SourceCode\CANDELAKPI\EngagementKPI\obj\Development\EngagementKPI.smproj.CoreCompileInputs.cache
+D:\Projects\Candela\SourceCode\CANDELAKPI\EngagementKPI\obj\Development\Model.asdatabase
+D:\Projects\Candela\SourceCode\CANDELAKPI\EngagementKPI\obj\Development\Model.deploymentoptions
+D:\Projects\Candela\SourceCode\CANDELAKPI\EngagementKPI\obj\Development\Model.deploymenttargets

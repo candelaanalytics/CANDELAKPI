@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.28307.757
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{6870E480-7721-4708-BFB8-9AE898AA21B3}") = "CANDELAKPI", "CANDELAKPI\CANDELAKPI.smproj", "{8CE414BB-95B2-4C99-9E03-51BA72086E22}"
 EndProject
+Project("{6870E480-7721-4708-BFB8-9AE898AA21B3}") = "EngagementKPI", "EngagementKPI\EngagementKPI.smproj", "{7D1D3224-5B1C-4F4E-8ABD-3F949A0B97E8}"
+EndProject
+Project("{6870E480-7721-4708-BFB8-9AE898AA21B3}") = "OrdersKPI", "OrdersKPI\OrdersKPI.smproj", "{E559D17D-69B9-4AEA-8E14-3DA9F35ABAF7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Development|x86 = Development|x86
@@ -13,6 +17,12 @@ Global
 		{8CE414BB-95B2-4C99-9E03-51BA72086E22}.Development|x86.ActiveCfg = Development|x86
 		{8CE414BB-95B2-4C99-9E03-51BA72086E22}.Development|x86.Build.0 = Development|x86
 		{8CE414BB-95B2-4C99-9E03-51BA72086E22}.Development|x86.Deploy.0 = Development|x86
+		{7D1D3224-5B1C-4F4E-8ABD-3F949A0B97E8}.Development|x86.ActiveCfg = Development|x86
+		{7D1D3224-5B1C-4F4E-8ABD-3F949A0B97E8}.Development|x86.Build.0 = Development|x86
+		{7D1D3224-5B1C-4F4E-8ABD-3F949A0B97E8}.Development|x86.Deploy.0 = Development|x86
+		{E559D17D-69B9-4AEA-8E14-3DA9F35ABAF7}.Development|x86.ActiveCfg = Development|x86
+		{E559D17D-69B9-4AEA-8E14-3DA9F35ABAF7}.Development|x86.Build.0 = Development|x86
+		{E559D17D-69B9-4AEA-8E14-3DA9F35ABAF7}.Development|x86.Deploy.0 = Development|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
