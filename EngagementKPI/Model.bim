@@ -1175,6 +1175,7 @@
             "name": "DIM_ACCOUNT",
             "dataView": "full",
             "source": {
+              "type": "query",
               "query": " SELECT [salesforce].[DIM_ACCOUNT].* FROM [salesforce].[DIM_ACCOUNT] ",
               "dataSource": "SqlAzure sc-az-datacontrol-srv1.database.windows.net CandelaKPI-Dev"
             }
@@ -1243,6 +1244,7 @@
             "name": "DIM_ACQUISITION",
             "dataView": "full",
             "source": {
+              "type": "query",
               "query": " SELECT [salesforce].[DIM_ACQUISITION].* FROM [salesforce].[DIM_ACQUISITION] ",
               "dataSource": "SqlAzure sc-az-datacontrol-srv1.database.windows.net CandelaKPI-Dev"
             }
@@ -1563,6 +1565,7 @@
             "name": "Dim_Campaign",
             "dataView": "full",
             "source": {
+              "type": "query",
               "query": " SELECT [salesforce].[Dim_Campaign].* FROM [salesforce].[Dim_Campaign] ",
               "dataSource": "SqlAzure sc-az-datacontrol-srv1.database.windows.net CandelaKPI-Dev"
             }
@@ -1637,6 +1640,7 @@
             "name": "DIM_CHANNEL",
             "dataView": "full",
             "source": {
+              "type": "query",
               "query": " SELECT [salesforce].[DIM_CHANNEL].* FROM [salesforce].[DIM_CHANNEL] ",
               "dataSource": "SqlAzure sc-az-datacontrol-srv1.database.windows.net CandelaKPI-Dev"
             }
@@ -1991,6 +1995,7 @@
             "name": "DIM_CONTACT",
             "dataView": "full",
             "source": {
+              "type": "query",
               "query": " SELECT [salesforce].[DIM_CONTACT].* FROM [salesforce].[DIM_CONTACT] ",
               "dataSource": "SqlAzure sc-az-datacontrol-srv1.database.windows.net CandelaKPI-Dev"
             }
@@ -2269,6 +2274,7 @@
             "name": "DIM_CUSTOMER",
             "dataView": "full",
             "source": {
+              "type": "query",
               "query": " SELECT [salesforce].[DIM_CUSTOMER].* FROM [salesforce].[DIM_CUSTOMER] ",
               "dataSource": "SqlAzure sc-az-datacontrol-srv1.database.windows.net CandelaKPI-Dev"
             }
@@ -2349,6 +2355,7 @@
             "name": "DIM_ENGAGEMENT_TYPE",
             "dataView": "full",
             "source": {
+              "type": "query",
               "query": " SELECT [salesforce].[DIM_ENGAGEMENT_TYPE].* FROM [salesforce].[DIM_ENGAGEMENT_TYPE] ",
               "dataSource": "SqlAzure sc-az-datacontrol-srv1.database.windows.net CandelaKPI-Dev"
             },
@@ -2996,6 +3003,7 @@
           {
             "name": "Is_Syneron_customer",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Is_Syneron_customer",
             "sourceProviderType": "nvarchar"
           },
@@ -3510,6 +3518,7 @@
             "name": "DIM_LEAD",
             "dataView": "full",
             "source": {
+              "type": "query",
               "query": " SELECT [salesforce].[DIM_LEAD].* FROM [salesforce].[DIM_LEAD] ",
               "dataSource": "SqlAzure sc-az-datacontrol-srv1.database.windows.net CandelaKPI-Dev"
             }
@@ -3584,6 +3593,7 @@
             "name": "DIM_LEAD_SOURCE",
             "dataView": "full",
             "source": {
+              "type": "query",
               "query": " SELECT [salesforce].[DIM_LEAD_SOURCE].* FROM [salesforce].[DIM_LEAD_SOURCE] ",
               "dataSource": "SqlAzure sc-az-datacontrol-srv1.database.windows.net CandelaKPI-Dev"
             }
@@ -5547,6 +5557,7 @@
             "name": "DIM_OPPORTUNITY",
             "dataView": "full",
             "source": {
+              "type": "query",
               "query": " SELECT [salesforce].[DIM_OPPORTUNITY].* FROM [salesforce].[DIM_OPPORTUNITY] ",
               "dataSource": "SqlAzure sc-az-datacontrol-srv1.database.windows.net CandelaKPI-Dev"
             }
@@ -5588,6 +5599,7 @@
             "name": "DIM_OPPORTUNITY_TYPE",
             "dataView": "full",
             "source": {
+              "type": "query",
               "query": " SELECT [salesforce].[DIM_OPPORTUNITY_TYPE].* FROM [salesforce].[DIM_OPPORTUNITY_TYPE] ",
               "dataSource": "SqlAzure sc-az-datacontrol-srv1.database.windows.net CandelaKPI-Dev"
             }
@@ -5629,6 +5641,7 @@
             "name": "DIM_SALES_TYPE",
             "dataView": "full",
             "source": {
+              "type": "query",
               "query": " SELECT [salesforce].[DIM_SALES_TYPE].* FROM [salesforce].[DIM_SALES_TYPE] ",
               "dataSource": "SqlAzure sc-az-datacontrol-srv1.database.windows.net CandelaKPI-Dev"
             }
@@ -6277,6 +6290,7 @@
             "name": "DIM_USERS",
             "dataView": "full",
             "source": {
+              "type": "query",
               "query": " SELECT [salesforce].[DIM_USERS].* FROM [salesforce].[DIM_USERS] ",
               "dataSource": "SqlAzure sc-az-datacontrol-srv1.database.windows.net CandelaKPI-Dev"
             }
@@ -6500,6 +6514,7 @@
             "name": "FACT_ENGAGEMENT",
             "dataView": "full",
             "source": {
+              "type": "query",
               "query": " SELECT [salesforce].[FACT_ENGAGEMENT].* FROM [salesforce].[FACT_ENGAGEMENT] ",
               "dataSource": "SqlAzure sc-az-datacontrol-srv1.database.windows.net CandelaKPI-Dev"
             },
@@ -7441,6 +7456,7 @@
             "name": "DIM_REGION",
             "dataView": "full",
             "source": {
+              "type": "query",
               "query": " SELECT [dbo].[DIM_ISO_COUNTRY_REGION_CODES].* FROM [dbo].[DIM_ISO_COUNTRY_REGION_CODES] ",
               "dataSource": "SqlAzure sc-az-datacontrol-srv1.database.windows.net CandelaKPI-Dev"
             }
@@ -7687,6 +7703,7 @@
             "name": "dim_date",
             "dataView": "full",
             "source": {
+              "type": "query",
               "query": " SELECT [dbo].[dim_date].* FROM [dbo].[dim_date] ",
               "dataSource": "SqlAzure sc-az-datacontrol-srv1.database.windows.net CandelaKPI-Dev"
             },
@@ -8808,6 +8825,7 @@
             "name": "DIM_SPECIALITY",
             "dataView": "full",
             "source": {
+              "type": "query",
               "query": " SELECT [dbo].[DIM_SPECIALITY].* FROM [dbo].[DIM_SPECIALITY] ",
               "dataSource": "SqlAzure sc-az-datacontrol-srv1.database.windows.net CandelaKPI-Dev"
             }
@@ -8855,6 +8873,7 @@
             "name": "DIM_STATUS_LOOKUP",
             "dataView": "full",
             "source": {
+              "type": "query",
               "query": " SELECT [dbo].[DIM_STATUS_LOOKUP].* FROM [dbo].[DIM_STATUS_LOOKUP] ",
               "dataSource": "SqlAzure sc-az-datacontrol-srv1.database.windows.net CandelaKPI-Dev"
             }
@@ -9040,6 +9059,7 @@
             "name": "dim_item_master",
             "dataView": "full",
             "source": {
+              "type": "query",
               "query": " SELECT [ORACLE].[dim_item_master].* FROM [ORACLE].[dim_item_master] ",
               "dataSource": "SqlAzure sc-az-datacontrol-srv1.database.windows.net CandelaKPI-Dev"
             }
@@ -9215,6 +9235,7 @@
             "name": "DIM_OPPORTUNITY_LINE_ITEMS",
             "dataView": "full",
             "source": {
+              "type": "query",
               "query": " SELECT [salesforce].[DIM_OPPORTUNITY_LINE_ITEMS].* FROM [salesforce].[DIM_OPPORTUNITY_LINE_ITEMS] ",
               "dataSource": "SqlAzure sc-az-datacontrol-srv1.database.windows.net CandelaKPI-Dev"
             }
