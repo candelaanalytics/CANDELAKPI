@@ -3015,6 +3015,7 @@
           {
             "name": "Job_Function",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Job_Function",
             "sourceProviderType": "nvarchar"
           },
