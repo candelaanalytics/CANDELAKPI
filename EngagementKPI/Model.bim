@@ -3003,7 +3003,6 @@
           {
             "name": "Is_Syneron_customer",
             "dataType": "string",
-            "isHidden": true,
             "sourceColumn": "Is_Syneron_customer",
             "sourceProviderType": "nvarchar"
           },
