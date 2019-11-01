@@ -2782,12 +2782,14 @@
           {
             "name": "Company",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Company",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Competitor_System_Owned",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Competitor_System_Owned",
             "sourceProviderType": "nvarchar"
           },
@@ -2800,6 +2802,7 @@
           {
             "name": "Contact_Request_Notes",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Contact_Request_Notes",
             "sourceProviderType": "nvarchar"
           },
@@ -2831,6 +2834,7 @@
           {
             "name": "Converted_Opportunity",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Converted_Opportunity",
             "sourceProviderType": "nvarchar"
           },
@@ -2849,12 +2853,14 @@
           {
             "name": "CountryCode",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "CountryCode",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "CreatedById",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "CreatedById",
             "sourceProviderType": "nvarchar"
           },
@@ -2874,12 +2880,14 @@
           {
             "name": "Current_Treatment",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Current_Treatment",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "DB_Created_Date_without_Time",
             "dataType": "dateTime",
+            "isHidden": true,
             "sourceColumn": "DB_Created_Date_without_Time",
             "formatString": "General Date",
             "sourceProviderType": "datetime2"
@@ -2887,6 +2895,7 @@
           {
             "name": "DB_Lead_Age",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "DB_Lead_Age",
             "sourceProviderType": "numeric"
           },
@@ -2899,18 +2908,21 @@
           {
             "name": "DoNotCall",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "DoNotCall",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Email",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Email",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "EmailBouncedDate",
             "dataType": "dateTime",
+            "isHidden": true,
             "sourceColumn": "EmailBouncedDate",
             "formatString": "General Date",
             "sourceProviderType": "datetime2"
@@ -2918,12 +2930,14 @@
           {
             "name": "EmailBouncedReason",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "EmailBouncedReason",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Financial_Qualified",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Financial_Qualified",
             "sourceProviderType": "nvarchar"
           },
@@ -2936,6 +2950,7 @@
           {
             "name": "Goal_Date",
             "dataType": "dateTime",
+            "isHidden": true,
             "sourceColumn": "Goal_Date",
             "formatString": "General Date",
             "sourceProviderType": "datetime2"
@@ -2943,18 +2958,21 @@
           {
             "name": "HasOptedOutOfEmail",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "HasOptedOutOfEmail",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "HasOptedOutOfFax",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "HasOptedOutOfFax",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "How_was_this_lead_qualified",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "How_was_this_lead_qualified",
             "sourceProviderType": "nvarchar"
           },
@@ -2967,6 +2985,7 @@
           {
             "name": "Industry",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Industry",
             "sourceProviderType": "nvarchar"
           },
@@ -2979,36 +2998,42 @@
           {
             "name": "In_Business_Since",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "In_Business_Since",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "IsConverted",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "IsConverted",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "IsDeleted",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "IsDeleted",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "IsUnreadByOwner",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "IsUnreadByOwner",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Is_Syneron_customer",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Is_Syneron_customer",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Is_Updated_By_Sales",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Is_Updated_By_Sales",
             "sourceProviderType": "nvarchar"
           },
@@ -3022,6 +3047,7 @@
           {
             "name": "LastActivityDate",
             "dataType": "dateTime",
+            "isHidden": true,
             "sourceColumn": "LastActivityDate",
             "formatString": "General Date",
             "sourceProviderType": "datetime2"
@@ -3029,6 +3055,7 @@
           {
             "name": "LastModifiedById",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "LastModifiedById",
             "sourceProviderType": "nvarchar"
           },
@@ -3048,6 +3075,7 @@
           {
             "name": "LastReferencedDate",
             "dataType": "dateTime",
+            "isHidden": true,
             "sourceColumn": "LastReferencedDate",
             "formatString": "General Date",
             "sourceProviderType": "datetime2"
@@ -3055,6 +3083,7 @@
           {
             "name": "LastViewedDate",
             "dataType": "dateTime",
+            "isHidden": true,
             "sourceColumn": "LastViewedDate",
             "formatString": "General Date",
             "sourceProviderType": "datetime2"
@@ -3062,6 +3091,7 @@
           {
             "name": "Last_Activity",
             "dataType": "dateTime",
+            "isHidden": true,
             "sourceColumn": "Last_Activity",
             "formatString": "General Date",
             "sourceProviderType": "datetime2"
@@ -3069,12 +3099,14 @@
           {
             "name": "Last_Expressed_Product_Interest",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Last_Expressed_Product_Interest",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Last_Inferred_Product_Interest",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Last_Inferred_Product_Interest",
             "sourceProviderType": "nvarchar"
           },
@@ -3087,96 +3119,112 @@
           {
             "name": "Leads_Power_of_1",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "Leads_Power_of_1",
             "sourceProviderType": "numeric"
           },
           {
             "name": "Marketing_qualified_lead",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Marketing_qualified_lead",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Medical_Designation",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Medical_Designation",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Min_Act_On_a_Lead",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "Min_Act_On_a_Lead",
             "sourceProviderType": "numeric"
           },
           {
             "name": "mkto2__Inferred_City",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "mkto2__Inferred_City",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "mkto2__Inferred_Company",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "mkto2__Inferred_Company",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "mkto2__Inferred_Country",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "mkto2__Inferred_Country",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "mkto2__Inferred_Metropolitan_Area",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "mkto2__Inferred_Metropolitan_Area",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "mkto2__Inferred_Phone_Area_Code",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "mkto2__Inferred_Phone_Area_Code",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "mkto2__Inferred_Postal_Code",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "mkto2__Inferred_Postal_Code",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "mkto2__Inferred_State_Region",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "mkto2__Inferred_State_Region",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "mkto2__Lead_Score",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "mkto2__Lead_Score",
             "sourceProviderType": "numeric"
           },
           {
             "name": "mkto2__Original_Referrer",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "mkto2__Original_Referrer",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "mkto2__Original_Search_Engine",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "mkto2__Original_Search_Engine",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "mkto2__Original_Search_Phrase",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "mkto2__Original_Search_Phrase",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "mkto2__Original_Source_Info",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "mkto2__Original_Source_Info",
             "sourceProviderType": "nvarchar"
           },
@@ -3189,6 +3237,7 @@
           {
             "name": "mkto_si__HideDate",
             "dataType": "dateTime",
+            "isHidden": true,
             "sourceColumn": "mkto_si__HideDate",
             "formatString": "General Date",
             "sourceProviderType": "datetime2"
@@ -3227,12 +3276,14 @@
           {
             "name": "mkto_si__Priority",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "mkto_si__Priority",
             "sourceProviderType": "numeric"
           },
           {
             "name": "mkto_si__Relative_Score_Value",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "mkto_si__Relative_Score_Value",
             "sourceProviderType": "numeric"
           },
@@ -3251,30 +3302,35 @@
           {
             "name": "Open_status_counter",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "Open_status_counter",
             "sourceProviderType": "numeric"
           },
           {
             "name": "Owner_Id",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Owner_Id",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Patient_Skin_Type_Class_III_or_higher",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "Patient_Skin_Type_Class_III_or_higher",
             "sourceProviderType": "numeric"
           },
           {
             "name": "PostalCode",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "PostalCode",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Purchase_Time_Frame",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "Purchase_Time_Frame",
             "sourceProviderType": "numeric"
           },
@@ -3287,30 +3343,35 @@
           {
             "name": "Reasons_for_1st_Recommendation",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Reasons_for_1st_Recommendation",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Reasons_for_2nd_Recommendation",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Reasons_for_2nd_Recommendation",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Reasons_for_3rd_Recommendation",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Reasons_for_3rd_Recommendation",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "RecordTypeId",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "RecordTypeId",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Referred_By",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Referred_By",
             "sourceProviderType": "nvarchar"
           },
@@ -3323,12 +3384,14 @@
           {
             "name": "Salutation",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Salutation",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Selected_System",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Selected_System",
             "sourceProviderType": "nvarchar"
           },
@@ -3353,6 +3416,7 @@
           {
             "name": "StateCode",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "StateCode",
             "sourceProviderType": "nvarchar"
           },
@@ -3365,24 +3429,28 @@
           {
             "name": "Street",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Street",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Sub_Category",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Sub_Category",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Syneron_Systems_Interested_In",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Syneron_Systems_Interested_In",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "SystemModstamp",
             "dataType": "dateTime",
+            "isHidden": true,
             "sourceColumn": "SystemModstamp",
             "formatString": "General Date",
             "sourceProviderType": "datetime2"
@@ -3396,24 +3464,28 @@
           {
             "name": "Title",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Title",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Treatments_Currently_Offered",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Treatments_Currently_Offered",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Treatment_Interest",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Treatment_Interest",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Treatment_Speed",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Treatment_Speed",
             "sourceProviderType": "nvarchar"
           },
@@ -3432,30 +3504,35 @@
           {
             "name": "X1st_Recommendation",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "X1st_Recommendation",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "X2nd_Recommendation",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "X2nd_Recommendation",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "X3rd_Recommendation",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "X3rd_Recommendation",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Years_In_Business",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Years_In_Business",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "isActiveRecord",
             "dataType": "boolean",
+            "isHidden": true,
             "sourceColumn": "isActiveRecord",
             "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
             "sourceProviderType": "bit"
@@ -3463,6 +3540,7 @@
           {
             "name": "RecordValidStartDate",
             "dataType": "dateTime",
+            "isHidden": true,
             "sourceColumn": "RecordValidStartDate",
             "formatString": "General Date",
             "sourceProviderType": "datetime2"
@@ -3470,6 +3548,7 @@
           {
             "name": "RecordValidEndDate",
             "dataType": "dateTime",
+            "isHidden": true,
             "sourceColumn": "RecordValidEndDate",
             "formatString": "General Date",
             "sourceProviderType": "datetime2"
@@ -3477,6 +3556,7 @@
           {
             "name": "ValidFrom",
             "dataType": "dateTime",
+            "isHidden": true,
             "sourceColumn": "ValidFrom",
             "formatString": "General Date",
             "sourceProviderType": "datetime2"
@@ -3484,6 +3564,7 @@
           {
             "name": "ValidTo",
             "dataType": "dateTime",
+            "isHidden": true,
             "sourceColumn": "ValidTo",
             "formatString": "General Date",
             "sourceProviderType": "datetime2"
@@ -3632,6 +3713,7 @@
           {
             "name": "Account Shipping Address",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Account Shipping Address",
             "sourceProviderType": "nvarchar"
           },
@@ -3644,12 +3726,14 @@
           {
             "name": "Action Items",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Action Items",
             "sourceProviderType": "ntext"
           },
           {
             "name": "Additional Accessories",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Additional Accessories",
             "sourceProviderType": "ntext"
           },
@@ -3662,6 +3746,7 @@
           {
             "name": "All Decision Makers Present",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "All Decision Makers Present",
             "sourceProviderType": "nvarchar"
           },
@@ -3674,18 +3759,21 @@
           {
             "name": "Appeal_Points",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Appeal_Points",
             "sourceProviderType": "ntext"
           },
           {
             "name": "Application_Interest",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Application_Interest",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Appointment",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Appointment",
             "sourceProviderType": "nvarchar"
           },
@@ -3698,12 +3786,14 @@
           {
             "name": "Attach_Conga_by_WF_Demo_Request",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Attach_Conga_by_WF_Demo_Request",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "best_case_date",
             "dataType": "dateTime",
+            "isHidden": true,
             "sourceColumn": "best_case_date",
             "formatString": "General Date",
             "sourceProviderType": "date"
@@ -3711,54 +3801,63 @@
           {
             "name": "Body_Additional_Bonus",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "Body_Additional_Bonus",
             "sourceProviderType": "numeric"
           },
           {
             "name": "Booked_in_Oracle",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Booked_in_Oracle",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Bundle",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Bundle",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Bundle_Commission",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "Bundle_Commission",
             "sourceProviderType": "numeric"
           },
           {
             "name": "Buying_Team_Identified",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Buying_Team_Identified",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "CA_Tax_Amount",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "CA_Tax_Amount",
             "sourceProviderType": "numeric"
           },
           {
             "name": "Call_Type_Assigned_To",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Call_Type_Assigned_To",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Call_Type_Last",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Call_Type_Last",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Call_Type_Last_Update",
             "dataType": "dateTime",
+            "isHidden": true,
             "sourceColumn": "Call_Type_Last_Update",
             "formatString": "General Date",
             "sourceProviderType": "datetime2"
@@ -3766,42 +3865,49 @@
           {
             "name": "Call_Type_Updated_By",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Call_Type_Updated_By",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Cash_Basis",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Cash_Basis",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Cash_Basis_Count2",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "Cash_Basis_Count2",
             "sourceProviderType": "float"
           },
           {
             "name": "Cash_Basis_Count",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "Cash_Basis_Count",
             "sourceProviderType": "float"
           },
           {
             "name": "Charging_Department",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Charging_Department",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Clinical_Disqualification_Reason",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Clinical_Disqualification_Reason",
             "sourceProviderType": "ntext"
           },
           {
             "name": "Clinical_Trainer_Needed",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Clinical_Trainer_Needed",
             "sourceProviderType": "nvarchar"
           },
@@ -3827,6 +3933,7 @@
           {
             "name": "Closing_Meeting",
             "dataType": "dateTime",
+            "isHidden": true,
             "sourceColumn": "Closing_Meeting",
             "formatString": "General Date",
             "sourceProviderType": "date"
@@ -3834,48 +3941,56 @@
           {
             "name": "Closing_Paper_Work_Indicator",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Closing_Paper_Work_Indicator",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Co2re_Full_Config_Bonus",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "Co2re_Full_Config_Bonus",
             "sourceProviderType": "numeric"
           },
           {
             "name": "Co2re_Full_Config_Bonus_CAD",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "Co2re_Full_Config_Bonus_CAD",
             "sourceProviderType": "numeric"
           },
           {
             "name": "Co2re_Full_Config_Bonus_USD",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "Co2re_Full_Config_Bonus_USD",
             "sourceProviderType": "numeric"
           },
           {
             "name": "Co2re_Full_Config_Count",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "Co2re_Full_Config_Count",
             "sourceProviderType": "float"
           },
           {
             "name": "Co2re_Full_Config_US_Sum",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "Co2re_Full_Config_US_Sum",
             "sourceProviderType": "numeric"
           },
           {
             "name": "Comments",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Comments",
             "sourceProviderType": "ntext"
           },
           {
             "name": "Commit_Date",
             "dataType": "dateTime",
+            "isHidden": true,
             "sourceColumn": "Commit_Date",
             "formatString": "General Date",
             "sourceProviderType": "date"
@@ -3883,6 +3998,7 @@
           {
             "name": "Communication_Contact",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Communication_Contact",
             "sourceProviderType": "nvarchar"
           },
@@ -3895,54 +4011,63 @@
           {
             "name": "Competition",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Competition",
             "sourceProviderType": "ntext"
           },
           {
             "name": "Competitor_Equipment_Owned",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Competitor_Equipment_Owned",
             "sourceProviderType": "ntext"
           },
           {
             "name": "Competitors'_Price",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "Competitors'_Price",
             "sourceProviderType": "numeric"
           },
           {
             "name": "Competitors'_Product",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Competitors'_Product",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Concerns_and_Objections",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Concerns_and_Objections",
             "sourceProviderType": "ntext"
           },
           {
             "name": "Confirmation_of_Price",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Confirmation_of_Price",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Conga_Demo_Request_Additional_To",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Conga_Demo_Request_Additional_To",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Conga_Demo_Request_Additional_To_2",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Conga_Demo_Request_Additional_To_2",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Contact_Present_in_the_Demo",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Contact_Present_in_the_Demo",
             "sourceProviderType": "nvarchar"
           },
@@ -3955,30 +4080,35 @@
           {
             "name": "CoolTouch_Territory",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "CoolTouch_Territory",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Count_of_Profound",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "Count_of_Profound",
             "sourceProviderType": "float"
           },
           {
             "name": "CPP_Account",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "CPP_Account",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "CPP_Purchase_Price",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "CPP_Purchase_Price",
             "sourceProviderType": "numeric"
           },
           {
             "name": "Created_By_ID",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Created_By_ID",
             "sourceProviderType": "nvarchar"
           },
@@ -3992,6 +4122,7 @@
           {
             "name": "Created_Time",
             "dataType": "dateTime",
+            "isHidden": true,
             "sourceColumn": "Created_Time",
             "formatString": "General Date",
             "sourceProviderType": "datetime2"
@@ -4005,6 +4136,7 @@
           {
             "name": "Customer_Notified_Date",
             "dataType": "dateTime",
+            "isHidden": true,
             "sourceColumn": "Customer_Notified_Date",
             "formatString": "General Date",
             "sourceProviderType": "date"
@@ -4018,6 +4150,7 @@
           {
             "name": "Date_of_Device_Delivery",
             "dataType": "dateTime",
+            "isHidden": true,
             "sourceColumn": "Date_of_Device_Delivery",
             "formatString": "General Date",
             "sourceProviderType": "datetime2"
@@ -4025,6 +4158,7 @@
           {
             "name": "Date_of_Device_Dismantle",
             "dataType": "dateTime",
+            "isHidden": true,
             "sourceColumn": "Date_of_Device_Dismantle",
             "formatString": "General Date",
             "sourceProviderType": "date"
@@ -4032,6 +4166,7 @@
           {
             "name": "Date_of_Device_Installation",
             "dataType": "dateTime",
+            "isHidden": true,
             "sourceColumn": "Date_of_Device_Installation",
             "formatString": "General Date",
             "sourceProviderType": "date"
@@ -4039,6 +4174,7 @@
           {
             "name": "Date_of_Device_Pick_Up",
             "dataType": "dateTime",
+            "isHidden": true,
             "sourceColumn": "Date_of_Device_Pick_Up",
             "formatString": "General Date",
             "sourceProviderType": "datetime2"
@@ -4046,42 +4182,49 @@
           {
             "name": "Decision_Makers_Validated",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Decision_Makers_Validated",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Default_Price_Book",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Default_Price_Book",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "DELETERegion",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "DELETERegion",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Delivery_Surcharge",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "Delivery_Surcharge",
             "sourceProviderType": "numeric"
           },
           {
             "name": "Demo_Comment",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Demo_Comment",
             "sourceProviderType": "ntext"
           },
           {
             "name": "Demo_Completed",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Demo_Completed",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Demo_Completed_Date_1",
             "dataType": "dateTime",
+            "isHidden": true,
             "sourceColumn": "Demo_Completed_Date_1",
             "formatString": "General Date",
             "sourceProviderType": "date"
@@ -4089,6 +4232,7 @@
           {
             "name": "Demo_Date",
             "dataType": "dateTime",
+            "isHidden": true,
             "sourceColumn": "Demo_Date",
             "formatString": "General Date",
             "sourceProviderType": "date"
@@ -4096,18 +4240,21 @@
           {
             "name": "Demo_Location",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Demo_Location",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Demo_Not_Needed",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Demo_Not_Needed",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Demo_Planned_Date",
             "dataType": "dateTime",
+            "isHidden": true,
             "sourceColumn": "Demo_Planned_Date",
             "formatString": "General Date",
             "sourceProviderType": "date"
@@ -4115,12 +4262,14 @@
           {
             "name": "Demo_Request_Number",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Demo_Request_Number",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Demo_Time",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Demo_Time",
             "sourceProviderType": "nvarchar"
           },
@@ -4139,54 +4288,63 @@
           {
             "name": "Down_payment_amount",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "Down_payment_amount",
             "sourceProviderType": "numeric"
           },
           {
             "name": "Down_payment_percentage",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "Down_payment_percentage",
             "sourceProviderType": "float"
           },
           {
             "name": "Email_Conga_File_by_WF_Demo_Request",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Email_Conga_File_by_WF_Demo_Request",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "eStore_Payment_Terms",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "eStore_Payment_Terms",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Evaluation_Notes",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Evaluation_Notes",
             "sourceProviderType": "ntext"
           },
           {
             "name": "Expected_Amount",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "Expected_Amount",
             "sourceProviderType": "numeric"
           },
           {
             "name": "External_ID",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "External_ID",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Finance/_Admin_User",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Finance/_Admin_User",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Finance_Approval",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Finance_Approval",
             "sourceProviderType": "nvarchar"
           },
@@ -4199,48 +4357,56 @@
           {
             "name": "Financial_Disqualification_Reason",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Financial_Disqualification_Reason",
             "sourceProviderType": "ntext"
           },
           {
             "name": "Financial_Qualified",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Financial_Qualified",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Financing_Company",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Financing_Company",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Financing_Signed",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Financing_Signed",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Financing_Status",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Financing_Status",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Fiscal_Period",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Fiscal_Period",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Fiscal_Quarter",
             "dataType": "int64",
+            "isHidden": true,
             "sourceColumn": "Fiscal_Quarter",
             "sourceProviderType": "int"
           },
           {
             "name": "Fiscal_Year",
             "dataType": "int64",
+            "isHidden": true,
             "sourceColumn": "Fiscal_Year",
             "sourceProviderType": "int"
           },
@@ -4259,108 +4425,126 @@
           {
             "name": "Fractional_HP_(7123-00-0072",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "Fractional_HP_(7123-00-0072",
             "sourceProviderType": "numeric"
           },
           {
             "name": "Fractional_HP_Count",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "Fractional_HP_Count",
             "sourceProviderType": "float"
           },
           {
             "name": "Fractional_HP_SUM",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "Fractional_HP_SUM",
             "sourceProviderType": "numeric"
           },
           {
             "name": "From_Company",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "From_Company",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Full_loaded_Pico_Sum",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "Full_loaded_Pico_Sum",
             "sourceProviderType": "numeric"
           },
           {
             "name": "GeoPointe_Region",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "GeoPointe_Region",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "GeoPointe_Territory",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "GeoPointe_Territory",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Has_Line_Item",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Has_Line_Item",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Has_Quoted",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Has_Quoted",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Health_Indicator",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Health_Indicator",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Hidden_Contact_Email",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Hidden_Contact_Email",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Hidden_Contact_Name",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Hidden_Contact_Name",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Hidden_Contact_Phone",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Hidden_Contact_Phone",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Hold_Back",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "Hold_Back",
             "sourceProviderType": "numeric"
           },
           {
             "name": "How_Can_We_Do_Better",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "How_Can_We_Do_Better",
             "sourceProviderType": "ntext"
           },
           {
             "name": "Information_Meeting_Pre_Notes",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Information_Meeting_Pre_Notes",
             "sourceProviderType": "ntext"
           },
           {
             "name": "Inside_Sales",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Inside_Sales",
             "sourceProviderType": "ntext"
           },
           {
             "name": "Inside_Sales_New",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Inside_Sales_New",
             "sourceProviderType": "nvarchar"
           },
@@ -4373,6 +4557,7 @@
           {
             "name": "Interest_Disqualification_Reason",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Interest_Disqualification_Reason",
             "sourceProviderType": "ntext"
           },
@@ -4385,12 +4570,14 @@
           {
             "name": "Is_NA",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Is_NA",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Is_Shipping",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Is_Shipping",
             "sourceProviderType": "nvarchar"
           },
@@ -4417,6 +4604,7 @@
           {
             "name": "Last_Modified_By_ID",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Last_Modified_By_ID",
             "sourceProviderType": "nvarchar"
           },
@@ -4436,6 +4624,7 @@
           {
             "name": "Last_Next_Step_Update",
             "dataType": "dateTime",
+            "isHidden": true,
             "sourceColumn": "Last_Next_Step_Update",
             "formatString": "General Date",
             "sourceProviderType": "datetime2"
@@ -4443,18 +4632,21 @@
           {
             "name": "Last_Q:Special_Instruction_to_be_printed",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Last_Q:Special_Instruction_to_be_printed",
             "sourceProviderType": "ntext"
           },
           {
             "name": "Last_Quote:_Comments_For_Approval",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Last_Quote:_Comments_For_Approval",
             "sourceProviderType": "ntext"
           },
           {
             "name": "Last_Referenced_Date",
             "dataType": "dateTime",
+            "isHidden": true,
             "sourceColumn": "Last_Referenced_Date",
             "formatString": "General Date",
             "sourceProviderType": "datetime2"
@@ -4462,6 +4654,7 @@
           {
             "name": "Last_Viewed_Date",
             "dataType": "dateTime",
+            "isHidden": true,
             "sourceColumn": "Last_Viewed_Date",
             "formatString": "General Date",
             "sourceProviderType": "datetime2"
@@ -4469,6 +4662,7 @@
           {
             "name": "Lead_Generator",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Lead_Generator",
             "sourceProviderType": "nvarchar"
           },
@@ -4487,18 +4681,21 @@
           {
             "name": "Lead_to_Opportunity_Initial_Submitter",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Lead_to_Opportunity_Initial_Submitter",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Lease_Program",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Lease_Program",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Lost_to_Competitor",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Lost_to_Competitor",
             "sourceProviderType": "nvarchar"
           },
@@ -4511,18 +4708,21 @@
           {
             "name": "Marketo_Opportunity_Analysis",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Marketo_Opportunity_Analysis",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Masqueraded_By",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Masqueraded_By",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "MDET",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "MDET",
             "sourceProviderType": "numeric"
           },
@@ -4535,12 +4735,14 @@
           {
             "name": "Needs",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Needs",
             "sourceProviderType": "ntext"
           },
           {
             "name": "Net_Term",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Net_Term",
             "sourceProviderType": "nvarchar"
           },
@@ -4553,18 +4755,21 @@
           {
             "name": "Next_Step_(N)",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Next_Step_(N)",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Next_step_idle_counter",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "Next_step_idle_counter",
             "sourceProviderType": "float"
           },
           {
             "name": "Next_Step_ISCHANGED",
             "dataType": "dateTime",
+            "isHidden": true,
             "sourceColumn": "Next_Step_ISCHANGED",
             "formatString": "General Date",
             "sourceProviderType": "date"
@@ -4572,30 +4777,35 @@
           {
             "name": "Next_Step_Log",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Next_Step_Log",
             "sourceProviderType": "ntext"
           },
           {
             "name": "Num_of_Quotes",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "Num_of_Quotes",
             "sourceProviderType": "float"
           },
           {
             "name": "Number_of_Days",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Number_of_Days",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Objectives_for_Next_Sales_Call",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Objectives_for_Next_Sales_Call",
             "sourceProviderType": "ntext"
           },
           {
             "name": "Omitted_Date",
             "dataType": "dateTime",
+            "isHidden": true,
             "sourceColumn": "Omitted_Date",
             "formatString": "General Date",
             "sourceProviderType": "date"
@@ -4603,24 +4813,28 @@
           {
             "name": "On_Hold_Reason",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "On_Hold_Reason",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Opp_Billing_Address_1",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Opp_Billing_Address_1",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Opp_Billing_Address_2",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Opp_Billing_Address_2",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Opp_Billing_City",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Opp_Billing_City",
             "sourceProviderType": "nvarchar"
           },
@@ -4633,42 +4847,49 @@
           {
             "name": "Opp_Billing_State",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Opp_Billing_State",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Opp_Billing_Zip",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Opp_Billing_Zip",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Opp_Owner_Profile",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Opp_Owner_Profile",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Opp_Power_of_1",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "Opp_Power_of_1",
             "sourceProviderType": "float"
           },
           {
             "name": "Opp_Shipping_Address_1",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Opp_Shipping_Address_1",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Opp_Shipping_Address_2",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Opp_Shipping_Address_2",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Opp_Shipping_City",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Opp_Shipping_City",
             "sourceProviderType": "nvarchar"
           },
@@ -4681,12 +4902,14 @@
           {
             "name": "Opp_Shipping_State",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Opp_Shipping_State",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Opp_Shipping_Zip",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Opp_Shipping_Zip",
             "sourceProviderType": "nvarchar"
           },
@@ -4699,6 +4922,7 @@
           {
             "name": "Opportunity_At_Risk",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Opportunity_At_Risk",
             "sourceProviderType": "nvarchar"
           },
@@ -4711,12 +4935,14 @@
           {
             "name": "Opportunity_General_Notes",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Opportunity_General_Notes",
             "sourceProviderType": "ntext"
           },
           {
             "name": "Opportunity_Owner_ID",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Opportunity_Owner_ID",
             "sourceProviderType": "nvarchar"
           },
@@ -4735,42 +4961,49 @@
           {
             "name": "Owner_Email",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Owner_Email",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Owner_Employee_Number",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Owner_Employee_Number",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Owner_ID",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Owner_ID",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Owner_Mobile",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Owner_Mobile",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "P_Quote_Canada_versionLine1",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "P_Quote_Canada_versionLine1",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "P_Quote_Canada_versionLine2",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "P_Quote_Canada_versionLine2",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "P_Quote_Canada_versionLine3",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "P_Quote_Canada_versionLine3",
             "sourceProviderType": "nvarchar"
           },
@@ -4789,78 +5022,91 @@
           {
             "name": "Payment_Notes",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Payment_Notes",
             "sourceProviderType": "ntext"
           },
           {
             "name": "PDP_Email",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "PDP_Email",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "PDP_Quantity",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "PDP_Quantity",
             "sourceProviderType": "float"
           },
           {
             "name": "Pico_w/_Fractional_HP_Sum",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "Pico_w/_Fractional_HP_Sum",
             "sourceProviderType": "numeric"
           },
           {
             "name": "Pico_w/_Third_Wavelength_Sum",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "Pico_w/_Third_Wavelength_Sum",
             "sourceProviderType": "numeric"
           },
           {
             "name": "Picoway_Bonus",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "Picoway_Bonus",
             "sourceProviderType": "numeric"
           },
           {
             "name": "Picoway_Bonus_CAD",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "Picoway_Bonus_CAD",
             "sourceProviderType": "numeric"
           },
           {
             "name": "Picoway_Bonus_USA",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "Picoway_Bonus_USA",
             "sourceProviderType": "numeric"
           },
           {
             "name": "Picoway_Deal_Type",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Picoway_Deal_Type",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Picoway_System_(9914-00-9060)",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "Picoway_System_(9914-00-9060)",
             "sourceProviderType": "numeric"
           },
           {
             "name": "Picoway_System_Count",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "Picoway_System_Count",
             "sourceProviderType": "float"
           },
           {
             "name": "Picoway_System_SUM2",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "Picoway_System_SUM2",
             "sourceProviderType": "numeric"
           },
           {
             "name": "Picoway_System_Sum",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "Picoway_System_Sum",
             "sourceProviderType": "numeric"
           },
@@ -4873,6 +5119,7 @@
           {
             "name": "Pre_Existing_Equipment",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Pre_Existing_Equipment",
             "sourceProviderType": "ntext"
           },
@@ -4891,6 +5138,7 @@
           {
             "name": "Primary_Competitor_Product",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Primary_Competitor_Product",
             "sourceProviderType": "nvarchar"
           },
@@ -4909,6 +5157,7 @@
           {
             "name": "processed_to_oracle",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "processed_to_oracle",
             "sourceProviderType": "nvarchar"
           },
@@ -4921,66 +5170,77 @@
           {
             "name": "Product_Family_Ellipse",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "Product_Family_Ellipse",
             "sourceProviderType": "numeric"
           },
           {
             "name": "Product_Family_Max",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Product_Family_Max",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Product_Family_Syneron",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "Product_Family_Syneron",
             "sourceProviderType": "numeric"
           },
           {
             "name": "Product_Family_UltraShape",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "Product_Family_UltraShape",
             "sourceProviderType": "numeric"
           },
           {
             "name": "Product_Family_Velashape",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "Product_Family_Velashape",
             "sourceProviderType": "numeric"
           },
           {
             "name": "Product_Interest",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Product_Interest",
             "sourceProviderType": "ntext"
           },
           {
             "name": "Profound_System",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Profound_System",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Promotion_Name",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Promotion_Name",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Provincal_Tax_Amount",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "Provincal_Tax_Amount",
             "sourceProviderType": "numeric"
           },
           {
             "name": "Purchase_Timeframe_(Days)",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Purchase_Timeframe_(Days)",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Qualifier_name",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Qualifier_name",
             "sourceProviderType": "nvarchar"
           },
@@ -5011,30 +5271,35 @@
           {
             "name": "Quote_Signed",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Quote_Signed",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Quote_Try_and_Buy_Count",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "Quote_Try_and_Buy_Count",
             "sourceProviderType": "float"
           },
           {
             "name": "Quote_Version",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Quote_Version",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Quoted",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Quoted",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Quoted_Date",
             "dataType": "dateTime",
+            "isHidden": true,
             "sourceColumn": "Quoted_Date",
             "formatString": "General Date",
             "sourceProviderType": "datetime2"
@@ -5042,6 +5307,7 @@
           {
             "name": "Quotes_Approved",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "Quotes_Approved",
             "sourceProviderType": "float"
           },
@@ -5054,36 +5320,42 @@
           {
             "name": "Ready_to_Create_CPP_Transaction",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Ready_to_Create_CPP_Transaction",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Record_Type_ID",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Record_Type_ID",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Redeemed_Points",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "Redeemed_Points",
             "sourceProviderType": "float"
           },
           {
             "name": "Redeemed_Points_($$)",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "Redeemed_Points_($$)",
             "sourceProviderType": "numeric"
           },
           {
             "name": "Referral",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Referral",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Referral_Date",
             "dataType": "dateTime",
+            "isHidden": true,
             "sourceColumn": "Referral_Date",
             "formatString": "General Date",
             "sourceProviderType": "date"
@@ -5091,18 +5363,21 @@
           {
             "name": "Referral_Fee",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "Referral_Fee",
             "sourceProviderType": "numeric"
           },
           {
             "name": "Referral_Rep",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Referral_Rep",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Referral_Rep_Employee_Number",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Referral_Rep_Employee_Number",
             "sourceProviderType": "nvarchar"
           },
@@ -5121,36 +5396,42 @@
           {
             "name": "Risk_Comments",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Risk_Comments",
             "sourceProviderType": "ntext"
           },
           {
             "name": "RPT_Campaign",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "RPT_Campaign",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "RPT_Campaign_Name",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "RPT_Campaign_Name",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Sales_Dept._Number",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "Sales_Dept._Number",
             "sourceProviderType": "float"
           },
           {
             "name": "Sales_Rep_Approver",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Sales_Rep_Approver",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Sales_Tax",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "Sales_Tax",
             "sourceProviderType": "numeric"
           },
@@ -5163,30 +5444,35 @@
           {
             "name": "Send_Marketing_Kit",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Send_Marketing_Kit",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Sent_Marketing_Kit_Triniti_via_Conga",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Sent_Marketing_Kit_Triniti_via_Conga",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Sent_Marketing_Kit_via_Conga",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Sent_Marketing_Kit_via_Conga",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Sent_SPECIALTY_DELIVERY_SYSTEM_KIT",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Sent_SPECIALTY_DELIVERY_SYSTEM_KIT",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Shipping",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Shipping",
             "sourceProviderType": "nvarchar"
           },
@@ -5199,6 +5485,7 @@
           {
             "name": "shipping_method",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "shipping_method",
             "sourceProviderType": "nvarchar"
           },
@@ -5211,24 +5498,28 @@
           {
             "name": "Shipping_Street",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Shipping_Street",
             "sourceProviderType": "ntext"
           },
           {
             "name": "Shipping_Zip/Postal_Code",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Shipping_Zip/Postal_Code",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Signed_Paperwork/Deposit/PO",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Signed_Paperwork/Deposit/PO",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Special_Instructions_for_Shipment",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Special_Instructions_for_Shipment",
             "sourceProviderType": "ntext"
           },
@@ -5241,42 +5532,49 @@
           {
             "name": "SPECIALTY_DELIVERY_SYSTEM_KIT",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "SPECIALTY_DELIVERY_SYSTEM_KIT",
             "sourceProviderType": "float"
           },
           {
             "name": "SPECIALTY_DELIVERY_SYSTEM_KIT_Email_To",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "SPECIALTY_DELIVERY_SYSTEM_KIT_Email_To",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Split_PDP",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Split_PDP",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "SR_Count",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "SR_Count",
             "sourceProviderType": "float"
           },
           {
             "name": "SR_Plus_Count",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "SR_Plus_Count",
             "sourceProviderType": "float"
           },
           {
             "name": "SRA_Count",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "SRA_Count",
             "sourceProviderType": "float"
           },
           {
             "name": "SRA_Plus_Count",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "SRA_Plus_Count",
             "sourceProviderType": "float"
           },
@@ -5289,12 +5587,14 @@
           {
             "name": "Stage_(S)",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Stage_(S)",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Stage_Date",
             "dataType": "dateTime",
+            "isHidden": true,
             "sourceColumn": "Stage_Date",
             "formatString": "General Date",
             "sourceProviderType": "date"
@@ -5302,6 +5602,7 @@
           {
             "name": "Stage_ISCHANGED",
             "dataType": "dateTime",
+            "isHidden": true,
             "sourceColumn": "Stage_ISCHANGED",
             "formatString": "General Date",
             "sourceProviderType": "date"
@@ -5309,6 +5610,7 @@
           {
             "name": "Stage_Notes",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Stage_Notes",
             "sourceProviderType": "ntext"
           },
@@ -5321,54 +5623,63 @@
           {
             "name": "Storage_Warehouse",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Storage_Warehouse",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Sub_Category",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Sub_Category",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Sublative_App_PN_Count",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "Sublative_App_PN_Count",
             "sourceProviderType": "float"
           },
           {
             "name": "Sublime_RF_Count",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "Sublime_RF_Count",
             "sourceProviderType": "float"
           },
           {
             "name": "Sum_Of_Systems_Quantity",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "Sum_Of_Systems_Quantity",
             "sourceProviderType": "float"
           },
           {
             "name": "Sync_Quote_Discount",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "Sync_Quote_Discount",
             "sourceProviderType": "float"
           },
           {
             "name": "Synced_Quote_Status",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Synced_Quote_Status",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Syneron-Candela_Advantage",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Syneron-Candela_Advantage",
             "sourceProviderType": "ntext"
           },
           {
             "name": "System_Modstamp",
             "dataType": "dateTime",
+            "isHidden": true,
             "sourceColumn": "System_Modstamp",
             "formatString": "General Date",
             "sourceProviderType": "datetime2"
@@ -5376,6 +5687,7 @@
           {
             "name": "Terms",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Terms",
             "sourceProviderType": "nvarchar"
           },
@@ -5388,30 +5700,35 @@
           {
             "name": "Test_Conga_Workflow_via_UI",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Test_Conga_Workflow_via_UI",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Third_Wavelength",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "Third_Wavelength",
             "sourceProviderType": "numeric"
           },
           {
             "name": "Third_Wavelength_Count",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Third_Wavelength_Count",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Third_Wavelength_SUM",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "Third_Wavelength_SUM",
             "sourceProviderType": "numeric"
           },
           {
             "name": "Tier_Type",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Tier_Type",
             "sourceProviderType": "nvarchar"
           },
@@ -5430,6 +5747,7 @@
           {
             "name": "Tracking_Email_Date",
             "dataType": "dateTime",
+            "isHidden": true,
             "sourceColumn": "Tracking_Email_Date",
             "formatString": "General Date",
             "sourceProviderType": "date"
@@ -5437,6 +5755,7 @@
           {
             "name": "Training_Start_Date",
             "dataType": "dateTime",
+            "isHidden": true,
             "sourceColumn": "Training_Start_Date",
             "formatString": "General Date",
             "sourceProviderType": "date"
@@ -5444,6 +5763,7 @@
           {
             "name": "Triniti_Email_To",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Triniti_Email_To",
             "sourceProviderType": "nvarchar"
           },
@@ -5456,48 +5776,56 @@
           {
             "name": "Ultrashape_Count2",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "Ultrashape_Count2",
             "sourceProviderType": "float"
           },
           {
             "name": "Ultrashape_Count",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "Ultrashape_Count",
             "sourceProviderType": "float"
           },
           {
             "name": "Ultrashape_Systems_Count",
             "dataType": "double",
+            "isHidden": true,
             "sourceColumn": "Ultrashape_Systems_Count",
             "sourceProviderType": "float"
           },
           {
             "name": "Upgrade/Traded_In_Equipment_1",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Upgrade/Traded_In_Equipment_1",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Upgrade/Traded_In_Equipment_Type",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Upgrade/Traded_In_Equipment_Type",
             "sourceProviderType": "ntext"
           },
           {
             "name": "Upgrade/Traded1_Type",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Upgrade/Traded1_Type",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Used_Coupon",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Used_Coupon",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Validate_Timeframe",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Validate_Timeframe",
             "sourceProviderType": "nvarchar"
           },
@@ -5516,12 +5844,14 @@
           {
             "name": "Web_Purchased_contact",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Web_Purchased_contact",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Welcome_Call_Date",
             "dataType": "dateTime",
+            "isHidden": true,
             "sourceColumn": "Welcome_Call_Date",
             "formatString": "General Date",
             "sourceProviderType": "date"
@@ -5529,6 +5859,7 @@
           {
             "name": "Welcome_Email_Date",
             "dataType": "dateTime",
+            "isHidden": true,
             "sourceColumn": "Welcome_Email_Date",
             "formatString": "General Date",
             "sourceProviderType": "date"
@@ -5536,6 +5867,7 @@
           {
             "name": "Will_Close_this_Q",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Will_Close_this_Q",
             "sourceProviderType": "nvarchar"
           },
