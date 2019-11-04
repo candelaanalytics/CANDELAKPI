@@ -2,7 +2,6 @@
   "name": "SemanticModel",
   "compatibilityLevel": 1200,
   "model": {
-    "defaultMode": "directQuery",
     "culture": "en-US",
     "dataSources": [
       {
