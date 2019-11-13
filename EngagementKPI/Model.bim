@@ -6239,6 +6239,48 @@
             "isDataTypeInferred": true,
             "expression": " dim_opportunity[Calculated Age Bucket]",
             "sortByColumn": "Age Bucket Sort Order"
+          },
+          {
+            "type": "calculated",
+            "name": "Lost Reason",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": [
+              "LEFT(dim_opportunity[stage_reason],IFERROR(SEARCH(\"-\",dim_opportunity[stage_reason]),LEN(dim_opportunity[stage_reason])+1)-1)",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Lost Reason Detail",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": [
+              "RIGHT(dim_opportunity[stage_reason],LEN(dim_opportunity[stage_reason])-IFERROR(SEARCH(\"-\", dim_opportunity[stage_reason]),LEN(dim_opportunity[stage_reason])))",
+              "",
+              ""
+            ]
           }
         ],
         "partitions": [
@@ -7204,7 +7246,7 @@
             "dataView": "full",
             "source": {
               "type": "query",
-              "query": " SELECT [salesforce].[FACT_ENGAGEMENT].* FROM [salesforce].[FACT_ENGAGEMENT] ",
+              "query": " SELECT [salesforce].[FACT_ENGAGEMENT].[Lead_Id],[salesforce].[FACT_ENGAGEMENT].[engagement_type_id],[salesforce].[FACT_ENGAGEMENT].[campaign_id],[salesforce].[FACT_ENGAGEMENT].[acquisition_id],[salesforce].[FACT_ENGAGEMENT].[Status_id],[salesforce].[FACT_ENGAGEMENT].[Date_id],[salesforce].[FACT_ENGAGEMENT].[opportunity_id],[salesforce].[FACT_ENGAGEMENT].[product_id],[salesforce].[FACT_ENGAGEMENT].[channel_id],[salesforce].[FACT_ENGAGEMENT].[contact_id],[salesforce].[FACT_ENGAGEMENT].[account_id],[salesforce].[FACT_ENGAGEMENT].[Country_Id],[salesforce].[FACT_ENGAGEMENT].[Customer_Id],[salesforce].[FACT_ENGAGEMENT].[LeadSource_Id],[salesforce].[FACT_ENGAGEMENT].[op_sales_type_id],[salesforce].[FACT_ENGAGEMENT].[opportunity_type_id],[salesforce].[FACT_ENGAGEMENT].[Amount],[salesforce].[FACT_ENGAGEMENT].[Speciality_id],[salesforce].[FACT_ENGAGEMENT].[AmountInUSD],[salesforce].[FACT_ENGAGEMENT].[OpportunityLineId],[salesforce].[FACT_ENGAGEMENT].[ORDER_ID],[salesforce].[FACT_ENGAGEMENT].[Sales_Rep_id] FROM [salesforce].[FACT_ENGAGEMENT] ",
               "dataSource": "SqlAzure sc-az-datacontrol-srv1.database.windows.net CandelaKPI-Dev"
             },
             "annotations": [
@@ -7334,10 +7376,10 @@
                   "    </item>",
                   "    <item>",
                   "      <key>",
-                  "        <string>Sales_Rep_Id</string>",
+                  "        <string>LeadorContactOwnerId</string>",
                   "      </key>",
                   "      <value>",
-                  "        <int>96</int>",
+                  "        <int>143</int>",
                   "      </value>",
                   "    </item>",
                   "    <item>",
@@ -7394,6 +7436,14 @@
                   "      </key>",
                   "      <value>",
                   "        <int>82</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>Sales_Rep_id</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>94</int>",
                   "      </value>",
                   "    </item>",
                   "  </ColumnWidths>",
@@ -7512,10 +7562,10 @@
                   "    </item>",
                   "    <item>",
                   "      <key>",
-                  "        <string>Sales_Rep_Id</string>",
+                  "        <string>LeadorContactOwnerId</string>",
                   "      </key>",
                   "      <value>",
-                  "        <int>14</int>",
+                  "        <int>21</int>",
                   "      </value>",
                   "    </item>",
                   "    <item>",
@@ -7523,7 +7573,7 @@
                   "        <string>op_sales_type_id</string>",
                   "      </key>",
                   "      <value>",
-                  "        <int>15</int>",
+                  "        <int>14</int>",
                   "      </value>",
                   "    </item>",
                   "    <item>",
@@ -7531,7 +7581,7 @@
                   "        <string>opportunity_type_id</string>",
                   "      </key>",
                   "      <value>",
-                  "        <int>16</int>",
+                  "        <int>15</int>",
                   "      </value>",
                   "    </item>",
                   "    <item>",
@@ -7539,7 +7589,7 @@
                   "        <string>Amount</string>",
                   "      </key>",
                   "      <value>",
-                  "        <int>17</int>",
+                  "        <int>16</int>",
                   "      </value>",
                   "    </item>",
                   "    <item>",
@@ -7547,7 +7597,7 @@
                   "        <string>Speciality_id</string>",
                   "      </key>",
                   "      <value>",
-                  "        <int>18</int>",
+                  "        <int>17</int>",
                   "      </value>",
                   "    </item>",
                   "    <item>",
@@ -7555,7 +7605,7 @@
                   "        <string>AmountInUSD</string>",
                   "      </key>",
                   "      <value>",
-                  "        <int>19</int>",
+                  "        <int>18</int>",
                   "      </value>",
                   "    </item>",
                   "    <item>",
@@ -7563,7 +7613,7 @@
                   "        <string>OpportunityLineId</string>",
                   "      </key>",
                   "      <value>",
-                  "        <int>20</int>",
+                  "        <int>19</int>",
                   "      </value>",
                   "    </item>",
                   "    <item>",
@@ -7571,7 +7621,15 @@
                   "        <string>ORDER_ID</string>",
                   "      </key>",
                   "      <value>",
-                  "        <int>21</int>",
+                  "        <int>20</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>Sales_Rep_id</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>22</int>",
                   "      </value>",
                   "    </item>",
                   "  </ColumnDisplayIndex>",
@@ -7599,6 +7657,14 @@
                   "      </key>",
                   "      <value>",
                   "        <boolean>true</boolean>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>LeadorContactOwnerId</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <boolean>false</boolean>",
                   "      </value>",
                   "    </item>",
                   "  </ColumnChecked>",
@@ -7669,7 +7735,7 @@
         "annotations": [
           {
             "name": "_TM_ExtProp_QueryDefinition",
-            "value": " SELECT [salesforce].[FACT_ENGAGEMENT].* FROM [salesforce].[FACT_ENGAGEMENT] "
+            "value": " SELECT [salesforce].[FACT_ENGAGEMENT].[Lead_Id],[salesforce].[FACT_ENGAGEMENT].[engagement_type_id],[salesforce].[FACT_ENGAGEMENT].[campaign_id],[salesforce].[FACT_ENGAGEMENT].[acquisition_id],[salesforce].[FACT_ENGAGEMENT].[Status_id],[salesforce].[FACT_ENGAGEMENT].[Date_id],[salesforce].[FACT_ENGAGEMENT].[opportunity_id],[salesforce].[FACT_ENGAGEMENT].[product_id],[salesforce].[FACT_ENGAGEMENT].[channel_id],[salesforce].[FACT_ENGAGEMENT].[contact_id],[salesforce].[FACT_ENGAGEMENT].[account_id],[salesforce].[FACT_ENGAGEMENT].[Country_Id],[salesforce].[FACT_ENGAGEMENT].[Customer_Id],[salesforce].[FACT_ENGAGEMENT].[LeadSource_Id],[salesforce].[FACT_ENGAGEMENT].[op_sales_type_id],[salesforce].[FACT_ENGAGEMENT].[opportunity_type_id],[salesforce].[FACT_ENGAGEMENT].[Amount],[salesforce].[FACT_ENGAGEMENT].[Speciality_id],[salesforce].[FACT_ENGAGEMENT].[AmountInUSD],[salesforce].[FACT_ENGAGEMENT].[OpportunityLineId],[salesforce].[FACT_ENGAGEMENT].[ORDER_ID],[salesforce].[FACT_ENGAGEMENT].[Sales_Rep_id] FROM [salesforce].[FACT_ENGAGEMENT] "
           },
           {
             "name": "_TM_ExtProp_DbTableName",
@@ -7805,10 +7871,10 @@
               "    </item>",
               "    <item>",
               "      <key>",
-              "        <string>Sales_Rep_Id</string>",
+              "        <string>LeadorContactOwnerId</string>",
               "      </key>",
               "      <value>",
-              "        <int>96</int>",
+              "        <int>143</int>",
               "      </value>",
               "    </item>",
               "    <item>",
@@ -7865,6 +7931,14 @@
               "      </key>",
               "      <value>",
               "        <int>82</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>Sales_Rep_id</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>94</int>",
               "      </value>",
               "    </item>",
               "  </ColumnWidths>",
@@ -7983,10 +8057,10 @@
               "    </item>",
               "    <item>",
               "      <key>",
-              "        <string>Sales_Rep_Id</string>",
+              "        <string>LeadorContactOwnerId</string>",
               "      </key>",
               "      <value>",
-              "        <int>14</int>",
+              "        <int>21</int>",
               "      </value>",
               "    </item>",
               "    <item>",
@@ -7994,7 +8068,7 @@
               "        <string>op_sales_type_id</string>",
               "      </key>",
               "      <value>",
-              "        <int>15</int>",
+              "        <int>14</int>",
               "      </value>",
               "    </item>",
               "    <item>",
@@ -8002,7 +8076,7 @@
               "        <string>opportunity_type_id</string>",
               "      </key>",
               "      <value>",
-              "        <int>16</int>",
+              "        <int>15</int>",
               "      </value>",
               "    </item>",
               "    <item>",
@@ -8010,7 +8084,7 @@
               "        <string>Amount</string>",
               "      </key>",
               "      <value>",
-              "        <int>17</int>",
+              "        <int>16</int>",
               "      </value>",
               "    </item>",
               "    <item>",
@@ -8018,7 +8092,7 @@
               "        <string>Speciality_id</string>",
               "      </key>",
               "      <value>",
-              "        <int>18</int>",
+              "        <int>17</int>",
               "      </value>",
               "    </item>",
               "    <item>",
@@ -8026,7 +8100,7 @@
               "        <string>AmountInUSD</string>",
               "      </key>",
               "      <value>",
-              "        <int>19</int>",
+              "        <int>18</int>",
               "      </value>",
               "    </item>",
               "    <item>",
@@ -8034,7 +8108,7 @@
               "        <string>OpportunityLineId</string>",
               "      </key>",
               "      <value>",
-              "        <int>20</int>",
+              "        <int>19</int>",
               "      </value>",
               "    </item>",
               "    <item>",
@@ -8042,7 +8116,15 @@
               "        <string>ORDER_ID</string>",
               "      </key>",
               "      <value>",
-              "        <int>21</int>",
+              "        <int>20</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>Sales_Rep_id</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>22</int>",
               "      </value>",
               "    </item>",
               "  </ColumnDisplayIndex>",
@@ -8070,6 +8152,14 @@
               "      </key>",
               "      <value>",
               "        <boolean>true</boolean>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>LeadorContactOwnerId</string>",
+              "      </key>",
+              "      <value>",
+              "        <boolean>false</boolean>",
               "      </value>",
               "    </item>",
               "  </ColumnChecked>",
@@ -10075,6 +10165,107 @@
         "fromColumn": "OpportunityLineId",
         "toTable": "DIM_OPPORTUNITY_LINE_ITEMS",
         "toColumn": "DIM_OPPLINE_ID"
+      },
+      {
+        "name": "aee0ced6-0c9f-4ac6-84c0-99a0da5302d0",
+        "fromTable": "FACT_ENGAGEMENT",
+        "fromColumn": "Sales_Rep_Id",
+        "toTable": "DIM_USERS",
+        "toColumn": "USERSID"
+      }
+    ],
+    "roles": [
+      {
+        "name": "Read",
+        "description": "Read Permissions",
+        "modelPermission": "read",
+        "members": [
+          {
+            "memberName": "jackh@candelamedical.com",
+            "memberId": "jackh@candelamedical.com",
+            "identityProvider": "AzureAD"
+          },
+          {
+            "memberName": "cnguyen@candelamedical.com",
+            "memberId": "cnguyen@candelamedical.com",
+            "identityProvider": "AzureAD"
+          },
+          {
+            "memberName": "marybethf@candelamedical.com",
+            "memberId": "marybethf@candelamedical.com",
+            "identityProvider": "AzureAD"
+          },
+          {
+            "memberName": "SarvarK@candelamedical.com",
+            "memberId": "SarvarK@candelamedical.com",
+            "identityProvider": "AzureAD"
+          },
+          {
+            "memberName": "graceh@candelamedical.com",
+            "memberId": "graceh@candelamedical.com",
+            "identityProvider": "AzureAD"
+          },
+          {
+            "memberName": "ivan@candelamedical.com",
+            "memberId": "ivan@candelamedical.com",
+            "identityProvider": "AzureAD"
+          },
+          {
+            "memberName": "marjolijnb@candelamedical.com",
+            "memberId": "marjolijnb@candelamedical.com",
+            "identityProvider": "AzureAD"
+          },
+          {
+            "memberName": "zoeb@candelamedical.com",
+            "memberId": "zoeb@candelamedical.com",
+            "identityProvider": "AzureAD"
+          },
+          {
+            "memberName": "jeffreys@candelamedical.com",
+            "memberId": "jeffreys@candelamedical.com",
+            "identityProvider": "AzureAD"
+          },
+          {
+            "memberName": "msavike@candelamedical.com",
+            "memberId": "msavike@candelamedical.com",
+            "identityProvider": "AzureAD"
+          },
+          {
+            "memberName": "kavithap@candelamedical.com",
+            "memberId": "kavithap@candelamedical.com",
+            "identityProvider": "AzureAD"
+          },
+          {
+            "memberName": "ericl@candelamedical.com",
+            "memberId": "ericl@candelamedical.com",
+            "identityProvider": "AzureAD"
+          },
+          {
+            "memberName": "charlenel@candelamedical.com",
+            "memberId": "charlenel@candelamedical.com",
+            "identityProvider": "AzureAD"
+          },
+          {
+            "memberName": "dangn@candelamedical.com",
+            "memberId": "dangn@candelamedical.com",
+            "identityProvider": "AzureAD"
+          },
+          {
+            "memberName": "gunjesh.joshi@candelamedical.com",
+            "memberId": "gunjesh.joshi@candelamedical.com",
+            "identityProvider": "AzureAD"
+          },
+          {
+            "memberName": "jony@candelamedical.com",
+            "memberId": "jony@candelamedical.com",
+            "identityProvider": "AzureAD"
+          },
+          {
+            "memberName": "alejandros@candelamedical.com",
+            "memberId": "alejandros@candelamedical.com",
+            "identityProvider": "AzureAD"
+          }
+        ]
       }
     ],
     "annotations": [
