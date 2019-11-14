@@ -36838,12 +36838,14 @@
           {
             "name": "cost_local_currency",
             "dataType": "double",
-            "sourceColumn": "cost_local_currency"
+            "sourceColumn": "cost_local_currency",
+            "formatString": "0.00"
           },
           {
             "name": "cost_usd",
             "dataType": "double",
-            "sourceColumn": "cost_usd"
+            "sourceColumn": "cost_usd",
+            "formatString": "0.00"
           },
           {
             "name": "item_class_primary",
@@ -36873,7 +36875,8 @@
           {
             "name": "gl_code",
             "dataType": "int64",
-            "sourceColumn": "gl_code"
+            "sourceColumn": "gl_code",
+            "formatString": "0"
           }
         ],
         "partitions": [
@@ -38599,6 +38602,49 @@
           {
             "name": "_TM_ExtProp_DbSchemaName",
             "value": "salesforce"
+          }
+        ]
+      },
+      {
+        "name": "Process_Time_Stamp",
+        "columns": [
+          {
+            "name": "LastRefreshTime",
+            "dataType": "dateTime",
+            "sourceColumn": "LastRefreshTime",
+            "formatString": "General Date",
+            "sourceProviderType": "Date"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Process_Time_Stamp",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": "select dateadd(hh,-4,min(AASPROCESSREFRESHTIME)) LastRefreshTime from bi.MM_PROCESSTIMETRACKER where ID=1",
+              "dataSource": "SqlAzure sc-az-datacontrol-srv1.database.windows.net CandelaKPI-Dev"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>select dateadd(hh,-4,min(AASPROCESSREFRESHTIME)) LastRefreshTime from bi.MM_PROCESSTIMETRACKER where ID=1</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": "select dateadd(hh,-4,min(AASPROCESSREFRESHTIME)) LastRefreshTime from bi.MM_PROCESSTIMETRACKER where ID=1"
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Process_Time_Stamp"
+          },
+          {
+            "name": "QueryEditorSerialization",
+            "value": "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>select dateadd(hh,-4,min(AASPROCESSREFRESHTIME)) LastRefreshTime from bi.MM_PROCESSTIMETRACKER where ID=1</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
           }
         ]
       }
