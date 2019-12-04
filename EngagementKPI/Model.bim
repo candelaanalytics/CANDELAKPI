@@ -43881,6 +43881,30 @@
             "dataType": "string",
             "sourceColumn": "BIZIBLE2_MARKETING_medium",
             "sourceProviderType": "nvarchar"
+          },
+          {
+            "type": "calculated",
+            "name": "OC Touchpoint",
+            "dataType": "boolean",
+            "isDataTypeInferred": true,
+            "expression": "CONTAINSSTRING(FACT_BIZIBLE_ATTRIBUTION[bizible2_Touchpoint_Position], \"OC\")",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\""
+          },
+          {
+            "type": "calculated",
+            "name": "LC TouchPoint",
+            "dataType": "boolean",
+            "isDataTypeInferred": true,
+            "expression": "CONTAINSSTRING(FACT_BIZIBLE_ATTRIBUTION[bizible2_Touchpoint_Position], \"LC\")",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\""
+          },
+          {
+            "type": "calculated",
+            "name": "FT TouchPoint",
+            "dataType": "boolean",
+            "isDataTypeInferred": true,
+            "expression": "CONTAINSSTRING(FACT_BIZIBLE_ATTRIBUTION[bizible2_Touchpoint_Position], \"FT\")",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\""
           }
         ],
         "partitions": [
