@@ -45240,6 +45240,75 @@
             ]
           }
         ]
+      },
+      {
+        "name": "DIM_BIZ_SOURCE",
+        "columns": [
+          {
+            "name": "BIZ_SOURCE_id",
+            "dataType": "int64",
+            "sourceColumn": "BIZ_SOURCE_id",
+            "sourceProviderType": "bigint"
+          },
+          {
+            "name": "Touchpoint_Source",
+            "dataType": "string",
+            "sourceColumn": "Touchpoint_Source",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Touchpoint_type",
+            "dataType": "string",
+            "sourceColumn": "Touchpoint_type",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "isActiveRecord",
+            "dataType": "boolean",
+            "sourceColumn": "isActiveRecord",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "sourceProviderType": "bit"
+          },
+          {
+            "name": "RecordValidStartDate",
+            "dataType": "dateTime",
+            "sourceColumn": "RecordValidStartDate",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "RecordValidEndDate",
+            "dataType": "dateTime",
+            "sourceColumn": "RecordValidEndDate",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DIM_BIZ_SOURCE",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [salesforce].[DIM_BIZ_SOURCE].* FROM [salesforce].[DIM_BIZ_SOURCE] ",
+              "dataSource": "SqlAzure sc-az-datacontrol-srv1.database.windows.net CandelaKPI-Dev"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [salesforce].[DIM_BIZ_SOURCE].* FROM [salesforce].[DIM_BIZ_SOURCE] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DIM_BIZ_SOURCE"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "salesforce"
+          }
+        ]
       }
     ],
     "relationships": [
