@@ -43885,26 +43885,23 @@
           {
             "type": "calculated",
             "name": "OC Touchpoint",
-            "dataType": "boolean",
+            "dataType": "int64",
             "isDataTypeInferred": true,
-            "expression": "CONTAINSSTRING(FACT_BIZIBLE_ATTRIBUTION[bizible2_Touchpoint_Position], \"OC\")",
-            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\""
+            "expression": "if(CONTAINSSTRING(FACT_BIZIBLE_ATTRIBUTION[bizible2_Touchpoint_Position], \"OC\"),1,0)"
           },
           {
             "type": "calculated",
             "name": "LC TouchPoint",
-            "dataType": "boolean",
+            "dataType": "int64",
             "isDataTypeInferred": true,
-            "expression": "CONTAINSSTRING(FACT_BIZIBLE_ATTRIBUTION[bizible2_Touchpoint_Position], \"LC\")",
-            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\""
+            "expression": "if(CONTAINSSTRING(FACT_BIZIBLE_ATTRIBUTION[bizible2_Touchpoint_Position], \"LC\"),1,0)"
           },
           {
             "type": "calculated",
             "name": "FT TouchPoint",
-            "dataType": "boolean",
+            "dataType": "int64",
             "isDataTypeInferred": true,
-            "expression": "CONTAINSSTRING(FACT_BIZIBLE_ATTRIBUTION[bizible2_Touchpoint_Position], \"FT\")",
-            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\""
+            "expression": "if(CONTAINSSTRING(FACT_BIZIBLE_ATTRIBUTION[bizible2_Touchpoint_Position], \"FT\"),1,0)"
           }
         ],
         "partitions": [
