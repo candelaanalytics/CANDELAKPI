@@ -14620,6 +14620,48 @@
             "isDataTypeInferred": true,
             "expression": "CONCATENATE(\"https://candelamedical.my.salesforce.com/\",left(DIM_LEAD[Id],15))",
             "dataCategory": "WebUrl"
+          },
+          {
+            "type": "calculated",
+            "name": "AgeinMonths",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "expression": "datediff(DIM_LEAD[LastModifiedDate],Today(),Month)"
+          },
+          {
+            "type": "calculated",
+            "name": "FTAgeinMonths",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "expression": "datediff(DIM_LEAD[bizible2_Touchpoint_Date_FT],Today(),Month)"
+          },
+          {
+            "type": "calculated",
+            "name": "LCAgeinMonths",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "expression": "datediff(DIM_LEAD[bizible2_Touchpoint_Date_LC],Today(),Month)"
+          },
+          {
+            "type": "calculated",
+            "name": "AgeLFTtoLC",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "expression": "DIM_LEAD[FTAgeinMonths]-DIM_LEAD[LCAgeinMonths]"
+          },
+          {
+            "type": "calculated",
+            "name": "CalculatedAgeBucket",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "If(dim_lead[ageLFTtoLC]<=1,\"1 Month\",If(dim_lead[ageLFTtoLC]>1 && dim_lead[ageLFTtoLC]<=2, \"2 Months\",If(dim_lead[ageLFTtoLC]>2 && dim_lead[ageLFTtoLC]<=3, \"3 Months\",If(dim_lead[ageLFTtoLC]>3&& dim_lead[ageLFTtoLC]<=6, \"3 - 6 months\",\"> 6 months\"))))"
+          },
+          {
+            "type": "calculated",
+            "name": "Agebucketsortorder",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "expression": "if(DIM_LEAD[CalculatedAgeBucket]=\"1 Month\",1,if(DIM_LEAD[CalculatedAgeBucket]=\"2 Months\",2,if(DIM_LEAD[CalculatedAgeBucket]=\"3 Months\",3,if(DIM_LEAD[CalculatedAgeBucket]=\"3 - 6 months\",4,5))))"
           }
         ],
         "partitions": [
