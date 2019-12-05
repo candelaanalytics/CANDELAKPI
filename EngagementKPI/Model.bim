@@ -19969,7 +19969,7 @@
             "name": "Calculated Age Bucket",
             "dataType": "string",
             "isDataTypeInferred": true,
-            "expression": "If(dim_opportunity[Age In Months]<=1,\"1 Month\",If(dim_opportunity[Age In Months]>1 && dim_opportunity[Age In Months]<=2, \"2 Months\",If(dim_opportunity[Age In Months]>2 && dim_opportunity[Age In Months]<=3, \"3 Months\",If(dim_opportunity[Age In Months]>3, \"> 3 months\",\"NA\"))))"
+            "expression": "If(dim_opportunity[Age In Months]<=1,\"1 Month\",If(dim_opportunity[Age In Months]>1 && dim_opportunity[Age In Months]<=2, \"2 Months\",If(dim_opportunity[Age In Months]>2 && dim_opportunity[Age In Months]<=3, \"3 Months\",If(dim_opportunity[Age In Months]>3&& dim_opportunity[Age In Months]<=6, \"3 -6 months\",\"> 6 months\"))))"
           },
           {
             "type": "calculated",
