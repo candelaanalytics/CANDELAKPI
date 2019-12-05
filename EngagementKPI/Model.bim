@@ -39818,6 +39818,16 @@
             "dataType": "string",
             "sourceColumn": "ISO_SUB_REGION",
             "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "DISTRIBUTOR",
+            "dataType": "string",
+            "sourceColumn": "DISTRIBUTOR"
+          },
+          {
+            "name": "DIRECT",
+            "dataType": "string",
+            "sourceColumn": "DIRECT"
           }
         ],
         "partitions": [
@@ -39826,7 +39836,7 @@
             "dataView": "full",
             "source": {
               "type": "query",
-              "query": " SELECT [dbo].[DIM_ISO_COUNTRY_REGION_CODES].[ID],[dbo].[DIM_ISO_COUNTRY_REGION_CODES].[COUNTRY_NAME],[dbo].[DIM_ISO_COUNTRY_REGION_CODES].[CANDELA_REGION],[dbo].[DIM_ISO_COUNTRY_REGION_CODES].[ISO_ALPHA2_COUNTRYCODE],[dbo].[DIM_ISO_COUNTRY_REGION_CODES].[ISO_ALPHA3_COUNTRYCODE],[dbo].[DIM_ISO_COUNTRY_REGION_CODES].[COUNTRY_CODE],[dbo].[DIM_ISO_COUNTRY_REGION_CODES].[ISO_3166_2_CODE],[dbo].[DIM_ISO_COUNTRY_REGION_CODES].[ISO_REGION],[dbo].[DIM_ISO_COUNTRY_REGION_CODES].[ISO_SUB_REGION] FROM [dbo].[DIM_ISO_COUNTRY_REGION_CODES] ",
+              "query": " SELECT [dbo].[DIM_ISO_COUNTRY_REGION_CODES].[ID],[dbo].[DIM_ISO_COUNTRY_REGION_CODES].[COUNTRY_NAME],[dbo].[DIM_ISO_COUNTRY_REGION_CODES].[CANDELA_REGION],[dbo].[DIM_ISO_COUNTRY_REGION_CODES].[ISO_ALPHA2_COUNTRYCODE],[dbo].[DIM_ISO_COUNTRY_REGION_CODES].[ISO_ALPHA3_COUNTRYCODE],[dbo].[DIM_ISO_COUNTRY_REGION_CODES].[COUNTRY_CODE],[dbo].[DIM_ISO_COUNTRY_REGION_CODES].[ISO_3166_2_CODE],[dbo].[DIM_ISO_COUNTRY_REGION_CODES].[ISO_REGION],[dbo].[DIM_ISO_COUNTRY_REGION_CODES].[ISO_SUB_REGION],[dbo].[DIM_ISO_COUNTRY_REGION_CODES].[DISTRIBUTOR],[dbo].[DIM_ISO_COUNTRY_REGION_CODES].[DIRECT] FROM [dbo].[DIM_ISO_COUNTRY_REGION_CODES] ",
               "dataSource": "SqlAzure sc-az-datacontrol-srv1.database.windows.net CandelaKPI-Dev"
             },
             "annotations": [
@@ -40052,7 +40062,7 @@
                   "        <string>DISTRIBUTOR</string>",
                   "      </key>",
                   "      <value>",
-                  "        <boolean>false</boolean>",
+                  "        <boolean>true</boolean>",
                   "      </value>",
                   "    </item>",
                   "    <item>",
@@ -40060,7 +40070,7 @@
                   "        <string>DIRECT</string>",
                   "      </key>",
                   "      <value>",
-                  "        <boolean>false</boolean>",
+                  "        <boolean>true</boolean>",
                   "      </value>",
                   "    </item>",
                   "  </ColumnChecked>",
@@ -40077,7 +40087,7 @@
         "annotations": [
           {
             "name": "_TM_ExtProp_QueryDefinition",
-            "value": " SELECT [dbo].[DIM_ISO_COUNTRY_REGION_CODES].[ID],[dbo].[DIM_ISO_COUNTRY_REGION_CODES].[COUNTRY_NAME],[dbo].[DIM_ISO_COUNTRY_REGION_CODES].[CANDELA_REGION],[dbo].[DIM_ISO_COUNTRY_REGION_CODES].[ISO_ALPHA2_COUNTRYCODE],[dbo].[DIM_ISO_COUNTRY_REGION_CODES].[ISO_ALPHA3_COUNTRYCODE],[dbo].[DIM_ISO_COUNTRY_REGION_CODES].[COUNTRY_CODE],[dbo].[DIM_ISO_COUNTRY_REGION_CODES].[ISO_3166_2_CODE],[dbo].[DIM_ISO_COUNTRY_REGION_CODES].[ISO_REGION],[dbo].[DIM_ISO_COUNTRY_REGION_CODES].[ISO_SUB_REGION] FROM [dbo].[DIM_ISO_COUNTRY_REGION_CODES] "
+            "value": " SELECT [dbo].[DIM_ISO_COUNTRY_REGION_CODES].[ID],[dbo].[DIM_ISO_COUNTRY_REGION_CODES].[COUNTRY_NAME],[dbo].[DIM_ISO_COUNTRY_REGION_CODES].[CANDELA_REGION],[dbo].[DIM_ISO_COUNTRY_REGION_CODES].[ISO_ALPHA2_COUNTRYCODE],[dbo].[DIM_ISO_COUNTRY_REGION_CODES].[ISO_ALPHA3_COUNTRYCODE],[dbo].[DIM_ISO_COUNTRY_REGION_CODES].[COUNTRY_CODE],[dbo].[DIM_ISO_COUNTRY_REGION_CODES].[ISO_3166_2_CODE],[dbo].[DIM_ISO_COUNTRY_REGION_CODES].[ISO_REGION],[dbo].[DIM_ISO_COUNTRY_REGION_CODES].[ISO_SUB_REGION],[dbo].[DIM_ISO_COUNTRY_REGION_CODES].[DISTRIBUTOR],[dbo].[DIM_ISO_COUNTRY_REGION_CODES].[DIRECT] FROM [dbo].[DIM_ISO_COUNTRY_REGION_CODES] "
           },
           {
             "name": "_TM_ExtProp_DbTableName",
@@ -40309,7 +40319,7 @@
               "        <string>DISTRIBUTOR</string>",
               "      </key>",
               "      <value>",
-              "        <boolean>false</boolean>",
+              "        <boolean>true</boolean>",
               "      </value>",
               "    </item>",
               "    <item>",
@@ -40317,7 +40327,7 @@
               "        <string>DIRECT</string>",
               "      </key>",
               "      <value>",
-              "        <boolean>false</boolean>",
+              "        <boolean>true</boolean>",
               "      </value>",
               "    </item>",
               "  </ColumnChecked>",
