@@ -19969,14 +19969,14 @@
             "name": "Calculated Age Bucket",
             "dataType": "string",
             "isDataTypeInferred": true,
-            "expression": "If(dim_opportunity[Age In Months]<=1,\"1 Month\",If(dim_opportunity[Age In Months]>1 && dim_opportunity[Age In Months]<=2, \"2 Months\",If(dim_opportunity[Age In Months]>2 && dim_opportunity[Age In Months]<=3, \"3 Months\",If(dim_opportunity[Age In Months]>3&& dim_opportunity[Age In Months]<=6, \"3 -6 months\",\"> 6 months\"))))"
+            "expression": "If(dim_opportunity[Age In Months]<=1,\"1 Month\",If(dim_opportunity[Age In Months]>1 && dim_opportunity[Age In Months]<=2, \"2 Months\",If(dim_opportunity[Age In Months]>2 && dim_opportunity[Age In Months]<=3, \"3 Months\",If(dim_opportunity[Age In Months]>3&& dim_opportunity[Age In Months]<=6, \"3 - 6 months\",\"> 6 months\"))))"
           },
           {
             "type": "calculated",
             "name": "Age Bucket Sort Order",
             "dataType": "int64",
             "isDataTypeInferred": true,
-            "expression": "if(dim_opportunity[Calculated Age Bucket]=\"1 Month\",1,if(dim_opportunity[Calculated Age Bucket]=\"2 Months\",2,if(dim_opportunity[Calculated Age Bucket]=\"3 Months\",3,if(dim_opportunity[Calculated Age Bucket]=\"> 3 Months\",4,5))))"
+            "expression": "if(dim_opportunity[Calculated Age Bucket]=\"1 Month\",1,if(dim_opportunity[Calculated Age Bucket]=\"2 Months\",2,if(dim_opportunity[Calculated Age Bucket]=\"3 Months\",3,if(dim_opportunity[Calculated Age Bucket]=\"3 - 6 months\",4,5))))"
           },
           {
             "type": "calculated",
