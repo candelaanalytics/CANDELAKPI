@@ -372,6 +372,14 @@
             "sourceColumn": "RecordValidEndDate",
             "formatString": "General Date",
             "sourceProviderType": "datetime2"
+          },
+          {
+            "type": "calculated",
+            "name": "LinktoURL",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "CONCATENATE(\"https://candelamedical.my.salesforce.com/\",left(DIM_ACCOUNT[Id],15))",
+            "dataCategory": "WebUrl"
           }
         ],
         "partitions": [
@@ -11620,6 +11628,17 @@
             "dataType": "string",
             "sourceColumn": "Type",
             "sourceProviderType": "nvarchar"
+          },
+          {
+            "type": "calculated",
+            "name": "LinktoSF",
+            "dataType": "string",
+            "isDataTypeInferred": false,
+            "expression": [
+              "CONCATENATE(\"https://candelamedical.my.salesforce.com/\",left(DIM_CUSTOMER[sf_account_id],15))",
+              ""
+            ],
+            "dataCategory": "WebUrl"
           }
         ],
         "partitions": [
@@ -14593,6 +14612,14 @@
             "name": "bizible2_Touchpoint_Source_LC",
             "dataType": "string",
             "sourceColumn": "bizible2_Touchpoint_Source_LC"
+          },
+          {
+            "type": "calculated",
+            "name": "LinktoSF",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "CONCATENATE(\"https://candelamedical.my.salesforce.com/\",left(DIM_LEAD[Id],15))",
+            "dataCategory": "WebUrl"
           }
         ],
         "partitions": [
@@ -19963,6 +19990,14 @@
             "name": "Lost_Reason_group",
             "dataType": "string",
             "sourceColumn": "Stage_Reason_group"
+          },
+          {
+            "type": "calculated",
+            "name": "LinktoSF",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "CONCATENATE(\"https://candelamedical.my.salesforce.com/\",left(DIM_OPPORTUNITY[ID],15))",
+            "dataCategory": "WebUrl"
           }
         ],
         "partitions": [
