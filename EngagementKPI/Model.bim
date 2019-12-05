@@ -39820,31 +39820,14 @@
             "sourceProviderType": "nvarchar"
           },
           {
-            "name": "DISTRIBUTOR Yes/No",
+            "name": "DISTRIBUTOR",
             "dataType": "string",
             "sourceColumn": "DISTRIBUTOR"
           },
           {
-            "name": "DIRECT Yes/No",
+            "name": "DIRECT",
             "dataType": "string",
             "sourceColumn": "DIRECT"
-          },
-          {
-            "type": "calculated",
-            "name": "Direct",
-            "dataType": "string",
-            "isDataTypeInferred": true,
-            "expression": "if(DIM_REGION[DIRECT Yes/No]=\"Y\", \"Direct\", blank())"
-          },
-          {
-            "type": "calculated",
-            "name": "Distributor",
-            "dataType": "string",
-            "isDataTypeInferred": true,
-            "expression": [
-              "if(DIM_REGION[DISTRIBUTOR Yes/No]=\"Y\", \"Distributor\", blank())",
-              ""
-            ]
           }
         ],
         "partitions": [
