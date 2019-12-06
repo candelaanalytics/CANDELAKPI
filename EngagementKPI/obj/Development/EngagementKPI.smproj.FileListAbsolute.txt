@@ -12,3 +12,10 @@ C:\Users\kavithap\Documents\Kavitha\Candela - Work\Projects\Marketing Data Mart\
 C:\Users\kavithap\Documents\Kavitha\Candela - Work\Projects\Marketing Data Mart\Source Code\Git hub source code copies\CandelaKPI-Latest\EngagementKPI\obj\Development\Model.asdatabase
 C:\Users\kavithap\Documents\Kavitha\Candela - Work\Projects\Marketing Data Mart\Source Code\Git hub source code copies\CandelaKPI-Latest\EngagementKPI\obj\Development\Model.deploymentoptions
 C:\Users\kavithap\Documents\Kavitha\Candela - Work\Projects\Marketing Data Mart\Source Code\Git hub source code copies\CandelaKPI-Latest\EngagementKPI\obj\Development\Model.deploymenttargets
+C:\Users\kavithap\Documents\Kavitha\Candela - Work\Projects\Marketing Data Mart\Source Code\Git hub source code copies\candelaKPI-Engagement\EngagementKPI\bin\Model.asdatabase
+C:\Users\kavithap\Documents\Kavitha\Candela - Work\Projects\Marketing Data Mart\Source Code\Git hub source code copies\candelaKPI-Engagement\EngagementKPI\bin\Model.deploymenttargets
+C:\Users\kavithap\Documents\Kavitha\Candela - Work\Projects\Marketing Data Mart\Source Code\Git hub source code copies\candelaKPI-Engagement\EngagementKPI\bin\Model.deploymentoptions
+C:\Users\kavithap\Documents\Kavitha\Candela - Work\Projects\Marketing Data Mart\Source Code\Git hub source code copies\candelaKPI-Engagement\EngagementKPI\obj\Development\EngagementKPI.smproj.CoreCompileInputs.cache
+C:\Users\kavithap\Documents\Kavitha\Candela - Work\Projects\Marketing Data Mart\Source Code\Git hub source code copies\candelaKPI-Engagement\EngagementKPI\obj\Development\Model.asdatabase
+C:\Users\kavithap\Documents\Kavitha\Candela - Work\Projects\Marketing Data Mart\Source Code\Git hub source code copies\candelaKPI-Engagement\EngagementKPI\obj\Development\Model.deploymentoptions
+C:\Users\kavithap\Documents\Kavitha\Candela - Work\Projects\Marketing Data Mart\Source Code\Git hub source code copies\candelaKPI-Engagement\EngagementKPI\obj\Development\Model.deploymenttargets
