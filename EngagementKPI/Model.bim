@@ -47435,6 +47435,13 @@
         "fromColumn": "Date_id",
         "toTable": "dim_date",
         "toColumn": "Date_id"
+      },
+      {
+        "name": "c7d001da-b7ae-4d30-9bb3-f015b26fe786",
+        "fromTable": "FACT_BIZIBLE_ATTRIBUTION",
+        "fromColumn": "Contact_id",
+        "toTable": "DIM_CONTACT",
+        "toColumn": "contact_id"
       }
     ],
     "roles": [
