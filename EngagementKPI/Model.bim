@@ -350,18 +350,21 @@
           {
             "name": "UltraShape_Partner_Package",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "UltraShape_Partner_Package",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "Years_In_Business",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Years_In_Business",
             "sourceProviderType": "nvarchar"
           },
           {
             "name": "RecordValidStartDate",
             "dataType": "dateTime",
+            "isHidden": true,
             "sourceColumn": "RecordValidStartDate",
             "formatString": "General Date",
             "sourceProviderType": "datetime2"
@@ -369,6 +372,7 @@
           {
             "name": "RecordValidEndDate",
             "dataType": "dateTime",
+            "isHidden": true,
             "sourceColumn": "RecordValidEndDate",
             "formatString": "General Date",
             "sourceProviderType": "datetime2"
@@ -8825,17 +8829,31 @@
           },
           {
             "type": "calculated",
-            "name": "CalculatedAgebucketCreationDate",
+            "name": "CalculatedAgeBucketModifiedDate",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "If(Dim_Campaign[AgeinMonthsModifiedDate]<=1,\"1 Month\",If(Dim_Campaign[AgeinMonthsModifiedDate]>1 && Dim_Campaign[AgeinMonthsModifiedDate]<=2, \"2 Months\",If(Dim_Campaign[AgeinMonthsModifiedDate]>2 && Dim_Campaign[AgeinMonthsModifiedDate]<=3, \"3 Months\",If(Dim_Campaign[AgeinMonthsModifiedDate]>3&& Dim_Campaign[AgeinMonthsModifiedDate]<=6, \"3 - 6 months\",\"> 6 months\"))))"
+          },
+          {
+            "type": "calculated",
+            "name": "CalculatedAgebucketCreatedDate",
             "dataType": "string",
             "isDataTypeInferred": true,
             "expression": "If(Dim_Campaign[AgeinMonthsCreationDate]<=1,\"1 Month\",If(Dim_Campaign[AgeinMonthsCreationDate]>1 && Dim_Campaign[AgeinMonthsCreationDate]<=2, \"2 Months\",If(Dim_Campaign[AgeinMonthsCreationDate]>2 && Dim_Campaign[AgeinMonthsCreationDate]<=3, \"3 Months\",If(Dim_Campaign[AgeinMonthsCreationDate]>3&& Dim_Campaign[AgeinMonthsCreationDate]<=6, \"3 - 6 months\",\"> 6 months\"))))"
           },
           {
             "type": "calculated",
-            "name": "CalculatedAgeBucketModifiedDate",
-            "dataType": "string",
+            "name": "AgeBucketSortOderCreatedDate",
+            "dataType": "int64",
             "isDataTypeInferred": true,
-            "expression": "If(Dim_Campaign[AgeinMonthsModifiedDate]<=1,\"1 Month\",If(Dim_Campaign[AgeinMonthsModifiedDate]>1 && Dim_Campaign[AgeinMonthsModifiedDate]<=2, \"2 Months\",If(Dim_Campaign[AgeinMonthsModifiedDate]>2 && Dim_Campaign[AgeinMonthsModifiedDate]<=3, \"3 Months\",If(Dim_Campaign[AgeinMonthsModifiedDate]>3&& Dim_Campaign[AgeinMonthsModifiedDate]<=6, \"3 - 6 months\",\"> 6 months\"))))"
+            "expression": "if(Dim_Campaign[CalculatedAgebucketCreatedDate]=\"1 Month\",1,if(Dim_Campaign[CalculatedAgebucketCreatedDate]=\"2 Months\",2,if(Dim_Campaign[CalculatedAgebucketCreatedDate]=\"3 Months\",3,if(Dim_Campaign[CalculatedAgebucketCreatedDate]=\"3 - 6 months\",4,5))))"
+          },
+          {
+            "type": "calculated",
+            "name": "AgeBucketSortOrderModifiedDate",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "expression": "if(Dim_Campaign[CalculatedAgeBucketModifiedDate]=\"1 Month\",1,if(Dim_Campaign[CalculatedAgeBucketModifiedDate]=\"2 Months\",2,if(Dim_Campaign[CalculatedAgeBucketModifiedDate]=\"3 Months\",3,if(Dim_Campaign[CalculatedAgeBucketModifiedDate]=\"3 - 6 months\",4,5))))"
           }
         ],
         "partitions": [
@@ -16404,35 +16422,21 @@
           },
           {
             "type": "calculated",
-            "name": "FTAgeinMonths",
+            "name": "FTtoLCAgeinMonths",
             "dataType": "int64",
             "isDataTypeInferred": true,
-            "expression": "datediff(DIM_LEAD[bizible2_Touchpoint_Date_FT],Today(),Month)"
-          },
-          {
-            "type": "calculated",
-            "name": "LCAgeinMonths",
-            "dataType": "int64",
-            "isDataTypeInferred": true,
-            "expression": "datediff(DIM_LEAD[bizible2_Touchpoint_Date_LC],Today(),Month)"
-          },
-          {
-            "type": "calculated",
-            "name": "AgeLFTtoLC",
-            "dataType": "int64",
-            "isDataTypeInferred": true,
-            "expression": "DIM_LEAD[FTAgeinMonths]-DIM_LEAD[LCAgeinMonths]"
+            "expression": "datediff(DIM_LEAD[bizible2_Touchpoint_Date_LC],DIM_LEAD[bizible2_Touchpoint_Date_FT],Month)"
           },
           {
             "type": "calculated",
             "name": "CalculatedAgeBucketFTtoLC",
             "dataType": "string",
             "isDataTypeInferred": true,
-            "expression": "If(DIM_LEAD[AgeSinceCreationinMonths]<=1,\"1 Month\",If(dim_lead[ageLFTtoLC]>1 && dim_lead[ageLFTtoLC]<=2, \"2 Months\",If(dim_lead[ageLFTtoLC]>2 && dim_lead[ageLFTtoLC]<=3, \"3 Months\",If(dim_lead[ageLFTtoLC]>3&& dim_lead[ageLFTtoLC]<=6, \"3 - 6 months\",\"> 6 months\"))))"
+            "expression": "If(DIM_LEAD[FTtoLCAgeinMonths]<=1,\"1 Month\",If(DIM_LEAD[FTtoLCAgeinMonths]>1 && DIM_LEAD[FTtoLCAgeinMonths]<=2, \"2 Months\",If(DIM_LEAD[FTtoLCAgeinMonths]>2 && DIM_LEAD[FTtoLCAgeinMonths]<=3, \"3 Months\",If(DIM_LEAD[FTtoLCAgeinMonths]>3&& DIM_LEAD[FTtoLCAgeinMonths]<=6, \"3 - 6 months\",\"> 6 months\"))))"
           },
           {
             "type": "calculated",
-            "name": "Agebucketsortorder",
+            "name": "AgebucketsortorderFTtoLC",
             "dataType": "int64",
             "isDataTypeInferred": true,
             "expression": "if(DIM_LEAD[CalculatedAgeBucketFTtoLC]=\"1 Month\",1,if(DIM_LEAD[CalculatedAgeBucketFTtoLC]=\"2 Months\",2,if(DIM_LEAD[CalculatedAgeBucketFTtoLC]=\"3 Months\",3,if(DIM_LEAD[CalculatedAgeBucketFTtoLC]=\"3 - 6 months\",4,5))))"
@@ -16446,7 +16450,7 @@
           },
           {
             "type": "calculated",
-            "name": "Calculated AgeBucket CreationDate",
+            "name": "CalculatedAgeBucketCreationDate",
             "dataType": "string",
             "isDataTypeInferred": true,
             "expression": "If(DIM_LEAD[AgeSinceCreationinMonths]<=1,\"1 Month\",If(DIM_LEAD[AgeSinceCreationinMonths]>1 && DIM_LEAD[AgeSinceCreationinMonths]<=2, \"2 Months\",If(DIM_LEAD[AgeSinceCreationinMonths]>2 && DIM_LEAD[AgeSinceCreationinMonths]<=3, \"3 Months\",If(DIM_LEAD[AgeSinceCreationinMonths]>3&& DIM_LEAD[AgeSinceCreationinMonths]<=6, \"3 - 6 months\",\"> 6 months\"))))"
@@ -16460,17 +16464,17 @@
           },
           {
             "type": "calculated",
-            "name": "AgeBucketSortOrderCreationDate",
-            "dataType": "int64",
-            "isDataTypeInferred": true,
-            "expression": "if(DIM_LEAD[Calculated AgeBucket CreationDate]=\"1 Month\",1,if(DIM_LEAD[Calculated AgeBucket CreationDate]=\"2 Months\",2,if(DIM_LEAD[Calculated AgeBucket CreationDate]=\"3 Months\",3,if(DIM_LEAD[Calculated AgeBucket CreationDate]=\"3 - 6 months\",4,5))))"
-          },
-          {
-            "type": "calculated",
             "name": "AgeBucketSortOrderModifiedDate",
             "dataType": "int64",
             "isDataTypeInferred": true,
             "expression": "if(DIM_LEAD[CalculatedAgeBucketModifiedDate]=\"1 Month\",1,if(DIM_LEAD[CalculatedAgeBucketModifiedDate]=\"2 Months\",2,if(DIM_LEAD[CalculatedAgeBucketModifiedDate]=\"3 Months\",3,if(DIM_LEAD[CalculatedAgeBucketModifiedDate]=\"3 - 6 months\",4,5))))"
+          },
+          {
+            "type": "calculated",
+            "name": "AgeBucketSortOrderCreationDate",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "expression": "if(DIM_LEAD[CalculatedAgeBucketCreationDate]=\"1 Month\",1,if(DIM_LEAD[CalculatedAgeBucketCreationDate]=\"2 Months\",2,if(DIM_LEAD[CalculatedAgeBucketCreationDate]=\"3 Months\",3,if(DIM_LEAD[CalculatedAgeBucketCreationDate]=\"3 - 6 months\",4,5))))"
           }
         ],
         "partitions": [
@@ -21817,13 +21821,6 @@
           },
           {
             "type": "calculated",
-            "name": "Calculated Age BucketModifiedDate",
-            "dataType": "string",
-            "isDataTypeInferred": true,
-            "expression": "If(dim_opportunity[AgeSinceModified In Months]<=1,\"1 Month\",If(dim_opportunity[AgeSinceModified In Months]>1 && dim_opportunity[AgeSinceModified In Months]<=2, \"2 Months\",If(dim_opportunity[AgeSinceModified In Months]>2 && dim_opportunity[AgeSinceModified In Months]<=3, \"3 Months\",If(dim_opportunity[AgeSinceModified In Months]>3&& dim_opportunity[AgeSinceModified In Months]<=6, \"3 - 6 months\",\"> 6 months\"))))"
-          },
-          {
-            "type": "calculated",
             "name": "AgeBucketSortOrderModifiedDate",
             "dataType": "int64",
             "isDataTypeInferred": true,
@@ -21866,7 +21863,14 @@
           },
           {
             "type": "calculated",
-            "name": "geBucketSortOrderCreatedDate",
+            "name": "Calculated Age BucketModifiedDate",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "If(dim_opportunity[AgeSinceModified In Months]<=1,\"1 Month\",If(dim_opportunity[AgeSinceModified In Months]>1 && dim_opportunity[AgeSinceModified In Months]<=2, \"2 Months\",If(dim_opportunity[AgeSinceModified In Months]>2 && dim_opportunity[AgeSinceModified In Months]<=3, \"3 Months\",If(dim_opportunity[AgeSinceModified In Months]>3&& dim_opportunity[AgeSinceModified In Months]<=6, \"3 - 6 months\",\"> 6 months\"))))"
+          },
+          {
+            "type": "calculated",
+            "name": "AgeBucketSortOrderCreatedDate",
             "dataType": "int64",
             "isDataTypeInferred": true,
             "expression": "if(DIM_OPPORTUNITY[CalculatedAgeBucketCreatedDate]=\"1 Month\",1,if(dim_opportunity[CalculatedAgeBucketCreatedDate]=\"2 Months\",2,if(dim_opportunity[CalculatedAgeBucketCreatedDate]=\"3 Months\",3,if(dim_opportunity[CalculatedAgeBucketCreatedDate]=\"3 - 6 months\",4,5))))"
@@ -40708,6 +40712,7 @@
             "name": "NoOfOpportunities",
             "dataType": "int64",
             "isDataTypeInferred": true,
+            "isHidden": true,
             "expression": "RELATED(Dim_Campaign[NumberOfOpportunities])"
           },
           {
@@ -40715,6 +40720,7 @@
             "name": "NoOfLeads",
             "dataType": "int64",
             "isDataTypeInferred": true,
+            "isHidden": true,
             "expression": "RELATED(Dim_Campaign[NumberOfLeads])"
           },
           {
@@ -40722,6 +40728,7 @@
             "name": "NoOfConvertedLeads",
             "dataType": "int64",
             "isDataTypeInferred": true,
+            "isHidden": true,
             "expression": "RELATED(Dim_Campaign[NumberOfConvertedLeads])"
           },
           {
@@ -40729,6 +40736,7 @@
             "name": "NoOfWonOpportunities",
             "dataType": "double",
             "isDataTypeInferred": true,
+            "isHidden": true,
             "expression": "Related(Dim_Campaign[NumberOfWonOpportunities])"
           },
           {
@@ -176916,6 +176924,7 @@
             "name": "OC Touchpoint",
             "dataType": "int64",
             "isDataTypeInferred": true,
+            "isHidden": true,
             "expression": "if(CONTAINSSTRING(FACT_BIZIBLE_ATTRIBUTION[bizible2_Touchpoint_Position], \"OC\"),1,0)"
           },
           {
@@ -176923,6 +176932,7 @@
             "name": "LC TouchPoint",
             "dataType": "int64",
             "isDataTypeInferred": true,
+            "isHidden": true,
             "expression": "if(CONTAINSSTRING(FACT_BIZIBLE_ATTRIBUTION[bizible2_Touchpoint_Position], \"LC\"),1,0)"
           },
           {
@@ -176930,6 +176940,7 @@
             "name": "FT TouchPoint",
             "dataType": "int64",
             "isDataTypeInferred": true,
+            "isHidden": true,
             "expression": "if(CONTAINSSTRING(FACT_BIZIBLE_ATTRIBUTION[bizible2_Touchpoint_Position], \"FT\"),1,0)"
           },
           {
@@ -176941,6 +176952,27 @@
             "name": "Contact_id",
             "dataType": "int64",
             "sourceColumn": "Contact_id"
+          },
+          {
+            "type": "calculated",
+            "name": "AgeinMonthsTouchpointDate",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "expression": "DATEDIFF(FACT_BIZIBLE_ATTRIBUTION[bizible2_Touchpoint_Date],TODAY(),MONTH)"
+          },
+          {
+            "type": "calculated",
+            "name": "CalculatedAgeBucketTocuhpointDate",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "If(FACT_BIZIBLE_ATTRIBUTION[AgeinMonthsTouchpointDate]<=1,\"1 Month\",If(FACT_BIZIBLE_ATTRIBUTION[AgeinMonthsTouchpointDate]>1 && FACT_BIZIBLE_ATTRIBUTION[AgeinMonthsTouchpointDate]<=2, \"2 Months\",If(FACT_BIZIBLE_ATTRIBUTION[AgeinMonthsTouchpointDate]>2 && FACT_BIZIBLE_ATTRIBUTION[AgeinMonthsTouchpointDate]<=3, \"3 Months\",If(FACT_BIZIBLE_ATTRIBUTION[AgeinMonthsTouchpointDate]>3&& FACT_BIZIBLE_ATTRIBUTION[AgeinMonthsTouchpointDate]<=6, \"3 - 6 months\",\"> 6 months\"))))"
+          },
+          {
+            "type": "calculated",
+            "name": "AgeBucketSortORder",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "expression": "if(FACT_BIZIBLE_ATTRIBUTION[CalculatedAgeBucketTocuhpointDate]=\"1 Month\",1,if(FACT_BIZIBLE_ATTRIBUTION[CalculatedAgeBucketTocuhpointDate]=\"2 Months\",2,if(FACT_BIZIBLE_ATTRIBUTION[CalculatedAgeBucketTocuhpointDate]=\"3 Months\",3,if(FACT_BIZIBLE_ATTRIBUTION[CalculatedAgeBucketTocuhpointDate]=\"3 - 6 months\",4,5))))"
           }
         ],
         "partitions": [

@@ -16457,6 +16457,20 @@
             "dataType": "string",
             "isDataTypeInferred": true,
             "expression": "If(DIM_LEAD[AgeSinceModifiedinMonths]<=1,\"1 Month\",If(DIM_LEAD[AgeSinceModifiedinMonths]>1 && DIM_LEAD[AgeSinceModifiedinMonths]<=2, \"2 Months\",If(DIM_LEAD[AgeSinceModifiedinMonths]>2 && DIM_LEAD[AgeSinceModifiedinMonths]<=3, \"3 Months\",If(DIM_LEAD[AgeSinceModifiedinMonths]>3&& DIM_LEAD[AgeSinceModifiedinMonths]<=6, \"3 - 6 months\",\"> 6 months\"))))"
+          },
+          {
+            "type": "calculated",
+            "name": "AgeBucketSortOrderCreationDate",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "expression": "if(DIM_LEAD[Calculated AgeBucket CreationDate]=\"1 Month\",1,if(DIM_LEAD[Calculated AgeBucket CreationDate]=\"2 Months\",2,if(DIM_LEAD[Calculated AgeBucket CreationDate]=\"3 Months\",3,if(DIM_LEAD[Calculated AgeBucket CreationDate]=\"3 - 6 months\",4,5))))"
+          },
+          {
+            "type": "calculated",
+            "name": "AgeBucketSortOrderModifiedDate",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "expression": "if(DIM_LEAD[CalculatedAgeBucketModifiedDate]=\"1 Month\",1,if(DIM_LEAD[CalculatedAgeBucketModifiedDate]=\"2 Months\",2,if(DIM_LEAD[CalculatedAgeBucketModifiedDate]=\"3 Months\",3,if(DIM_LEAD[CalculatedAgeBucketModifiedDate]=\"3 - 6 months\",4,5))))"
           }
         ],
         "partitions": [
@@ -21810,7 +21824,7 @@
           },
           {
             "type": "calculated",
-            "name": "Age Bucket Sort Order",
+            "name": "AgeBucketSortOrderModifiedDate",
             "dataType": "int64",
             "isDataTypeInferred": true,
             "expression": "if(dim_opportunity[Calculated Age BucketModifiedDate]=\"1 Month\",1,if(dim_opportunity[Calculated Age BucketModifiedDate]=\"2 Months\",2,if(dim_opportunity[Calculated Age BucketModifiedDate]=\"3 Months\",3,if(dim_opportunity[Calculated Age BucketModifiedDate]=\"3 - 6 months\",4,5))))"
@@ -21821,7 +21835,7 @@
             "dataType": "string",
             "isDataTypeInferred": true,
             "expression": " dim_opportunity[Calculated Age BucketModifiedDate]",
-            "sortByColumn": "Age Bucket Sort Order"
+            "sortByColumn": "AgeBucketSortOrderModifiedDate"
           },
           {
             "name": "Lost_Reason_group",
@@ -21849,6 +21863,13 @@
             "dataType": "string",
             "isDataTypeInferred": true,
             "expression": "If(DIM_OPPORTUNITY[AgeSinceCreated]<=1,\"1 Month\",If(DIM_OPPORTUNITY[AgeSinceCreated]>1 && DIM_OPPORTUNITY[AgeSinceCreated]<=2, \"2 Months\",If(DIM_OPPORTUNITY[AgeSinceCreated]>2 && DIM_OPPORTUNITY[AgeSinceCreated]<=3, \"3 Months\",If(DIM_OPPORTUNITY[AgeSinceCreated]>3&& DIM_OPPORTUNITY[AgeSinceCreated]<=6, \"3 - 6 months\",\"> 6 months\"))))"
+          },
+          {
+            "type": "calculated",
+            "name": "geBucketSortOrderCreatedDate",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "expression": "if(DIM_OPPORTUNITY[CalculatedAgeBucketCreatedDate]=\"1 Month\",1,if(dim_opportunity[CalculatedAgeBucketCreatedDate]=\"2 Months\",2,if(dim_opportunity[CalculatedAgeBucketCreatedDate]=\"3 Months\",3,if(dim_opportunity[CalculatedAgeBucketCreatedDate]=\"3 - 6 months\",4,5))))"
           }
         ],
         "partitions": [
