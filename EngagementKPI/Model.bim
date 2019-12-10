@@ -40743,6 +40743,16 @@
             "name": "ORDER_ID",
             "dataType": "string",
             "sourceColumn": "ORDER_ID"
+          },
+          {
+            "type": "calculated",
+            "name": "Date_dt",
+            "dataType": "dateTime",
+            "isDataTypeInferred": true,
+            "expression": [
+              "date(left(FACT_ENGAGEMENT[Date_id],4),mid(FACT_ENGAGEMENT[Date_id],5,2),right(FACT_ENGAGEMENT[Date_id],2))",
+              ""
+            ]
           }
         ],
         "partitions": [
@@ -176771,6 +176781,7 @@
           {
             "name": "bizible2_SF_Campaign",
             "dataType": "string",
+            "description": "Campaign id from salesforce",
             "sourceColumn": "bizible2_SF_Campaign",
             "sourceProviderType": "nvarchar"
           },
@@ -178554,14 +178565,6 @@
         "crossFilteringBehavior": "bothDirections"
       },
       {
-        "name": "b8a4aeb1-4a66-44f8-b6e0-5bb8c9b0e7e1",
-        "fromTable": "FACT_ENGAGEMENT",
-        "fromColumn": "Date_id",
-        "toTable": "dim_date",
-        "toColumn": "Date_id",
-        "crossFilteringBehavior": "bothDirections"
-      },
-      {
         "name": "591e3829-80c8-45e9-968b-ff77c379c311",
         "fromTable": "FACT_ENGAGEMENT",
         "fromColumn": "Lead_Id",
@@ -178677,6 +178680,13 @@
         "fromColumn": "SOURCE_ID",
         "toTable": "DIM_BIZ_SOURCE",
         "toColumn": "BIZ_SOURCE_id"
+      },
+      {
+        "name": "86af78bd-0c33-4a82-8806-c8b6df826928",
+        "fromTable": "FACT_ENGAGEMENT",
+        "fromColumn": "Date_dt",
+        "toTable": "dim_date",
+        "toColumn": "Date_dt"
       }
     ],
     "roles": [
