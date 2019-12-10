@@ -16425,7 +16425,7 @@
             "name": "FTtoLCAgeinMonths",
             "dataType": "int64",
             "isDataTypeInferred": true,
-            "expression": "datediff(DIM_LEAD[bizible2_Touchpoint_Date_LC],DIM_LEAD[bizible2_Touchpoint_Date_FT],Month)"
+            "expression": "if(DIM_LEAD[bizible2_Touchpoint_Date_FT]==blank()&&DIM_LEAD[bizible2_Touchpoint_Date_LC]==blank(),0,datediff(DIM_LEAD[bizible2_Touchpoint_Date_FT],DIM_LEAD[bizible2_Touchpoint_Date_LC],MONTH))"
           },
           {
             "type": "calculated",
@@ -178670,6 +178670,13 @@
         "fromColumn": "Contact_id",
         "toTable": "DIM_CONTACT",
         "toColumn": "contact_id"
+      },
+      {
+        "name": "81570f10-2547-42c5-b8e8-a05bdb05e5d1",
+        "fromTable": "FACT_BIZIBLE_ATTRIBUTION",
+        "fromColumn": "SOURCE_ID",
+        "toTable": "DIM_BIZ_SOURCE",
+        "toColumn": "BIZ_SOURCE_id"
       }
     ],
     "roles": [
