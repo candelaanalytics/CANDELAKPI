@@ -21874,6 +21874,13 @@
             "dataType": "int64",
             "isDataTypeInferred": true,
             "expression": "if(DIM_OPPORTUNITY[CalculatedAgeBucketCreatedDate]=\"1 Month\",1,if(dim_opportunity[CalculatedAgeBucketCreatedDate]=\"2 Months\",2,if(dim_opportunity[CalculatedAgeBucketCreatedDate]=\"3 Months\",3,if(dim_opportunity[CalculatedAgeBucketCreatedDate]=\"3 - 6 months\",4,5))))"
+          },
+          {
+            "type": "calculated",
+            "name": "Test deploy",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "expression": "1"
           }
         ],
         "partitions": [
