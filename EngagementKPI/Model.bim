@@ -178661,13 +178661,6 @@
         "toColumn": "DIM_OPP_ID"
       },
       {
-        "name": "d149b2ee-7c85-4f46-8ed2-8bb5cac196c6",
-        "fromTable": "FACT_BIZIBLE_ATTRIBUTION",
-        "fromColumn": "Date_id",
-        "toTable": "dim_date",
-        "toColumn": "Date_id"
-      },
-      {
         "name": "c7d001da-b7ae-4d30-9bb3-f015b26fe786",
         "fromTable": "FACT_BIZIBLE_ATTRIBUTION",
         "fromColumn": "Contact_id",
@@ -178687,6 +178680,13 @@
         "fromColumn": "Date_dt",
         "toTable": "dim_date",
         "toColumn": "Date_dt"
+      },
+      {
+        "name": "d149b2ee-7c85-4f46-8ed2-8bb5cac196c6",
+        "fromTable": "FACT_BIZIBLE_ATTRIBUTION",
+        "fromColumn": "Date_id",
+        "toTable": "dim_date",
+        "toColumn": "Date_id"
       }
     ],
     "roles": [
