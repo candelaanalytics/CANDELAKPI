@@ -17,7 +17,7 @@
     <DeploymentServerVersion>Unknown</DeploymentServerVersion>
     <DeploymentServerDatabase>EngagementKPI</DeploymentServerDatabase>
     <DeploymentServerCubeName>Model</DeploymentServerCubeName>
-    <DeploymentOptionProcessing>Full</DeploymentOptionProcessing>
+    <DeploymentOptionProcessing>Default</DeploymentOptionProcessing>
     <DeploymentOptionTransactionalDeployment>False</DeploymentOptionTransactionalDeployment>
     <DeploymentOptionADALCache>Default</DeploymentOptionADALCache>
     <DeploymentOptionDirectQueryMode>InMemory</DeploymentOptionDirectQueryMode>
