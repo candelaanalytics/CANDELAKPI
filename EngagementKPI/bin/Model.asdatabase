@@ -26999,6 +26999,16 @@
             "name": "ORDER_ID",
             "dataType": "string",
             "sourceColumn": "ORDER_ID"
+          },
+          {
+            "name": "LeadOwnerId",
+            "dataType": "int64",
+            "sourceColumn": "LeadOwnerId"
+          },
+          {
+            "name": "OpportunityOwnerId",
+            "dataType": "int64",
+            "sourceColumn": "OpportunityOwnerId"
           }
         ],
         "partitions": [
@@ -27007,7 +27017,7 @@
             "dataView": "full",
             "source": {
               "type": "query",
-              "query": " SELECT [salesforce].[FACT_ENGAGEMENT].[Lead_Id],[salesforce].[FACT_ENGAGEMENT].[engagement_type_id],[salesforce].[FACT_ENGAGEMENT].[campaign_id],[salesforce].[FACT_ENGAGEMENT].[acquisition_id],[salesforce].[FACT_ENGAGEMENT].[Status_id],[salesforce].[FACT_ENGAGEMENT].[Date_id],[salesforce].[FACT_ENGAGEMENT].[opportunity_id],[salesforce].[FACT_ENGAGEMENT].[product_id],[salesforce].[FACT_ENGAGEMENT].[channel_id],[salesforce].[FACT_ENGAGEMENT].[contact_id],[salesforce].[FACT_ENGAGEMENT].[account_id],[salesforce].[FACT_ENGAGEMENT].[Country_Id],[salesforce].[FACT_ENGAGEMENT].[Customer_Id],[salesforce].[FACT_ENGAGEMENT].[LeadSource_Id],[salesforce].[FACT_ENGAGEMENT].[op_sales_type_id],[salesforce].[FACT_ENGAGEMENT].[opportunity_type_id],[salesforce].[FACT_ENGAGEMENT].[Amount],[salesforce].[FACT_ENGAGEMENT].[Speciality_id],[salesforce].[FACT_ENGAGEMENT].[AmountInUSD],[salesforce].[FACT_ENGAGEMENT].[OpportunityLineId],[salesforce].[FACT_ENGAGEMENT].[ORDER_ID],[salesforce].[FACT_ENGAGEMENT].[Sales_Rep_id] FROM [salesforce].[FACT_ENGAGEMENT] ",
+              "query": " SELECT [salesforce].[FACT_ENGAGEMENT].[Lead_Id],[salesforce].[FACT_ENGAGEMENT].[engagement_type_id],[salesforce].[FACT_ENGAGEMENT].[campaign_id],[salesforce].[FACT_ENGAGEMENT].[acquisition_id],[salesforce].[FACT_ENGAGEMENT].[Status_id],[salesforce].[FACT_ENGAGEMENT].[Date_id],[salesforce].[FACT_ENGAGEMENT].[opportunity_id],[salesforce].[FACT_ENGAGEMENT].[product_id],[salesforce].[FACT_ENGAGEMENT].[channel_id],[salesforce].[FACT_ENGAGEMENT].[contact_id],[salesforce].[FACT_ENGAGEMENT].[account_id],[salesforce].[FACT_ENGAGEMENT].[Country_Id],[salesforce].[FACT_ENGAGEMENT].[Customer_Id],[salesforce].[FACT_ENGAGEMENT].[LeadSource_Id],[salesforce].[FACT_ENGAGEMENT].[op_sales_type_id],[salesforce].[FACT_ENGAGEMENT].[opportunity_type_id],[salesforce].[FACT_ENGAGEMENT].[Amount],[salesforce].[FACT_ENGAGEMENT].[Speciality_id],[salesforce].[FACT_ENGAGEMENT].[AmountInUSD],[salesforce].[FACT_ENGAGEMENT].[OpportunityLineId],[salesforce].[FACT_ENGAGEMENT].[ORDER_ID],[salesforce].[FACT_ENGAGEMENT].[Sales_Rep_id],[salesforce].[FACT_ENGAGEMENT].[LeadOwnerId],[salesforce].[FACT_ENGAGEMENT].[OpportunityOwnerId] FROM [salesforce].[FACT_ENGAGEMENT] ",
               "dataSource": "SqlAzure sc-az-datacontrol-srv1.database.windows.net CandelaKPI-Dev"
             },
             "annotations": [
@@ -27207,6 +27217,30 @@
                   "        <int>94</int>",
                   "      </value>",
                   "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>LeadOwnerId</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>95</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>OpportunityOwnerId</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>130</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>CampaignOwnerId</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>119</int>",
+                  "      </value>",
+                  "    </item>",
                   "  </ColumnWidths>",
                   "  <ColumnDisplayIndex>",
                   "    <item>",
@@ -27393,6 +27427,30 @@
                   "        <int>22</int>",
                   "      </value>",
                   "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>LeadOwnerId</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>23</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>OpportunityOwnerId</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>24</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>CampaignOwnerId</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>25</int>",
+                  "      </value>",
+                  "    </item>",
                   "  </ColumnDisplayIndex>",
                   "  <ColumnFrozen />",
                   "  <ColumnChecked>",
@@ -27423,6 +27481,30 @@
                   "    <item>",
                   "      <key>",
                   "        <string>LeadorContactOwnerId</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <boolean>false</boolean>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>LeadOwnerId</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <boolean>true</boolean>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>OpportunityOwnerId</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <boolean>true</boolean>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>CampaignOwnerId</string>",
                   "      </key>",
                   "      <value>",
                   "        <boolean>false</boolean>",
@@ -158608,7 +158690,7 @@
         "annotations": [
           {
             "name": "_TM_ExtProp_QueryDefinition",
-            "value": " SELECT [salesforce].[FACT_ENGAGEMENT].[Lead_Id],[salesforce].[FACT_ENGAGEMENT].[engagement_type_id],[salesforce].[FACT_ENGAGEMENT].[campaign_id],[salesforce].[FACT_ENGAGEMENT].[acquisition_id],[salesforce].[FACT_ENGAGEMENT].[Status_id],[salesforce].[FACT_ENGAGEMENT].[Date_id],[salesforce].[FACT_ENGAGEMENT].[opportunity_id],[salesforce].[FACT_ENGAGEMENT].[product_id],[salesforce].[FACT_ENGAGEMENT].[channel_id],[salesforce].[FACT_ENGAGEMENT].[contact_id],[salesforce].[FACT_ENGAGEMENT].[account_id],[salesforce].[FACT_ENGAGEMENT].[Country_Id],[salesforce].[FACT_ENGAGEMENT].[Customer_Id],[salesforce].[FACT_ENGAGEMENT].[LeadSource_Id],[salesforce].[FACT_ENGAGEMENT].[op_sales_type_id],[salesforce].[FACT_ENGAGEMENT].[opportunity_type_id],[salesforce].[FACT_ENGAGEMENT].[Amount],[salesforce].[FACT_ENGAGEMENT].[Speciality_id],[salesforce].[FACT_ENGAGEMENT].[AmountInUSD],[salesforce].[FACT_ENGAGEMENT].[OpportunityLineId],[salesforce].[FACT_ENGAGEMENT].[ORDER_ID],[salesforce].[FACT_ENGAGEMENT].[Sales_Rep_id] FROM [salesforce].[FACT_ENGAGEMENT] "
+            "value": " SELECT [salesforce].[FACT_ENGAGEMENT].[Lead_Id],[salesforce].[FACT_ENGAGEMENT].[engagement_type_id],[salesforce].[FACT_ENGAGEMENT].[campaign_id],[salesforce].[FACT_ENGAGEMENT].[acquisition_id],[salesforce].[FACT_ENGAGEMENT].[Status_id],[salesforce].[FACT_ENGAGEMENT].[Date_id],[salesforce].[FACT_ENGAGEMENT].[opportunity_id],[salesforce].[FACT_ENGAGEMENT].[product_id],[salesforce].[FACT_ENGAGEMENT].[channel_id],[salesforce].[FACT_ENGAGEMENT].[contact_id],[salesforce].[FACT_ENGAGEMENT].[account_id],[salesforce].[FACT_ENGAGEMENT].[Country_Id],[salesforce].[FACT_ENGAGEMENT].[Customer_Id],[salesforce].[FACT_ENGAGEMENT].[LeadSource_Id],[salesforce].[FACT_ENGAGEMENT].[op_sales_type_id],[salesforce].[FACT_ENGAGEMENT].[opportunity_type_id],[salesforce].[FACT_ENGAGEMENT].[Amount],[salesforce].[FACT_ENGAGEMENT].[Speciality_id],[salesforce].[FACT_ENGAGEMENT].[AmountInUSD],[salesforce].[FACT_ENGAGEMENT].[OpportunityLineId],[salesforce].[FACT_ENGAGEMENT].[ORDER_ID],[salesforce].[FACT_ENGAGEMENT].[Sales_Rep_id],[salesforce].[FACT_ENGAGEMENT].[LeadOwnerId],[salesforce].[FACT_ENGAGEMENT].[OpportunityOwnerId] FROM [salesforce].[FACT_ENGAGEMENT] "
           },
           {
             "name": "_TM_ExtProp_DbTableName",
@@ -158814,6 +158896,30 @@
               "        <int>94</int>",
               "      </value>",
               "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>LeadOwnerId</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>95</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>OpportunityOwnerId</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>130</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>CampaignOwnerId</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>119</int>",
+              "      </value>",
+              "    </item>",
               "  </ColumnWidths>",
               "  <ColumnDisplayIndex>",
               "    <item>",
@@ -159000,6 +159106,30 @@
               "        <int>22</int>",
               "      </value>",
               "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>LeadOwnerId</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>23</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>OpportunityOwnerId</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>24</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>CampaignOwnerId</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>25</int>",
+              "      </value>",
+              "    </item>",
               "  </ColumnDisplayIndex>",
               "  <ColumnFrozen />",
               "  <ColumnChecked>",
@@ -159030,6 +159160,30 @@
               "    <item>",
               "      <key>",
               "        <string>LeadorContactOwnerId</string>",
+              "      </key>",
+              "      <value>",
+              "        <boolean>false</boolean>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>LeadOwnerId</string>",
+              "      </key>",
+              "      <value>",
+              "        <boolean>true</boolean>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>OpportunityOwnerId</string>",
+              "      </key>",
+              "      <value>",
+              "        <boolean>true</boolean>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>CampaignOwnerId</string>",
               "      </key>",
               "      <value>",
               "        <boolean>false</boolean>",
@@ -164794,6 +164948,252 @@
             "value": "salesforce"
           }
         ]
+      },
+      {
+        "name": "DIM_LeadOwners",
+        "columns": [
+          {
+            "name": "USERSID",
+            "dataType": "int64",
+            "sourceColumn": "USERSID",
+            "sourceProviderType": "bigint"
+          },
+          {
+            "name": "Id",
+            "dataType": "string",
+            "sourceColumn": "Id",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "CreatedDate",
+            "dataType": "dateTime",
+            "sourceColumn": "CreatedDate",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "LastModifiedDate",
+            "dataType": "dateTime",
+            "sourceColumn": "LastModifiedDate",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "AccountId",
+            "dataType": "string",
+            "sourceColumn": "AccountId",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "CompanyName",
+            "dataType": "string",
+            "sourceColumn": "CompanyName",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "ContactId",
+            "dataType": "string",
+            "sourceColumn": "ContactId",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Country",
+            "dataType": "string",
+            "sourceColumn": "Country",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Department",
+            "dataType": "string",
+            "sourceColumn": "Department",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Email",
+            "dataType": "string",
+            "sourceColumn": "Email",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "EmployeeNumber",
+            "dataType": "string",
+            "sourceColumn": "EmployeeNumber",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "ExpirationDate",
+            "dataType": "dateTime",
+            "sourceColumn": "ExpirationDate",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "Name",
+            "dataType": "string",
+            "sourceColumn": "Name",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Region",
+            "dataType": "string",
+            "sourceColumn": "Region",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "IsActive",
+            "dataType": "string",
+            "sourceColumn": "IsActive",
+            "sourceProviderType": "nvarchar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DIM_LeadOwners",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [salesforce].[DIM_LeadOwners].* FROM [salesforce].[DIM_LeadOwners] ",
+              "dataSource": "SqlAzure sc-az-datacontrol-srv1.database.windows.net CandelaKPI-Dev"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [salesforce].[DIM_LeadOwners].* FROM [salesforce].[DIM_LeadOwners] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DIM_LeadOwners"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "salesforce"
+          }
+        ]
+      },
+      {
+        "name": "DIM_OpportunityOwners",
+        "columns": [
+          {
+            "name": "USERSID",
+            "dataType": "int64",
+            "sourceColumn": "USERSID",
+            "sourceProviderType": "bigint"
+          },
+          {
+            "name": "Id",
+            "dataType": "string",
+            "sourceColumn": "Id",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "CreatedDate",
+            "dataType": "dateTime",
+            "sourceColumn": "CreatedDate",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "LastModifiedDate",
+            "dataType": "dateTime",
+            "sourceColumn": "LastModifiedDate",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "AccountId",
+            "dataType": "string",
+            "sourceColumn": "AccountId",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "CompanyName",
+            "dataType": "string",
+            "sourceColumn": "CompanyName",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "ContactId",
+            "dataType": "string",
+            "sourceColumn": "ContactId",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Country",
+            "dataType": "string",
+            "sourceColumn": "Country",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Department",
+            "dataType": "string",
+            "sourceColumn": "Department",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Email",
+            "dataType": "string",
+            "sourceColumn": "Email",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "EmployeeNumber",
+            "dataType": "string",
+            "sourceColumn": "EmployeeNumber",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "ExpirationDate",
+            "dataType": "dateTime",
+            "sourceColumn": "ExpirationDate",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "Name",
+            "dataType": "string",
+            "sourceColumn": "Name",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Region",
+            "dataType": "string",
+            "sourceColumn": "Region",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "IsActive",
+            "dataType": "string",
+            "sourceColumn": "IsActive",
+            "sourceProviderType": "nvarchar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DIM_OpportunityOwners",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [salesforce].[DIM_OpportunityOwners].* FROM [salesforce].[DIM_OpportunityOwners] ",
+              "dataSource": "SqlAzure sc-az-datacontrol-srv1.database.windows.net CandelaKPI-Dev"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [salesforce].[DIM_OpportunityOwners].* FROM [salesforce].[DIM_OpportunityOwners] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DIM_OpportunityOwners"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "salesforce"
+          }
+        ]
       }
     ],
     "relationships": [
@@ -164973,6 +165373,20 @@
         "fromColumn": "Date_id",
         "toTable": "dim_date",
         "toColumn": "Date_id"
+      },
+      {
+        "name": "69d53c2a-5e22-4f84-8f25-6aae39884755",
+        "fromTable": "FACT_ENGAGEMENT",
+        "fromColumn": "LeadOwnerId",
+        "toTable": "DIM_LeadOwners",
+        "toColumn": "USERSID"
+      },
+      {
+        "name": "82626cf9-4898-483d-bef3-84c10447acf0",
+        "fromTable": "FACT_ENGAGEMENT",
+        "fromColumn": "OpportunityOwnerId",
+        "toTable": "DIM_OpportunityOwners",
+        "toColumn": "USERSID"
       }
     ],
     "roles": [
