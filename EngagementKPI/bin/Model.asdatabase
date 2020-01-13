@@ -27063,7 +27063,7 @@
                   "        <string>campaign_id</string>",
                   "      </key>",
                   "      <value>",
-                  "        <int>89</int>",
+                  "        <int>134</int>",
                   "      </value>",
                   "    </item>",
                   "    <item>",
@@ -27135,7 +27135,7 @@
                   "        <string>Country_Id</string>",
                   "      </key>",
                   "      <value>",
-                  "        <int>85</int>",
+                  "        <int>170</int>",
                   "      </value>",
                   "    </item>",
                   "    <item>",
@@ -158778,7 +158778,7 @@
               "        <string>campaign_id</string>",
               "      </key>",
               "      <value>",
-              "        <int>89</int>",
+              "        <int>134</int>",
               "      </value>",
               "    </item>",
               "    <item>",
@@ -158850,7 +158850,7 @@
               "        <string>Country_Id</string>",
               "      </key>",
               "      <value>",
-              "        <int>85</int>",
+              "        <int>170</int>",
               "      </value>",
               "    </item>",
               "    <item>",
@@ -161646,6 +161646,16 @@
             "dataType": "int64",
             "sourceColumn": "gl_code",
             "formatString": "0"
+          },
+          {
+            "name": "Product_Revenue",
+            "dataType": "string",
+            "sourceColumn": "Product_Revenue"
+          },
+          {
+            "name": "Company_product",
+            "dataType": "string",
+            "sourceColumn": "Company_product"
           }
         ],
         "partitions": [
@@ -161655,7 +161665,7 @@
             "source": {
               "type": "query",
               "query": [
-                "SELECT [ORACLE].[dim_item_master].[DIM_ITEM_ID],[ORACLE].[dim_item_master].[INVENTORY_ITEM_ID],[ORACLE].[dim_item_master].[ORGANIZATION_ID],[ORACLE].[dim_item_master].[ITEM_CODE],[ORACLE].[dim_item_master].[ITEM_TYPE],[ORACLE].[dim_item_master].[LAST_UPDATE_DATE],[ORACLE].[dim_item_master].[CREATION_DATE],[ORACLE].[dim_item_master].[ITEM_DESC],[ORACLE].[dim_item_master].[EXPENSE_ACCOUNT],[ORACLE].[dim_item_master].[BASE_ITEM_ID],[ORACLE].[dim_item_master].[PRIMARY_UOM_CODE],[ORACLE].[dim_item_master].[PRIMARY_UNIT_OF_MEASURE],[ORACLE].[dim_item_master].[COST_OF_SALES_ACCOUNT],[ORACLE].[dim_item_master].[SALES_ACCOUNT],[ORACLE].[dim_item_master].[INVENTORY_ITEM_STATUS_CODE],[ORACLE].[dim_item_master].[INVENTORY_PLANNING_CODE],[ORACLE].[dim_item_master].[ORDER_COST],[ORACLE].[dim_item_master].[TAX_CODE],[ORACLE].[dim_item_master].[EQUIPMENT_TYPE],[ORACLE].[dim_item_master].[Product_family],[ORACLE].[dim_item_master].[Product_line],[ORACLE].[dim_item_master].[Company],[ORACLE].[dim_item_master].[cost_local_currency],[ORACLE].[dim_item_master].[cost_usd],[ORACLE].[dim_item_master].[item_class_primary],[ORACLE].[dim_item_master].[gbu],[ORACLE].[dim_item_master].[inventory_asset_flag],[ORACLE].[dim_item_master].[inventory_item_flag],[ORACLE].[dim_item_master].[item_name],[ORACLE].[dim_item_master].[gl_code] FROM [ORACLE].[dim_item_master]",
+                "SELECT [ORACLE].[dim_item_master].[DIM_ITEM_ID],[ORACLE].[dim_item_master].[INVENTORY_ITEM_ID],[ORACLE].[dim_item_master].[ORGANIZATION_ID],[ORACLE].[dim_item_master].[ITEM_CODE],[ORACLE].[dim_item_master].[ITEM_TYPE],[ORACLE].[dim_item_master].[LAST_UPDATE_DATE],[ORACLE].[dim_item_master].[CREATION_DATE],[ORACLE].[dim_item_master].[ITEM_DESC],[ORACLE].[dim_item_master].[EXPENSE_ACCOUNT],[ORACLE].[dim_item_master].[BASE_ITEM_ID],[ORACLE].[dim_item_master].[PRIMARY_UOM_CODE],[ORACLE].[dim_item_master].[PRIMARY_UNIT_OF_MEASURE],[ORACLE].[dim_item_master].[COST_OF_SALES_ACCOUNT],[ORACLE].[dim_item_master].[SALES_ACCOUNT],[ORACLE].[dim_item_master].[INVENTORY_ITEM_STATUS_CODE],[ORACLE].[dim_item_master].[INVENTORY_PLANNING_CODE],[ORACLE].[dim_item_master].[ORDER_COST],[ORACLE].[dim_item_master].[TAX_CODE],[ORACLE].[dim_item_master].[EQUIPMENT_TYPE],[ORACLE].[dim_item_master].[Product_family],[ORACLE].[dim_item_master].[Product_line],[ORACLE].[dim_item_master].[Company],[ORACLE].[dim_item_master].[cost_local_currency],[ORACLE].[dim_item_master].[cost_usd],[ORACLE].[dim_item_master].[item_class_primary],[ORACLE].[dim_item_master].[gbu],[ORACLE].[dim_item_master].[inventory_asset_flag],[ORACLE].[dim_item_master].[inventory_item_flag],[ORACLE].[dim_item_master].[item_name],[ORACLE].[dim_item_master].[gl_code],[ORACLE].[dim_item_master].[Product_Revenue],[ORACLE].[dim_item_master].[Company_product] FROM [ORACLE].[dim_item_master]",
                 "WHERE ORGANIZATION_ID='83'"
               ],
               "dataSource": "SqlAzure sc-az-datacontrol-srv1.database.windows.net CandelaKPI-Dev"
@@ -161664,7 +161674,7 @@
               {
                 "name": "QueryEditorSerialization",
                 "value": [
-                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT [ORACLE].[dim_item_master].[DIM_ITEM_ID],[ORACLE].[dim_item_master].[INVENTORY_ITEM_ID],[ORACLE].[dim_item_master].[ORGANIZATION_ID],[ORACLE].[dim_item_master].[ITEM_CODE],[ORACLE].[dim_item_master].[ITEM_TYPE],[ORACLE].[dim_item_master].[LAST_UPDATE_DATE],[ORACLE].[dim_item_master].[CREATION_DATE],[ORACLE].[dim_item_master].[ITEM_DESC],[ORACLE].[dim_item_master].[EXPENSE_ACCOUNT],[ORACLE].[dim_item_master].[BASE_ITEM_ID],[ORACLE].[dim_item_master].[PRIMARY_UOM_CODE],[ORACLE].[dim_item_master].[PRIMARY_UNIT_OF_MEASURE],[ORACLE].[dim_item_master].[COST_OF_SALES_ACCOUNT],[ORACLE].[dim_item_master].[SALES_ACCOUNT],[ORACLE].[dim_item_master].[INVENTORY_ITEM_STATUS_CODE],[ORACLE].[dim_item_master].[INVENTORY_PLANNING_CODE],[ORACLE].[dim_item_master].[ORDER_COST],[ORACLE].[dim_item_master].[TAX_CODE],[ORACLE].[dim_item_master].[EQUIPMENT_TYPE],[ORACLE].[dim_item_master].[Product_family],[ORACLE].[dim_item_master].[Product_line],[ORACLE].[dim_item_master].[Company],[ORACLE].[dim_item_master].[cost_local_currency],[ORACLE].[dim_item_master].[cost_usd],[ORACLE].[dim_item_master].[item_class_primary],[ORACLE].[dim_item_master].[gbu],[ORACLE].[dim_item_master].[inventory_asset_flag],[ORACLE].[dim_item_master].[inventory_item_flag],[ORACLE].[dim_item_master].[item_name],[ORACLE].[dim_item_master].[gl_code] FROM [ORACLE].[dim_item_master]",
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT [ORACLE].[dim_item_master].[DIM_ITEM_ID],[ORACLE].[dim_item_master].[INVENTORY_ITEM_ID],[ORACLE].[dim_item_master].[ORGANIZATION_ID],[ORACLE].[dim_item_master].[ITEM_CODE],[ORACLE].[dim_item_master].[ITEM_TYPE],[ORACLE].[dim_item_master].[LAST_UPDATE_DATE],[ORACLE].[dim_item_master].[CREATION_DATE],[ORACLE].[dim_item_master].[ITEM_DESC],[ORACLE].[dim_item_master].[EXPENSE_ACCOUNT],[ORACLE].[dim_item_master].[BASE_ITEM_ID],[ORACLE].[dim_item_master].[PRIMARY_UOM_CODE],[ORACLE].[dim_item_master].[PRIMARY_UNIT_OF_MEASURE],[ORACLE].[dim_item_master].[COST_OF_SALES_ACCOUNT],[ORACLE].[dim_item_master].[SALES_ACCOUNT],[ORACLE].[dim_item_master].[INVENTORY_ITEM_STATUS_CODE],[ORACLE].[dim_item_master].[INVENTORY_PLANNING_CODE],[ORACLE].[dim_item_master].[ORDER_COST],[ORACLE].[dim_item_master].[TAX_CODE],[ORACLE].[dim_item_master].[EQUIPMENT_TYPE],[ORACLE].[dim_item_master].[Product_family],[ORACLE].[dim_item_master].[Product_line],[ORACLE].[dim_item_master].[Company],[ORACLE].[dim_item_master].[cost_local_currency],[ORACLE].[dim_item_master].[cost_usd],[ORACLE].[dim_item_master].[item_class_primary],[ORACLE].[dim_item_master].[gbu],[ORACLE].[dim_item_master].[inventory_asset_flag],[ORACLE].[dim_item_master].[inventory_item_flag],[ORACLE].[dim_item_master].[item_name],[ORACLE].[dim_item_master].[gl_code],[ORACLE].[dim_item_master].[Product_Revenue],[ORACLE].[dim_item_master].[Company_product] FROM [ORACLE].[dim_item_master]",
                   "WHERE ORGANIZATION_ID='83'</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
                 ]
               }
@@ -161675,7 +161685,7 @@
           {
             "name": "_TM_ExtProp_QueryDefinition",
             "value": [
-              "SELECT [ORACLE].[dim_item_master].[DIM_ITEM_ID],[ORACLE].[dim_item_master].[INVENTORY_ITEM_ID],[ORACLE].[dim_item_master].[ORGANIZATION_ID],[ORACLE].[dim_item_master].[ITEM_CODE],[ORACLE].[dim_item_master].[ITEM_TYPE],[ORACLE].[dim_item_master].[LAST_UPDATE_DATE],[ORACLE].[dim_item_master].[CREATION_DATE],[ORACLE].[dim_item_master].[ITEM_DESC],[ORACLE].[dim_item_master].[EXPENSE_ACCOUNT],[ORACLE].[dim_item_master].[BASE_ITEM_ID],[ORACLE].[dim_item_master].[PRIMARY_UOM_CODE],[ORACLE].[dim_item_master].[PRIMARY_UNIT_OF_MEASURE],[ORACLE].[dim_item_master].[COST_OF_SALES_ACCOUNT],[ORACLE].[dim_item_master].[SALES_ACCOUNT],[ORACLE].[dim_item_master].[INVENTORY_ITEM_STATUS_CODE],[ORACLE].[dim_item_master].[INVENTORY_PLANNING_CODE],[ORACLE].[dim_item_master].[ORDER_COST],[ORACLE].[dim_item_master].[TAX_CODE],[ORACLE].[dim_item_master].[EQUIPMENT_TYPE],[ORACLE].[dim_item_master].[Product_family],[ORACLE].[dim_item_master].[Product_line],[ORACLE].[dim_item_master].[Company],[ORACLE].[dim_item_master].[cost_local_currency],[ORACLE].[dim_item_master].[cost_usd],[ORACLE].[dim_item_master].[item_class_primary],[ORACLE].[dim_item_master].[gbu],[ORACLE].[dim_item_master].[inventory_asset_flag],[ORACLE].[dim_item_master].[inventory_item_flag],[ORACLE].[dim_item_master].[item_name],[ORACLE].[dim_item_master].[gl_code] FROM [ORACLE].[dim_item_master]",
+              "SELECT [ORACLE].[dim_item_master].[DIM_ITEM_ID],[ORACLE].[dim_item_master].[INVENTORY_ITEM_ID],[ORACLE].[dim_item_master].[ORGANIZATION_ID],[ORACLE].[dim_item_master].[ITEM_CODE],[ORACLE].[dim_item_master].[ITEM_TYPE],[ORACLE].[dim_item_master].[LAST_UPDATE_DATE],[ORACLE].[dim_item_master].[CREATION_DATE],[ORACLE].[dim_item_master].[ITEM_DESC],[ORACLE].[dim_item_master].[EXPENSE_ACCOUNT],[ORACLE].[dim_item_master].[BASE_ITEM_ID],[ORACLE].[dim_item_master].[PRIMARY_UOM_CODE],[ORACLE].[dim_item_master].[PRIMARY_UNIT_OF_MEASURE],[ORACLE].[dim_item_master].[COST_OF_SALES_ACCOUNT],[ORACLE].[dim_item_master].[SALES_ACCOUNT],[ORACLE].[dim_item_master].[INVENTORY_ITEM_STATUS_CODE],[ORACLE].[dim_item_master].[INVENTORY_PLANNING_CODE],[ORACLE].[dim_item_master].[ORDER_COST],[ORACLE].[dim_item_master].[TAX_CODE],[ORACLE].[dim_item_master].[EQUIPMENT_TYPE],[ORACLE].[dim_item_master].[Product_family],[ORACLE].[dim_item_master].[Product_line],[ORACLE].[dim_item_master].[Company],[ORACLE].[dim_item_master].[cost_local_currency],[ORACLE].[dim_item_master].[cost_usd],[ORACLE].[dim_item_master].[item_class_primary],[ORACLE].[dim_item_master].[gbu],[ORACLE].[dim_item_master].[inventory_asset_flag],[ORACLE].[dim_item_master].[inventory_item_flag],[ORACLE].[dim_item_master].[item_name],[ORACLE].[dim_item_master].[gl_code],[ORACLE].[dim_item_master].[Product_Revenue],[ORACLE].[dim_item_master].[Company_product] FROM [ORACLE].[dim_item_master]",
               "WHERE ORGANIZATION_ID='83'"
             ]
           },
@@ -161690,7 +161700,7 @@
           {
             "name": "QueryEditorSerialization",
             "value": [
-              "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT [ORACLE].[dim_item_master].[DIM_ITEM_ID],[ORACLE].[dim_item_master].[INVENTORY_ITEM_ID],[ORACLE].[dim_item_master].[ORGANIZATION_ID],[ORACLE].[dim_item_master].[ITEM_CODE],[ORACLE].[dim_item_master].[ITEM_TYPE],[ORACLE].[dim_item_master].[LAST_UPDATE_DATE],[ORACLE].[dim_item_master].[CREATION_DATE],[ORACLE].[dim_item_master].[ITEM_DESC],[ORACLE].[dim_item_master].[EXPENSE_ACCOUNT],[ORACLE].[dim_item_master].[BASE_ITEM_ID],[ORACLE].[dim_item_master].[PRIMARY_UOM_CODE],[ORACLE].[dim_item_master].[PRIMARY_UNIT_OF_MEASURE],[ORACLE].[dim_item_master].[COST_OF_SALES_ACCOUNT],[ORACLE].[dim_item_master].[SALES_ACCOUNT],[ORACLE].[dim_item_master].[INVENTORY_ITEM_STATUS_CODE],[ORACLE].[dim_item_master].[INVENTORY_PLANNING_CODE],[ORACLE].[dim_item_master].[ORDER_COST],[ORACLE].[dim_item_master].[TAX_CODE],[ORACLE].[dim_item_master].[EQUIPMENT_TYPE],[ORACLE].[dim_item_master].[Product_family],[ORACLE].[dim_item_master].[Product_line],[ORACLE].[dim_item_master].[Company],[ORACLE].[dim_item_master].[cost_local_currency],[ORACLE].[dim_item_master].[cost_usd],[ORACLE].[dim_item_master].[item_class_primary],[ORACLE].[dim_item_master].[gbu],[ORACLE].[dim_item_master].[inventory_asset_flag],[ORACLE].[dim_item_master].[inventory_item_flag],[ORACLE].[dim_item_master].[item_name],[ORACLE].[dim_item_master].[gl_code] FROM [ORACLE].[dim_item_master]",
+              "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT [ORACLE].[dim_item_master].[DIM_ITEM_ID],[ORACLE].[dim_item_master].[INVENTORY_ITEM_ID],[ORACLE].[dim_item_master].[ORGANIZATION_ID],[ORACLE].[dim_item_master].[ITEM_CODE],[ORACLE].[dim_item_master].[ITEM_TYPE],[ORACLE].[dim_item_master].[LAST_UPDATE_DATE],[ORACLE].[dim_item_master].[CREATION_DATE],[ORACLE].[dim_item_master].[ITEM_DESC],[ORACLE].[dim_item_master].[EXPENSE_ACCOUNT],[ORACLE].[dim_item_master].[BASE_ITEM_ID],[ORACLE].[dim_item_master].[PRIMARY_UOM_CODE],[ORACLE].[dim_item_master].[PRIMARY_UNIT_OF_MEASURE],[ORACLE].[dim_item_master].[COST_OF_SALES_ACCOUNT],[ORACLE].[dim_item_master].[SALES_ACCOUNT],[ORACLE].[dim_item_master].[INVENTORY_ITEM_STATUS_CODE],[ORACLE].[dim_item_master].[INVENTORY_PLANNING_CODE],[ORACLE].[dim_item_master].[ORDER_COST],[ORACLE].[dim_item_master].[TAX_CODE],[ORACLE].[dim_item_master].[EQUIPMENT_TYPE],[ORACLE].[dim_item_master].[Product_family],[ORACLE].[dim_item_master].[Product_line],[ORACLE].[dim_item_master].[Company],[ORACLE].[dim_item_master].[cost_local_currency],[ORACLE].[dim_item_master].[cost_usd],[ORACLE].[dim_item_master].[item_class_primary],[ORACLE].[dim_item_master].[gbu],[ORACLE].[dim_item_master].[inventory_asset_flag],[ORACLE].[dim_item_master].[inventory_item_flag],[ORACLE].[dim_item_master].[item_name],[ORACLE].[dim_item_master].[gl_code],[ORACLE].[dim_item_master].[Product_Revenue],[ORACLE].[dim_item_master].[Company_product] FROM [ORACLE].[dim_item_master]",
               "WHERE ORGANIZATION_ID='83'</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
             ]
           }
