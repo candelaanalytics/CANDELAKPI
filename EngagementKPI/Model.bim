@@ -27084,6 +27084,13 @@
             "name": "OppLineAmountUSD",
             "dataType": "int64",
             "sourceColumn": "OppLineAmountUSD"
+          },
+          {
+            "type": "calculated",
+            "name": "TotalOpportunityAmountUSD",
+            "dataType": "double",
+            "isDataTypeInferred": true,
+            "expression": "IF(isblank(FACT_ENGAGEMENT[OppLineAmountUSD]),FACT_ENGAGEMENT[OppAmountUSD],FACT_ENGAGEMENT[OppLineAmountUSD])"
           }
         ],
         "partitions": [
