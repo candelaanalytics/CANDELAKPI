@@ -21193,8 +21193,14 @@
             "name": "Close_Date",
             "dataType": "dateTime",
             "sourceColumn": "Close_Date",
-            "formatString": "General Date",
-            "sourceProviderType": "date"
+            "formatString": "Short Date",
+            "sourceProviderType": "date",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"DateTimeShortDatePattern\" />"
+              }
+            ]
           },
           {
             "name": "Closed",
