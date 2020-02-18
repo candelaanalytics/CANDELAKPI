@@ -167227,6 +167227,54 @@
             ]
           }
         ]
+      },
+      {
+        "name": "stage_name_clensing",
+        "columns": [
+          {
+            "name": "StageName",
+            "dataType": "string",
+            "sourceColumn": "StageName",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "StandardStageName",
+            "dataType": "string",
+            "sourceColumn": "StandardStageName",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "stagename_id",
+            "dataType": "int64",
+            "sourceColumn": "stagename_id",
+            "sourceProviderType": "int"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "stage_name_clensing",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [salesforce].[stage_name_clensing].* FROM [salesforce].[stage_name_clensing] ",
+              "dataSource": "SqlAzure sc-az-datacontrol-srv1.database.windows.net CandelaKPI-Dev"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [salesforce].[stage_name_clensing].* FROM [salesforce].[stage_name_clensing] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "stage_name_clensing"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "salesforce"
+          }
+        ]
       }
     ],
     "relationships": [
@@ -167469,6 +167517,13 @@
         "fromColumn": "ACCOUNTID",
         "toTable": "DIM_ACCOUNT",
         "toColumn": "ACCOUNTID"
+      },
+      {
+        "name": "c8441d52-f699-4f47-91b4-2cb10da10105",
+        "fromTable": "DIM_OPPORTUNITY",
+        "fromColumn": "Stage",
+        "toTable": "stage_name_clensing",
+        "toColumn": "StageName"
       }
     ],
     "roles": [
