@@ -165449,6 +165449,303 @@
             "value": "dbo"
           }
         ]
+      },
+      {
+        "name": "fact_opportunity_history",
+        "columns": [
+          {
+            "name": "opportunityid",
+            "dataType": "string",
+            "sourceColumn": "opportunityid",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "creation_date",
+            "dataType": "dateTime",
+            "sourceColumn": "creation_date",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime"
+          },
+          {
+            "name": "Date_id",
+            "dataType": "int64",
+            "sourceColumn": "Date_id",
+            "sourceProviderType": "int"
+          },
+          {
+            "name": "last_update_date",
+            "dataType": "dateTime",
+            "sourceColumn": "last_update_date",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime"
+          },
+          {
+            "name": "dim_opp_id",
+            "dataType": "int64",
+            "sourceColumn": "dim_opp_id",
+            "sourceProviderType": "bigint"
+          },
+          {
+            "name": "UserId",
+            "dataType": "int64",
+            "sourceColumn": "UserId",
+            "sourceProviderType": "bigint"
+          },
+          {
+            "name": "CountryId",
+            "dataType": "int64",
+            "sourceColumn": "CountryId",
+            "sourceProviderType": "int"
+          },
+          {
+            "name": "Discovery_date",
+            "dataType": "dateTime",
+            "sourceColumn": "Discovery_date",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime"
+          },
+          {
+            "name": "discovery_amount_LC",
+            "dataType": "double",
+            "sourceColumn": "discovery_amount_LC",
+            "sourceProviderType": "numeric"
+          },
+          {
+            "name": "discovery_amount_USD",
+            "dataType": "double",
+            "sourceColumn": "discovery_amount_USD",
+            "sourceProviderType": "numeric"
+          },
+          {
+            "name": "discovery_daysin",
+            "dataType": "int64",
+            "sourceColumn": "discovery_daysin",
+            "sourceProviderType": "int"
+          },
+          {
+            "name": "Discovery_nextstage",
+            "dataType": "string",
+            "sourceColumn": "Discovery_nextstage",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Identify_date",
+            "dataType": "dateTime",
+            "sourceColumn": "Identify_date",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime"
+          },
+          {
+            "name": "Identify_amount_LC",
+            "dataType": "double",
+            "sourceColumn": "Identify_amount_LC",
+            "sourceProviderType": "numeric"
+          },
+          {
+            "name": "Identify_amount_USD",
+            "dataType": "double",
+            "sourceColumn": "Identify_amount_USD",
+            "sourceProviderType": "numeric"
+          },
+          {
+            "name": "Identify_daysin",
+            "dataType": "int64",
+            "sourceColumn": "Identify_daysin",
+            "sourceProviderType": "int"
+          },
+          {
+            "name": "Identify_age",
+            "dataType": "int64",
+            "sourceColumn": "Identify_age",
+            "sourceProviderType": "int"
+          },
+          {
+            "name": "Identify_nextstage",
+            "dataType": "string",
+            "sourceColumn": "Identify_nextstage",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Validate_date",
+            "dataType": "dateTime",
+            "sourceColumn": "Validate_date",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime"
+          },
+          {
+            "name": "Validate_amount_LC",
+            "dataType": "double",
+            "sourceColumn": "Validate_amount_LC",
+            "sourceProviderType": "numeric"
+          },
+          {
+            "name": "Validate_amount_USD",
+            "dataType": "double",
+            "sourceColumn": "Validate_amount_USD",
+            "sourceProviderType": "numeric"
+          },
+          {
+            "name": "Validate_age",
+            "dataType": "int64",
+            "sourceColumn": "Validate_age",
+            "sourceProviderType": "int"
+          },
+          {
+            "name": "Validate_daysin",
+            "dataType": "int64",
+            "sourceColumn": "Validate_daysin",
+            "sourceProviderType": "int"
+          },
+          {
+            "name": "Validate_nextstage",
+            "dataType": "string",
+            "sourceColumn": "Validate_nextstage",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Selected_date",
+            "dataType": "dateTime",
+            "sourceColumn": "Selected_date",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime"
+          },
+          {
+            "name": "Selected_amount_LC",
+            "dataType": "double",
+            "sourceColumn": "Selected_amount_LC",
+            "sourceProviderType": "numeric"
+          },
+          {
+            "name": "Selected_amount_USD",
+            "dataType": "double",
+            "sourceColumn": "Selected_amount_USD",
+            "sourceProviderType": "numeric"
+          },
+          {
+            "name": "Selected_age",
+            "dataType": "int64",
+            "sourceColumn": "Selected_age",
+            "sourceProviderType": "int"
+          },
+          {
+            "name": "Selected_daysin",
+            "dataType": "int64",
+            "sourceColumn": "Selected_daysin",
+            "sourceProviderType": "int"
+          },
+          {
+            "name": "Selected_nextstage",
+            "dataType": "string",
+            "sourceColumn": "Selected_nextstage",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Purchasing_date",
+            "dataType": "dateTime",
+            "sourceColumn": "Purchasing_date",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime"
+          },
+          {
+            "name": "Purchasing_amount_LC",
+            "dataType": "double",
+            "sourceColumn": "Purchasing_amount_LC",
+            "sourceProviderType": "numeric"
+          },
+          {
+            "name": "Purchasing_amount_USD",
+            "dataType": "double",
+            "sourceColumn": "Purchasing_amount_USD",
+            "sourceProviderType": "numeric"
+          },
+          {
+            "name": "Purchasing_age",
+            "dataType": "int64",
+            "sourceColumn": "Purchasing_age",
+            "sourceProviderType": "int"
+          },
+          {
+            "name": "Purchasing_daysin",
+            "dataType": "int64",
+            "sourceColumn": "Purchasing_daysin",
+            "sourceProviderType": "int"
+          },
+          {
+            "name": "Purchasing_nextstage",
+            "dataType": "string",
+            "sourceColumn": "Purchasing_nextstage",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "Close_date",
+            "dataType": "dateTime",
+            "sourceColumn": "Close_date",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime"
+          },
+          {
+            "name": "Close_amount_LC",
+            "dataType": "double",
+            "sourceColumn": "Close_amount_LC",
+            "sourceProviderType": "numeric"
+          },
+          {
+            "name": "Close_amount_USD",
+            "dataType": "double",
+            "sourceColumn": "Close_amount_USD",
+            "sourceProviderType": "numeric"
+          },
+          {
+            "name": "Win_Lost",
+            "dataType": "string",
+            "sourceColumn": "Win_Lost",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "close_age",
+            "dataType": "int64",
+            "sourceColumn": "close_age",
+            "sourceProviderType": "int"
+          },
+          {
+            "name": "Last_modified_date",
+            "dataType": "dateTime",
+            "sourceColumn": "Last_modified_date",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2"
+          },
+          {
+            "name": "RN",
+            "dataType": "int64",
+            "sourceColumn": "RN",
+            "sourceProviderType": "bigint"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "fact_opportunity_history",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [salesforce].[fact_opportunity_history].* FROM [salesforce].[fact_opportunity_history] ",
+              "dataSource": "SqlAzure sc-az-datacontrol-srv1.database.windows.net CandelaKPI-Dev"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [salesforce].[fact_opportunity_history].* FROM [salesforce].[fact_opportunity_history] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "fact_opportunity_history"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "salesforce"
+          }
+        ]
       }
     ],
     "relationships": [
@@ -165656,6 +165953,34 @@
         "fromColumn": "Last_Modified_date_id",
         "toTable": "dim_LastModifiedDate",
         "toColumn": "Date_id"
+      },
+      {
+        "name": "fbc721d1-5067-4b69-9c83-c1d594b0e5d9",
+        "fromTable": "fact_opportunity_history",
+        "fromColumn": "dim_opp_id",
+        "toTable": "DIM_OPPORTUNITY",
+        "toColumn": "DIM_OPP_ID"
+      },
+      {
+        "name": "5425d65c-38b2-4454-aaeb-96dec6e218fe",
+        "fromTable": "fact_opportunity_history",
+        "fromColumn": "Date_id",
+        "toTable": "dim_date",
+        "toColumn": "Date_id"
+      },
+      {
+        "name": "fa534e5f-04d2-40e1-9d37-b2269bf8b346",
+        "fromTable": "fact_opportunity_history",
+        "fromColumn": "CountryId",
+        "toTable": "DIM_REGION",
+        "toColumn": "ID"
+      },
+      {
+        "name": "d0512c23-4c8d-4e70-bb92-ce2bc6caf17f",
+        "fromTable": "fact_opportunity_history",
+        "fromColumn": "UserId",
+        "toTable": "DIM_USERS",
+        "toColumn": "USERSID"
       }
     ],
     "roles": [
