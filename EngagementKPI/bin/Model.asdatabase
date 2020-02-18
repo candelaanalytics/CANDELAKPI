@@ -21193,8 +21193,14 @@
             "name": "Close_Date",
             "dataType": "dateTime",
             "sourceColumn": "Close_Date",
-            "formatString": "General Date",
-            "sourceProviderType": "date"
+            "formatString": "Short Date",
+            "sourceProviderType": "date",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"DateTimeShortDatePattern\" />"
+              }
+            ]
           },
           {
             "name": "Closed",
@@ -27084,6 +27090,23 @@
             "name": "OppLineAmountUSD",
             "dataType": "int64",
             "sourceColumn": "OppLineAmountUSD"
+          },
+          {
+            "type": "calculated",
+            "name": "TotalOpportunityAmountUSD",
+            "dataType": "double",
+            "isDataTypeInferred": true,
+            "expression": "IF(isblank(FACT_ENGAGEMENT[OppLineAmountUSD]),FACT_ENGAGEMENT[OppAmountUSD],FACT_ENGAGEMENT[OppLineAmountUSD])"
+          },
+          {
+            "name": "close_date_id",
+            "dataType": "int64",
+            "sourceColumn": "close_date_id"
+          },
+          {
+            "name": "Last_Modified_date_id",
+            "dataType": "int64",
+            "sourceColumn": "Last_Modified_date_id"
           }
         ],
         "partitions": [
@@ -27092,7 +27115,7 @@
             "dataView": "full",
             "source": {
               "type": "query",
-              "query": " SELECT [salesforce].[FACT_ENGAGEMENT].[Lead_Id],[salesforce].[FACT_ENGAGEMENT].[engagement_type_id],[salesforce].[FACT_ENGAGEMENT].[campaign_id],[salesforce].[FACT_ENGAGEMENT].[acquisition_id],[salesforce].[FACT_ENGAGEMENT].[Status_id],[salesforce].[FACT_ENGAGEMENT].[Date_id],[salesforce].[FACT_ENGAGEMENT].[opportunity_id],[salesforce].[FACT_ENGAGEMENT].[product_id],[salesforce].[FACT_ENGAGEMENT].[channel_id],[salesforce].[FACT_ENGAGEMENT].[contact_id],[salesforce].[FACT_ENGAGEMENT].[account_id],[salesforce].[FACT_ENGAGEMENT].[Country_Id],[salesforce].[FACT_ENGAGEMENT].[Customer_Id],[salesforce].[FACT_ENGAGEMENT].[LeadSource_Id],[salesforce].[FACT_ENGAGEMENT].[LeadorContactOwnerId],[salesforce].[FACT_ENGAGEMENT].[op_sales_type_id],[salesforce].[FACT_ENGAGEMENT].[opportunity_type_id],[salesforce].[FACT_ENGAGEMENT].[OppAmount],[salesforce].[FACT_ENGAGEMENT].[Speciality_id],[salesforce].[FACT_ENGAGEMENT].[OppAmountUSD],[salesforce].[FACT_ENGAGEMENT].[OpportunityLineId],[salesforce].[FACT_ENGAGEMENT].[ORDER_ID],[salesforce].[FACT_ENGAGEMENT].[Sales_Rep_id],[salesforce].[FACT_ENGAGEMENT].[LeadOwnerId],[salesforce].[FACT_ENGAGEMENT].[OpportunityOwnerId],[salesforce].[FACT_ENGAGEMENT].[OppLineAmountUSD] FROM [salesforce].[FACT_ENGAGEMENT] ",
+              "query": " SELECT [salesforce].[FACT_ENGAGEMENT].[Lead_Id],[salesforce].[FACT_ENGAGEMENT].[engagement_type_id],[salesforce].[FACT_ENGAGEMENT].[campaign_id],[salesforce].[FACT_ENGAGEMENT].[acquisition_id],[salesforce].[FACT_ENGAGEMENT].[Status_id],[salesforce].[FACT_ENGAGEMENT].[Date_id],[salesforce].[FACT_ENGAGEMENT].[opportunity_id],[salesforce].[FACT_ENGAGEMENT].[product_id],[salesforce].[FACT_ENGAGEMENT].[channel_id],[salesforce].[FACT_ENGAGEMENT].[contact_id],[salesforce].[FACT_ENGAGEMENT].[account_id],[salesforce].[FACT_ENGAGEMENT].[Country_Id],[salesforce].[FACT_ENGAGEMENT].[Customer_Id],[salesforce].[FACT_ENGAGEMENT].[LeadSource_Id],[salesforce].[FACT_ENGAGEMENT].[LeadorContactOwnerId],[salesforce].[FACT_ENGAGEMENT].[op_sales_type_id],[salesforce].[FACT_ENGAGEMENT].[opportunity_type_id],[salesforce].[FACT_ENGAGEMENT].[OppAmount],[salesforce].[FACT_ENGAGEMENT].[Speciality_id],[salesforce].[FACT_ENGAGEMENT].[OppAmountUSD],[salesforce].[FACT_ENGAGEMENT].[OpportunityLineId],[salesforce].[FACT_ENGAGEMENT].[ORDER_ID],[salesforce].[FACT_ENGAGEMENT].[Sales_Rep_id],[salesforce].[FACT_ENGAGEMENT].[LeadOwnerId],[salesforce].[FACT_ENGAGEMENT].[OpportunityOwnerId],[salesforce].[FACT_ENGAGEMENT].[OppLineAmountUSD],[salesforce].[FACT_ENGAGEMENT].[close_date_id],[salesforce].[FACT_ENGAGEMENT].[Last_Modified_date_id] FROM [salesforce].[FACT_ENGAGEMENT] ",
               "dataSource": "SqlAzure sc-az-datacontrol-srv1.database.windows.net CandelaKPI-Dev"
             },
             "annotations": [
@@ -27324,6 +27347,22 @@
                   "        <int>126</int>",
                   "      </value>",
                   "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>close_date_id</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>96</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>Last_Modified_date_id</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>138</int>",
+                  "      </value>",
+                  "    </item>",
                   "  </ColumnWidths>",
                   "  <ColumnDisplayIndex>",
                   "    <item>",
@@ -27542,6 +27581,22 @@
                   "        <int>26</int>",
                   "      </value>",
                   "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>close_date_id</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>27</int>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>Last_Modified_date_id</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <int>28</int>",
+                  "      </value>",
+                  "    </item>",
                   "  </ColumnDisplayIndex>",
                   "  <ColumnFrozen />",
                   "  <ColumnChecked>",
@@ -27612,6 +27667,22 @@
                   "    <item>",
                   "      <key>",
                   "        <string>OppLineAmountUSD</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <boolean>true</boolean>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>close_date_id</string>",
+                  "      </key>",
+                  "      <value>",
+                  "        <boolean>true</boolean>",
+                  "      </value>",
+                  "    </item>",
+                  "    <item>",
+                  "      <key>",
+                  "        <string>Last_Modified_date_id</string>",
                   "      </key>",
                   "      <value>",
                   "        <boolean>true</boolean>",
@@ -158801,7 +158872,7 @@
         "annotations": [
           {
             "name": "_TM_ExtProp_QueryDefinition",
-            "value": " SELECT [salesforce].[FACT_ENGAGEMENT].[Lead_Id],[salesforce].[FACT_ENGAGEMENT].[engagement_type_id],[salesforce].[FACT_ENGAGEMENT].[campaign_id],[salesforce].[FACT_ENGAGEMENT].[acquisition_id],[salesforce].[FACT_ENGAGEMENT].[Status_id],[salesforce].[FACT_ENGAGEMENT].[Date_id],[salesforce].[FACT_ENGAGEMENT].[opportunity_id],[salesforce].[FACT_ENGAGEMENT].[product_id],[salesforce].[FACT_ENGAGEMENT].[channel_id],[salesforce].[FACT_ENGAGEMENT].[contact_id],[salesforce].[FACT_ENGAGEMENT].[account_id],[salesforce].[FACT_ENGAGEMENT].[Country_Id],[salesforce].[FACT_ENGAGEMENT].[Customer_Id],[salesforce].[FACT_ENGAGEMENT].[LeadSource_Id],[salesforce].[FACT_ENGAGEMENT].[LeadorContactOwnerId],[salesforce].[FACT_ENGAGEMENT].[op_sales_type_id],[salesforce].[FACT_ENGAGEMENT].[opportunity_type_id],[salesforce].[FACT_ENGAGEMENT].[OppAmount],[salesforce].[FACT_ENGAGEMENT].[Speciality_id],[salesforce].[FACT_ENGAGEMENT].[OppAmountUSD],[salesforce].[FACT_ENGAGEMENT].[OpportunityLineId],[salesforce].[FACT_ENGAGEMENT].[ORDER_ID],[salesforce].[FACT_ENGAGEMENT].[Sales_Rep_id],[salesforce].[FACT_ENGAGEMENT].[LeadOwnerId],[salesforce].[FACT_ENGAGEMENT].[OpportunityOwnerId],[salesforce].[FACT_ENGAGEMENT].[OppLineAmountUSD] FROM [salesforce].[FACT_ENGAGEMENT] "
+            "value": " SELECT [salesforce].[FACT_ENGAGEMENT].[Lead_Id],[salesforce].[FACT_ENGAGEMENT].[engagement_type_id],[salesforce].[FACT_ENGAGEMENT].[campaign_id],[salesforce].[FACT_ENGAGEMENT].[acquisition_id],[salesforce].[FACT_ENGAGEMENT].[Status_id],[salesforce].[FACT_ENGAGEMENT].[Date_id],[salesforce].[FACT_ENGAGEMENT].[opportunity_id],[salesforce].[FACT_ENGAGEMENT].[product_id],[salesforce].[FACT_ENGAGEMENT].[channel_id],[salesforce].[FACT_ENGAGEMENT].[contact_id],[salesforce].[FACT_ENGAGEMENT].[account_id],[salesforce].[FACT_ENGAGEMENT].[Country_Id],[salesforce].[FACT_ENGAGEMENT].[Customer_Id],[salesforce].[FACT_ENGAGEMENT].[LeadSource_Id],[salesforce].[FACT_ENGAGEMENT].[LeadorContactOwnerId],[salesforce].[FACT_ENGAGEMENT].[op_sales_type_id],[salesforce].[FACT_ENGAGEMENT].[opportunity_type_id],[salesforce].[FACT_ENGAGEMENT].[OppAmount],[salesforce].[FACT_ENGAGEMENT].[Speciality_id],[salesforce].[FACT_ENGAGEMENT].[OppAmountUSD],[salesforce].[FACT_ENGAGEMENT].[OpportunityLineId],[salesforce].[FACT_ENGAGEMENT].[ORDER_ID],[salesforce].[FACT_ENGAGEMENT].[Sales_Rep_id],[salesforce].[FACT_ENGAGEMENT].[LeadOwnerId],[salesforce].[FACT_ENGAGEMENT].[OpportunityOwnerId],[salesforce].[FACT_ENGAGEMENT].[OppLineAmountUSD],[salesforce].[FACT_ENGAGEMENT].[close_date_id],[salesforce].[FACT_ENGAGEMENT].[Last_Modified_date_id] FROM [salesforce].[FACT_ENGAGEMENT] "
           },
           {
             "name": "_TM_ExtProp_DbTableName",
@@ -159039,6 +159110,22 @@
               "        <int>126</int>",
               "      </value>",
               "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>close_date_id</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>96</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>Last_Modified_date_id</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>138</int>",
+              "      </value>",
+              "    </item>",
               "  </ColumnWidths>",
               "  <ColumnDisplayIndex>",
               "    <item>",
@@ -159257,6 +159344,22 @@
               "        <int>26</int>",
               "      </value>",
               "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>close_date_id</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>27</int>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>Last_Modified_date_id</string>",
+              "      </key>",
+              "      <value>",
+              "        <int>28</int>",
+              "      </value>",
+              "    </item>",
               "  </ColumnDisplayIndex>",
               "  <ColumnFrozen />",
               "  <ColumnChecked>",
@@ -159327,6 +159430,22 @@
               "    <item>",
               "      <key>",
               "        <string>OppLineAmountUSD</string>",
+              "      </key>",
+              "      <value>",
+              "        <boolean>true</boolean>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>close_date_id</string>",
+              "      </key>",
+              "      <value>",
+              "        <boolean>true</boolean>",
+              "      </value>",
+              "    </item>",
+              "    <item>",
+              "      <key>",
+              "        <string>Last_Modified_date_id</string>",
               "      </key>",
               "      <value>",
               "        <boolean>true</boolean>",
@@ -164864,6 +164983,472 @@
             "value": "salesforce"
           }
         ]
+      },
+      {
+        "name": "dim_CloseDate",
+        "columns": [
+          {
+            "name": "Date_id",
+            "dataType": "int64",
+            "sourceColumn": "Date_id",
+            "sourceProviderType": "int"
+          },
+          {
+            "name": "Date_dt",
+            "dataType": "dateTime",
+            "sourceColumn": "Date_dt",
+            "formatString": "General Date",
+            "sourceProviderType": "date"
+          },
+          {
+            "name": "Day",
+            "dataType": "int64",
+            "sourceColumn": "Day",
+            "sourceProviderType": "tinyint"
+          },
+          {
+            "name": "DaySuffix",
+            "dataType": "string",
+            "sourceColumn": "DaySuffix",
+            "sourceProviderType": "char"
+          },
+          {
+            "name": "Weekday",
+            "dataType": "int64",
+            "sourceColumn": "Weekday",
+            "sourceProviderType": "tinyint"
+          },
+          {
+            "name": "WeekDayName",
+            "dataType": "string",
+            "sourceColumn": "WeekDayName",
+            "sourceProviderType": "varchar"
+          },
+          {
+            "name": "IsWeekend",
+            "dataType": "boolean",
+            "sourceColumn": "IsWeekend",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "sourceProviderType": "bit"
+          },
+          {
+            "name": "IsHoliday",
+            "dataType": "boolean",
+            "sourceColumn": "IsHoliday",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "sourceProviderType": "bit"
+          },
+          {
+            "name": "HolidayText",
+            "dataType": "string",
+            "sourceColumn": "HolidayText",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "HolidayCountry",
+            "dataType": "string",
+            "sourceColumn": "HolidayCountry",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "DOWInMonth",
+            "dataType": "int64",
+            "sourceColumn": "DOWInMonth",
+            "sourceProviderType": "tinyint"
+          },
+          {
+            "name": "DayOfYear",
+            "dataType": "int64",
+            "sourceColumn": "DayOfYear",
+            "sourceProviderType": "smallint"
+          },
+          {
+            "name": "WeekOfMonth",
+            "dataType": "int64",
+            "sourceColumn": "WeekOfMonth",
+            "sourceProviderType": "tinyint"
+          },
+          {
+            "name": "WeekOfYear",
+            "dataType": "int64",
+            "sourceColumn": "WeekOfYear",
+            "sourceProviderType": "tinyint"
+          },
+          {
+            "name": "ISOWeekOfYear",
+            "dataType": "int64",
+            "sourceColumn": "ISOWeekOfYear",
+            "sourceProviderType": "tinyint"
+          },
+          {
+            "name": "Month",
+            "dataType": "int64",
+            "sourceColumn": "Month",
+            "sourceProviderType": "tinyint"
+          },
+          {
+            "name": "MonthName",
+            "dataType": "string",
+            "sourceColumn": "MonthName",
+            "sourceProviderType": "varchar"
+          },
+          {
+            "name": "Quarter",
+            "dataType": "int64",
+            "sourceColumn": "Quarter",
+            "sourceProviderType": "tinyint"
+          },
+          {
+            "name": "QuarterName",
+            "dataType": "string",
+            "sourceColumn": "QuarterName",
+            "sourceProviderType": "varchar"
+          },
+          {
+            "name": "QTD_days",
+            "dataType": "int64",
+            "sourceColumn": "QTD_days",
+            "sourceProviderType": "tinyint"
+          },
+          {
+            "name": "Year",
+            "dataType": "int64",
+            "sourceColumn": "Year",
+            "sourceProviderType": "int"
+          },
+          {
+            "name": "YTD_days",
+            "dataType": "int64",
+            "sourceColumn": "YTD_days",
+            "sourceProviderType": "smallint"
+          },
+          {
+            "name": "MMYYYY",
+            "dataType": "string",
+            "sourceColumn": "MMYYYY",
+            "sourceProviderType": "char"
+          },
+          {
+            "name": "MonthYear",
+            "dataType": "string",
+            "sourceColumn": "MonthYear",
+            "sourceProviderType": "char"
+          },
+          {
+            "name": "FirstDayOfMonth",
+            "dataType": "dateTime",
+            "sourceColumn": "FirstDayOfMonth",
+            "formatString": "General Date",
+            "sourceProviderType": "date"
+          },
+          {
+            "name": "LastDayOfMonth",
+            "dataType": "dateTime",
+            "sourceColumn": "LastDayOfMonth",
+            "formatString": "General Date",
+            "sourceProviderType": "date"
+          },
+          {
+            "name": "FirstDayOfQuarter",
+            "dataType": "dateTime",
+            "sourceColumn": "FirstDayOfQuarter",
+            "formatString": "General Date",
+            "sourceProviderType": "date"
+          },
+          {
+            "name": "LastDayOfQuarter",
+            "dataType": "dateTime",
+            "sourceColumn": "LastDayOfQuarter",
+            "formatString": "General Date",
+            "sourceProviderType": "date"
+          },
+          {
+            "name": "FirstDayOfYear",
+            "dataType": "dateTime",
+            "sourceColumn": "FirstDayOfYear",
+            "formatString": "General Date",
+            "sourceProviderType": "date"
+          },
+          {
+            "name": "LastDayOfYear",
+            "dataType": "dateTime",
+            "sourceColumn": "LastDayOfYear",
+            "formatString": "General Date",
+            "sourceProviderType": "date"
+          },
+          {
+            "name": "FirstDayOfNextMonth",
+            "dataType": "dateTime",
+            "sourceColumn": "FirstDayOfNextMonth",
+            "formatString": "General Date",
+            "sourceProviderType": "date"
+          },
+          {
+            "name": "FirstDayOfNextYear",
+            "dataType": "dateTime",
+            "sourceColumn": "FirstDayOfNextYear",
+            "formatString": "General Date",
+            "sourceProviderType": "date"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "dim_CloseDate",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[dim_CloseDate].* FROM [dbo].[dim_CloseDate] ",
+              "dataSource": "SqlAzure sc-az-datacontrol-srv1.database.windows.net CandelaKPI-Dev"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[dim_CloseDate].* FROM [dbo].[dim_CloseDate] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "dim_CloseDate"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "dim_LastModifiedDate",
+        "columns": [
+          {
+            "name": "Date_id",
+            "dataType": "int64",
+            "sourceColumn": "Date_id",
+            "sourceProviderType": "int"
+          },
+          {
+            "name": "Date_dt",
+            "dataType": "dateTime",
+            "sourceColumn": "Date_dt",
+            "formatString": "General Date",
+            "sourceProviderType": "date"
+          },
+          {
+            "name": "Day",
+            "dataType": "int64",
+            "sourceColumn": "Day",
+            "sourceProviderType": "tinyint"
+          },
+          {
+            "name": "DaySuffix",
+            "dataType": "string",
+            "sourceColumn": "DaySuffix",
+            "sourceProviderType": "char"
+          },
+          {
+            "name": "Weekday",
+            "dataType": "int64",
+            "sourceColumn": "Weekday",
+            "sourceProviderType": "tinyint"
+          },
+          {
+            "name": "WeekDayName",
+            "dataType": "string",
+            "sourceColumn": "WeekDayName",
+            "sourceProviderType": "varchar"
+          },
+          {
+            "name": "IsWeekend",
+            "dataType": "boolean",
+            "sourceColumn": "IsWeekend",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "sourceProviderType": "bit"
+          },
+          {
+            "name": "IsHoliday",
+            "dataType": "boolean",
+            "sourceColumn": "IsHoliday",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "sourceProviderType": "bit"
+          },
+          {
+            "name": "HolidayText",
+            "dataType": "string",
+            "sourceColumn": "HolidayText",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "HolidayCountry",
+            "dataType": "string",
+            "sourceColumn": "HolidayCountry",
+            "sourceProviderType": "nvarchar"
+          },
+          {
+            "name": "DOWInMonth",
+            "dataType": "int64",
+            "sourceColumn": "DOWInMonth",
+            "sourceProviderType": "tinyint"
+          },
+          {
+            "name": "DayOfYear",
+            "dataType": "int64",
+            "sourceColumn": "DayOfYear",
+            "sourceProviderType": "smallint"
+          },
+          {
+            "name": "WeekOfMonth",
+            "dataType": "int64",
+            "sourceColumn": "WeekOfMonth",
+            "sourceProviderType": "tinyint"
+          },
+          {
+            "name": "WeekOfYear",
+            "dataType": "int64",
+            "sourceColumn": "WeekOfYear",
+            "sourceProviderType": "tinyint"
+          },
+          {
+            "name": "ISOWeekOfYear",
+            "dataType": "int64",
+            "sourceColumn": "ISOWeekOfYear",
+            "sourceProviderType": "tinyint"
+          },
+          {
+            "name": "Month",
+            "dataType": "int64",
+            "sourceColumn": "Month",
+            "sourceProviderType": "tinyint"
+          },
+          {
+            "name": "MonthName",
+            "dataType": "string",
+            "sourceColumn": "MonthName",
+            "sourceProviderType": "varchar"
+          },
+          {
+            "name": "Quarter",
+            "dataType": "int64",
+            "sourceColumn": "Quarter",
+            "sourceProviderType": "tinyint"
+          },
+          {
+            "name": "QuarterName",
+            "dataType": "string",
+            "sourceColumn": "QuarterName",
+            "sourceProviderType": "varchar"
+          },
+          {
+            "name": "QTD_days",
+            "dataType": "int64",
+            "sourceColumn": "QTD_days",
+            "sourceProviderType": "tinyint"
+          },
+          {
+            "name": "Year",
+            "dataType": "int64",
+            "sourceColumn": "Year",
+            "sourceProviderType": "int"
+          },
+          {
+            "name": "YTD_days",
+            "dataType": "int64",
+            "sourceColumn": "YTD_days",
+            "sourceProviderType": "smallint"
+          },
+          {
+            "name": "MMYYYY",
+            "dataType": "string",
+            "sourceColumn": "MMYYYY",
+            "sourceProviderType": "char"
+          },
+          {
+            "name": "MonthYear",
+            "dataType": "string",
+            "sourceColumn": "MonthYear",
+            "sourceProviderType": "char"
+          },
+          {
+            "name": "FirstDayOfMonth",
+            "dataType": "dateTime",
+            "sourceColumn": "FirstDayOfMonth",
+            "formatString": "General Date",
+            "sourceProviderType": "date"
+          },
+          {
+            "name": "LastDayOfMonth",
+            "dataType": "dateTime",
+            "sourceColumn": "LastDayOfMonth",
+            "formatString": "General Date",
+            "sourceProviderType": "date"
+          },
+          {
+            "name": "FirstDayOfQuarter",
+            "dataType": "dateTime",
+            "sourceColumn": "FirstDayOfQuarter",
+            "formatString": "General Date",
+            "sourceProviderType": "date"
+          },
+          {
+            "name": "LastDayOfQuarter",
+            "dataType": "dateTime",
+            "sourceColumn": "LastDayOfQuarter",
+            "formatString": "General Date",
+            "sourceProviderType": "date"
+          },
+          {
+            "name": "FirstDayOfYear",
+            "dataType": "dateTime",
+            "sourceColumn": "FirstDayOfYear",
+            "formatString": "General Date",
+            "sourceProviderType": "date"
+          },
+          {
+            "name": "LastDayOfYear",
+            "dataType": "dateTime",
+            "sourceColumn": "LastDayOfYear",
+            "formatString": "General Date",
+            "sourceProviderType": "date"
+          },
+          {
+            "name": "FirstDayOfNextMonth",
+            "dataType": "dateTime",
+            "sourceColumn": "FirstDayOfNextMonth",
+            "formatString": "General Date",
+            "sourceProviderType": "date"
+          },
+          {
+            "name": "FirstDayOfNextYear",
+            "dataType": "dateTime",
+            "sourceColumn": "FirstDayOfNextYear",
+            "formatString": "General Date",
+            "sourceProviderType": "date"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "dim_LastModifiedDate",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[dim_LastModifiedDate].* FROM [dbo].[dim_LastModifiedDate] ",
+              "dataSource": "SqlAzure sc-az-datacontrol-srv1.database.windows.net CandelaKPI-Dev"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[dim_LastModifiedDate].* FROM [dbo].[dim_LastModifiedDate] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "dim_LastModifiedDate"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
       }
     ],
     "relationships": [
@@ -165057,6 +165642,20 @@
         "fromColumn": "OpportunityOwnerId",
         "toTable": "DIM_OpportunityOwners",
         "toColumn": "USERSID"
+      },
+      {
+        "name": "22fee962-99c8-4a86-80bd-63d24581eaa2",
+        "fromTable": "FACT_ENGAGEMENT",
+        "fromColumn": "close_date_id",
+        "toTable": "dim_CloseDate",
+        "toColumn": "Date_id"
+      },
+      {
+        "name": "a453efd5-53a1-4fec-84f6-75eea9c95f6e",
+        "fromTable": "FACT_ENGAGEMENT",
+        "fromColumn": "Last_Modified_date_id",
+        "toTable": "dim_LastModifiedDate",
+        "toColumn": "Date_id"
       }
     ],
     "roles": [
