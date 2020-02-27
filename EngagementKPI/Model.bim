@@ -166539,6 +166539,28 @@
             ]
           }
         ],
+        "measures": [
+          {
+            "name": "DiscoveryAvgDays",
+            "expression": "AVERAGE(fact_opportunity_history[Identify_age])"
+          },
+          {
+            "name": "IdentifyAvgDays",
+            "expression": "AVERAGE(fact_opportunity_history[Validate_age])-AVERAGE(fact_opportunity_history[Identify_age])"
+          },
+          {
+            "name": "ValidateAvgDays",
+            "expression": "AVERAGE(fact_opportunity_history[Selected_age])-AVERAGE(fact_opportunity_history[Validate_age])"
+          },
+          {
+            "name": "SelectedAvgDays",
+            "expression": "AVERAGE(fact_opportunity_history[Purchasing_age])-AVERAGE(fact_opportunity_history[Selected_age])"
+          },
+          {
+            "name": "PurchasingAvgDays",
+            "expression": "AVERAGE(fact_opportunity_history[closed_won_age])-AVERAGE(fact_opportunity_history[Purchasing_age])"
+          }
+        ],
         "annotations": [
           {
             "name": "_TM_ExtProp_QueryDefinition",
