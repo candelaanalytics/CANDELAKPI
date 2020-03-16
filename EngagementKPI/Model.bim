@@ -16545,6 +16545,27 @@
             "dataType": "int64",
             "isDataTypeInferred": true,
             "expression": "if(DIM_LEAD[CalculatedAgeBucketCreationDate]=\"1 Month\",1,if(DIM_LEAD[CalculatedAgeBucketCreationDate]=\"2 Months\",2,if(DIM_LEAD[CalculatedAgeBucketCreationDate]=\"3 Months\",3,if(DIM_LEAD[CalculatedAgeBucketCreationDate]=\"3 - 6 months\",4,5))))"
+          },
+          {
+            "type": "calculated",
+            "name": "Month",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "expression": "month(DIM_LEAD[CreatedDate])"
+          },
+          {
+            "type": "calculated",
+            "name": "Year",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "expression": "year(DIM_LEAD[CreatedDate])"
+          },
+          {
+            "type": "calculated",
+            "name": "Quarter",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "expression": "quarter(DIM_LEAD[CreatedDate])"
           }
         ],
         "partitions": [
