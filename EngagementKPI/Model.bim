@@ -384,6 +384,27 @@
             "isDataTypeInferred": true,
             "expression": "CONCATENATE(\"https://candelamedical.my.salesforce.com/\",left(DIM_ACCOUNT[Id],15))",
             "dataCategory": "WebUrl"
+          },
+          {
+            "type": "calculated",
+            "name": "Quarter",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "expression": "quarter(DIM_ACCOUNT[CreatedDate])"
+          },
+          {
+            "type": "calculated",
+            "name": "Month",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "expression": "month(DIM_ACCOUNT[CreatedDate])"
+          },
+          {
+            "type": "calculated",
+            "name": "Year",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "expression": "year(DIM_ACCOUNT[CreatedDate])"
           }
         ],
         "partitions": [
